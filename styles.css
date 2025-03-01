@@ -101,6 +101,74 @@ button {
     border-radius: 5px;
 }
 
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hide the menu toggle by default (desktop view) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Hide the nav links in mobile view */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #b22222;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        display: block;
+    }
+
+    /* Show the menu toggle (hamburger icon) */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Fix for the mobile menu appearing properly */
+    .nav-active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
 button:hover {
     background: #8b1b1b;
 }
