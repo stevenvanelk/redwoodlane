@@ -17,6 +17,10 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.homepage-container {
+    text-align: center;
+}
+
 /* Header Styling */
 header {
     display: flex;
