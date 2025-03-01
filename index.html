@@ -14,7 +14,6 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
-            text-align: center;
         }
         .container {
             max-width: 900px;
@@ -23,6 +22,7 @@
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         header {
             display: flex;
@@ -49,18 +49,20 @@
             font-size: 18px;
             line-height: 1.6;
         }
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #b22222;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
+        .services {
+            margin-top: 30px;
+            text-align: left;
         }
-        .button:hover {
-            background: #8b1b1b;
+        .services h2 {
+            color: #b22222;
+        }
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+        .services li {
+            margin-bottom: 10px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -68,15 +70,27 @@
     <header>
         <h2>Redwood Lane</h2>
         <nav>
-            <a href="Home.html">Home</a>
             <a href="AboutMe.html">About Me</a>
             <a href="Contact.html">Contact</a>
         </nav>
     </header>
     <div class="container">
-        <h1>Welcome to Redwood Lane</h1>
+        <h1>Redwood Lane</h1>
         <p>Salesforce Consulting specializing in Administration, Integrations, Automation, and Reporting.</p>
-        <a href="Home.html" class="button">Enter Site</a>
+        <div class="services">
+            <h2>What We Do Best</h2>
+            <ul>
+                <li>Salesforce Administration & Customization</li>
+                <li>Flow Automation & Process Optimization</li>
+                <li>Integration with Postman, Axus, Safari Portal, OpenAI, and More</li>
+                <li>Custom Reports & Dashboards</li>
+                <li>Security & User Management</li>
+                <li>Email-to-Case & Service Request Optimization</li>
+                <li>Membership Portal Customization</li>
+                <li>Salesforce LWC & Visualforce Development</li>
+                <li>Consulting on Best Practices & Scalable Solutions</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
