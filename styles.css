@@ -27,6 +27,10 @@ header {
     color: white;
 }
 
+header h2 {
+    color: white;
+}
+
 header nav a {
     color: white;
     text-decoration: none;
