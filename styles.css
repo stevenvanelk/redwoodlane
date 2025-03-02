@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #b22222;
+    background: #DC143C;
     padding: 10px 30px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -82,14 +82,14 @@ header h2 {
 
 /* Text Styling */
 h1 {
-    color: #b22222;
+    color: #DC143C;
     font-size: 40px;
     text-align: center;
     margin-bottom: 15px;
 }
 
 h2 {
-    color: #b22222;
+    color: #DC143C;
     font-size: 28px;
     margin-bottom: 10px;
     text-align: center;
@@ -147,13 +147,13 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    border: 1px solid #b22222;
+    border: 1px solid #DC143C;
     outline: none;
 }
 
 /* Buttons */
 button {
-    background: #b22222;
+    background: #DC143C;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -170,7 +170,7 @@ button:hover {
 /* Footer Styling */
 footer {
     text-align: center;
-    background: #b22222;
+    background: #DC143C;
     color: white;
     padding: 15px;
     margin-top: 50px;
@@ -186,7 +186,7 @@ footer {
         position: absolute;
         top: 60px;
         left: 0;
-        background: #b22222;
+        background: #DC143C;
         text-align: center;
         padding: 10px 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -263,7 +263,7 @@ footer {
 
 .cta-button {
     display: inline-block;
-    background: #b22222;
+    background: #DC143C;
     color: white;
     padding: 12px 24px;
     text-decoration: none;
@@ -279,7 +279,7 @@ footer {
 /* Footer */
 footer {
     text-align: center;
-    background: #b22222;
+    background: #DC143C;
     color: white;
     padding: 15px;
     margin-top: 50px;
