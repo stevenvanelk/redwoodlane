@@ -4,7 +4,7 @@
 /* General Styles */
 body {
     margin: 0;
-    padding: 0;
+    padding-top: 75px;
     font-family: 'Poppins', sans-serif;
     background-color: white; /* Removes gray */
     color: #333;
@@ -28,6 +28,11 @@ body {
 
 /* Header Styling */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +50,7 @@ header {
 }
 
 .logo {
-    height: 60px;
+    height: 50px;
     width: auto;
 }
 
