@@ -19,11 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-document.querySelector(".menu-toggle").addEventListener("click", function() {
-    console.log("Menu button clicked!");
-    document.querySelector(".nav-links").classList.toggle("nav-active");
-});
-
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("year").textContent = new Date().getFullYear();
 });
