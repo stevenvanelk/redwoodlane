@@ -18,6 +18,10 @@ body {
     padding: 40px 20px;
 }
 
+.contact-container {
+    max-width: 600px; /* Reduced width only for the Contact page */
+}
+
 /* Header Styling */
 header {
     display: flex;
