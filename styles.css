@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #DC143C;
+    background: #660000;
     padding: 10px 30px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -82,14 +82,14 @@ header h2 {
 
 /* Text Styling */
 h1 {
-    color: #DC143C;
+    color: #660000;
     font-size: 40px;
     text-align: center;
     margin-bottom: 15px;
 }
 
 h2 {
-    color: #DC143C;
+    color: #660000;
     font-size: 28px;
     margin-bottom: 10px;
     text-align: center;
@@ -147,13 +147,13 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    border: 1px solid #DC143C;
+    border: 1px solid #660000;
     outline: none;
 }
 
 /* Buttons */
 button {
-    background: #DC143C;
+    background: #660000;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -170,7 +170,7 @@ button:hover {
 /* Footer Styling */
 footer {
     text-align: center;
-    background: #DC143C;
+    background: #660000;
     color: white;
     padding: 15px;
     margin-top: 50px;
@@ -186,7 +186,7 @@ footer {
         position: absolute;
         top: 60px;
         left: 0;
-        background: #DC143C;
+        background: #660000;
         text-align: center;
         padding: 10px 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -253,6 +253,7 @@ footer {
 .hero-text h1 {
     font-size: 36px;
     margin-bottom: 10px;
+    color: white;
 }
 
 .hero-text p {
@@ -263,7 +264,7 @@ footer {
 
 .cta-button {
     display: inline-block;
-    background: #DC143C;
+    background: #660000;
     color: white;
     padding: 12px 24px;
     text-decoration: none;
@@ -279,7 +280,7 @@ footer {
 /* Footer */
 footer {
     text-align: center;
-    background: #DC143C;
+    background: #660000;
     color: white;
     padding: 15px;
     margin-top: 50px;
