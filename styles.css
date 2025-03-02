@@ -415,7 +415,6 @@ footer a:hover {
     justify-content: center;
     gap: 15px;
     margin-top: 10px;
-    background: #E0E0E0;
 }
 
 .footer-social-links a {
@@ -436,7 +435,7 @@ footer a:hover {
 .footer-social-section {
     text-align: center;
     padding: 15px 0;
-    background: #800000; /* Adjust to match site theme */
+    background: #E0E0E0;
     color: white;
 }
 
