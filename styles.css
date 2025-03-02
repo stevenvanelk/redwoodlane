@@ -35,9 +35,9 @@ header {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;  /* Ensures vertical alignment */
     background: linear-gradient(to bottom, #990000, #4d0000);
-    padding: 10px 30px;
+    padding: 10px 20px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 75px;
@@ -108,10 +108,7 @@ nav {
     font-size: 28px;
     cursor: pointer;
     color: white;
-    position: absolute;
-    right: 30px; /* Push it to the right */
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
 }
 
 /* Text Styling */
