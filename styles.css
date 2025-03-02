@@ -290,6 +290,7 @@ button:hover {
         align-items: center;
         position: absolute;
         top: 74px;
+        right: 0;
         background: linear-gradient(to bottom, #4d0000, #190000);
         width: 200px;
         padding: 5px 0;
