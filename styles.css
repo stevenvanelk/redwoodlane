@@ -416,17 +416,15 @@ footer a:hover {
 .footer-social-section {
     text-align: center;
     padding: 10px 0;
-    background: #C4C4C4;
+    background: #B0B0B0; /* Slightly darker gray for better contrast */
     color: white;
 }
 
-/* Flex container to keep text & icons on same line */
 .footer-social-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    vertical-align: middle;
 }
 
 .footer-social-container h3 {
@@ -435,23 +433,18 @@ footer a:hover {
     font-weight: 600;
 }
 
+.footer-content {
+    text-align: center;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, #990000, #4d0000);
+}
+
 .social-icon {
     width: 20px; /* Small size */
     height: 20px;
-    vertical-align: middle;
     transition: transform 0.2s ease-in-out;
 }
 
 .social-icon:hover {
     transform: scale(1.1); /* Slight zoom effect */
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    margin: 0 auto;
-    background: linear-gradient(to bottom, #990000, #4d0000);
-    text-align: center;
 }
