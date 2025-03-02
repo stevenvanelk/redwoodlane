@@ -19,8 +19,12 @@ body {
 }
 
 .contact-container {
-    max-width: 600px; /* Reduced width only for the Contact page */
+    max-width: 600px; /* Ensures it's smaller than the default .container */
+    margin: 40px auto; /* Centers it on the page */
+    padding: 40px 20px; /* Adds spacing inside the container */
+    text-align: center;
 }
+
 
 /* Header Styling */
 header {
