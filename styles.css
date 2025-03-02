@@ -136,10 +136,11 @@ p {
 /* Contact Form */
 form {
     margin-top: 20px;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch; /* Makes all children (inputs, textarea, button) take full width */
+    max-width: 600px; /* Matches the width of the container */
+    margin: 0 auto; /* Centers the form */
 }
 
 input, textarea, button {
@@ -172,9 +173,9 @@ button {
 
 .contact-button {
     width: 100%; /* Makes it as wide as inputs */
-    max-width: 600px; /* Prevents it from getting too wide */
+    max-width: none; /* Prevents it from getting too wide */
     display: block; /* Forces it onto its own line */
-    margin: 0 auto; /* Centers it */
+    margin: 10px 0; /* Centers it */
 }
 
 button:hover {
