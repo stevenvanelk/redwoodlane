@@ -435,8 +435,8 @@ footer a:hover {
 }
 
 .social-icon {
-    width: 18px; /* Small size */
-    height: 18px;
+    width: 24px; /* Small size */
+    height: 24px;
     display: inline-block;
     vertical-align: middle;
     transition: transform 0.2s ease-in-out;
