@@ -131,19 +131,19 @@ p {
 
 /* Contact Form */
 form {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
 }
 
-input, textarea {
-    width: 80%;
-    max-width: 600px;
+input, textarea, button {
+    width: 100%; /* Ensures all elements are the same width */
+    max-width: 600px; /* Prevents them from getting too wide */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    transition: border 0.3s ease-in-out;
+    display: block; /* Forces each element to take full width on a new line */
 }
 
 input:focus, textarea:focus {
@@ -161,6 +161,13 @@ button {
     cursor: pointer;
     border-radius: 8px;
     transition: background 0.3s ease-in-out;
+}
+
+.contact-button {
+    width: 100%; /* Makes it as wide as inputs */
+    max-width: 600px; /* Prevents it from getting too wide */
+    display: block; /* Forces it onto its own line */
+    margin: 10px auto; /* Centers it */
 }
 
 button:hover {
