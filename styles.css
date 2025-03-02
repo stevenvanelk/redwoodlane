@@ -82,14 +82,14 @@ header h2 {
 
 /* Text Styling */
 h1 {
-    color: #800000;
+    color: #990000;
     font-size: 40px;
     text-align: center;
     margin-bottom: 15px;
 }
 
 h2 {
-    color: #800000;
+    color: #990000;
     font-size: 28px;
     margin-bottom: 10px;
     text-align: center;
@@ -147,7 +147,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    border: 1px solid #800000;
+    border: 1px solid #990000;
     outline: none;
 }
 
@@ -165,15 +165,6 @@ button {
 
 button:hover {
     background: #8b1b1b;
-}
-
-/* Footer Styling */
-footer {
-    text-align: center;
-    background: #800000;
-    color: white;
-    padding: 15px;
-    margin-top: 50px;
 }
 
 /* Mobile Responsive Styles */
@@ -248,6 +239,7 @@ footer {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
+    width: 100%;
 }
 
 .hero-text h1 {
@@ -262,9 +254,14 @@ footer {
     color: white;
 }
 
+.hero-content {
+    max-width: 600px; /* Limits how wide the text can be */
+    margin: auto;
+}
+
 .cta-button {
     display: inline-block;
-    background: #800000;
+    background: #990000;
     color: white;
     padding: 12px 24px;
     text-decoration: none;
@@ -277,7 +274,7 @@ footer {
     background: #8b1b1b;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
     text-align: center;
     background: linear-gradient(to bottom, #990000, #4d0000);
