@@ -1,7 +1,11 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* General Styles */
+html {
+    visibility: hidden;
+    opacity: 0;
+}
+
 body {
     margin: 0;
     padding-top: 75px;
@@ -9,6 +13,16 @@ body {
     background-color: white; /* Removes gray */
     color: #333;
     line-height: 1.7;
+    visibility: visible; /* Ensures body is visible */
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+}
+
+/* Ensure html becomes visible once the styles are loaded */
+html.loaded {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
 }
 
 /* Container: Keeps content centered, but not boxed */
