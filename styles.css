@@ -391,9 +391,14 @@ button:hover {
 
 /* Footer Styling */
 footer {
+    width: 100%;
     text-align: center;
     color: white;
-    margin-top: 50px;
+    margin-top: 25px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
 }
 
 footer p, footer a {
@@ -408,6 +413,7 @@ footer a:hover {
 .footer-social-section {
     text-align: center;
     padding: 10px 0;
+    width: 100%;
     background: #B0B0B0; /* Slightly darker gray for better contrast */
     color: white;
 }
@@ -441,6 +447,7 @@ footer a:hover {
 
 .footer-content {
     text-align: center;
-    padding: 10px 20px;
+    padding: 10px 0;
+    width: 100%;
     background: linear-gradient(to bottom, #990000, #4d0000);
 }
