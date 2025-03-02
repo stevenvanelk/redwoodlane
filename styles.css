@@ -133,17 +133,26 @@ nav {
 }
 
 .nav-links {
-    overflow: visible !important;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-    white-space: nowrap;
-    margin-left: auto;
-    z-index: 9999 !important;
+    position: absolute;
+    top: 75px; /* Below header */
+    right: 10px;
+    width: 200px;
+    background: #800000;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 9999 !important; /* Forces it above hero */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
+
+.nav-links.nav-active {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    flex-direction: column;
+}
+
 
 .nav-links li {
     display: inline-block;
