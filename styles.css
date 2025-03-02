@@ -232,7 +232,11 @@ button:hover {
     }
 
     .nav-links.nav-active {
-        display: flex; /* Shows the menu when toggled */
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        z-index: 9999 !important;
     }
 
     .nav-links li {
