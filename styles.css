@@ -219,16 +219,18 @@ button:hover {
 @media screen and (max-width: 768px) {
     /* Navigation */
     .nav-links {
-        display: none;
+        display: none; /* Hidden by default */
         flex-direction: column;
-        width: 100%;
+        align-items: center;
         position: absolute;
-        top: 75px;
-        right: 0;
+        top: 60px; /* Adjust based on your header height */
+        right: 10px;
         background: #800000;
-        text-align: center;
+        width: 200px; /* Adjust width */
+        border-radius: 5px;
         padding: 10px 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
 
     .nav-links.nav-active {
@@ -240,20 +242,29 @@ button:hover {
     }
 
     .nav-links li {
-        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
     }
 
     .nav-links a {
-        font-size: 20px;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
         display: block;
+        width: 100%;
+        padding: 10px;
     }
 
     .menu-toggle {
-        display: block;
+        display: block; /* Ensure hamburger is visible */
+        position: absolute;
+        top: 15px;
         right: 20px;
         font-size: 28px;
         cursor: pointer;
         color: white;
+        z-index: 1100;
     }
 
     /* Make containers more mobile-friendly */
