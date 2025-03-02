@@ -143,9 +143,9 @@ form {
     margin: 0 auto; /* Centers the form */
 }
 
-input, textarea, button {
+input, textarea {
     width: 100%; /* Ensures all elements are the same width */
-    max-width: 600px; /* Prevents them from getting too wide */
+    max-width: 100%; /* Prevents them from getting too wide */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
