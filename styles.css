@@ -1,4 +1,4 @@
-/* Import Google Font for a modern look */
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* General Styles */
@@ -6,24 +6,16 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
+    background-color: white; /* Removes gray */
     color: #333;
     line-height: 1.7;
 }
 
-/* Container Styling */
+/* Container: Keeps content centered, but not boxed */
 .container {
     max-width: 900px;
-    margin: 50px auto;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Center text in homepage */
-.homepage-container {
-    text-align: center;
+    margin: 40px auto;
+    padding: 40px 20px;
 }
 
 /* Header Styling */
@@ -32,15 +24,16 @@ header {
     justify-content: space-between;
     align-items: center;
     background: #b22222;
-    padding: 15px 40px;
+    padding: 20px 40px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo & Title */
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 15px; /* Space between logo and text */
+    gap: 15px;
 }
 
 .logo {
@@ -58,7 +51,7 @@ header h2 {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
@@ -90,7 +83,8 @@ header h2 {
 /* Text Styling */
 h1 {
     color: #b22222;
-    font-size: 36px;
+    font-size: 40px;
+    text-align: center;
     margin-bottom: 15px;
 }
 
@@ -98,22 +92,20 @@ h2 {
     color: #b22222;
     font-size: 28px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 p {
     font-size: 18px;
     line-height: 1.6;
-    color: #555;
+    color: #444;
+    text-align: center;
 }
 
 /* Services Section */
 .services {
-    margin-top: 30px;
+    margin-top: 40px;
     text-align: center;
-}
-
-.services h2 {
-    font-size: 26px;
 }
 
 .services ul {
@@ -129,22 +121,23 @@ p {
     font-size: 18px;
     text-align: center;
     background: #fff3f3;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 8px;
     width: 80%;
     max-width: 500px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Form */
 form {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
 }
 
 input, textarea {
-    width: 100%;
+    width: 80%;
+    max-width: 600px;
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -212,13 +205,6 @@ footer {
         display: block;
     }
 
-    /* Ensure the menu opens properly */
-    .nav-active {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
     /* Make containers more mobile-friendly */
     .container {
         width: 90%;
@@ -230,7 +216,7 @@ footer {
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     h2 {
