@@ -40,11 +40,15 @@ header {
     padding: 10px 30px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 75px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* Logo & Title */
 .logo-container {
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     gap: 15px;
 }
@@ -61,16 +65,25 @@ header h2 {
 }
 
 /* Navigation Styling */
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 0;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .nav-links li {
-    display: inline;
+    display: inline-block;
 }
 
 .nav-links a {
@@ -78,6 +91,8 @@ header h2 {
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
+    padding: 10px;
+    display: block;
     transition: color 0.3s ease-in-out;
 }
 
@@ -202,7 +217,7 @@ button:hover {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 60px;
+        top: 75px;
         left: 0;
         background: #800000;
         text-align: center;
@@ -221,6 +236,9 @@ button:hover {
 
     .menu-toggle {
         display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
     }
 
     /* Make containers more mobile-friendly */
