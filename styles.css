@@ -13,7 +13,7 @@ body {
 
 /* Container: Keeps content centered, but not boxed */
 .container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 40px auto;
     padding: 40px 20px;
 }
