@@ -318,15 +318,13 @@ button:hover {
 
 .about-image img {
     max-width: 100%;
-    border-radius: 10px; /* Slightly rounded corners for a modern look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
 
 /* Certifications Section */
 .certifications {
     list-style: none;
     padding: 0;
-    text-align: left;
+    text-align: center;
 }
 
 .certifications li {
