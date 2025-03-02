@@ -429,8 +429,8 @@ footer a:hover {
 }
 
 .social-icon {
-    width: 20px; /* Small size */
-    height: 20px;
+    width: 16px; /* Small size */
+    height: 16px;
     transition: transform 0.2s ease-in-out;
 }
 
