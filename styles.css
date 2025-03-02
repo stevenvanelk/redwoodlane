@@ -127,14 +127,16 @@ p {
 
 .services li {
     font-size: 18px;
-    text-align: center;
-    background: #fff3f3;
-    padding: 12px 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 500px;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text left instead of center */
+    background: none; /* Remove background color */
+    padding: 5px 0; /* Reduce padding */
+    border-radius: 0; /* Remove rounded corners */
+    width: auto; /* Allow natural text width */
+    max-width: none; /* Remove width restriction */
+    box-shadow: none; /* Remove the button-like shadow */
+    display: flex; /* Ensures icons and text align properly */
+    align-items: center; /* Vertically align icon & text */
+    gap: 10px; /* Add spacing between icon and text */
 }
 
 /* Contact Form */
