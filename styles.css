@@ -421,24 +421,33 @@ footer a:hover {
     display: inline-block;
 }
 
+.footer-social-section {
+    text-align: center;
+    padding: 10px 0;
+    background: #800000; /* Match site theme */
+    color: white;
+}
+
+/* Flex container to keep text & icons on same line */
+.footer-social-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and icons */
+}
+
+.footer-social-container h3 {
+    margin: 0;
+    font-size: 18px; /* Adjust text size */
+    font-weight: 600;
+}
+
 .social-icon {
-    width: 24px; /* Adjust size as needed */
-    height: auto;
+    width: 20px; /* Small size */
+    height: 20px;
     transition: transform 0.2s ease-in-out;
 }
 
 .social-icon:hover {
     transform: scale(1.1); /* Slight zoom effect */
-}
-
-/* Only for Option 2: Separate Social Section */
-.footer-social-section {
-    text-align: center;
-    padding: 15px 0;
-    background: #E0E0E0;
-    color: white;
-}
-
-.footer-social-section h3 {
-    margin-bottom: 10px;
 }
