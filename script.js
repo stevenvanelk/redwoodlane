@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.error("Error: #year element not found in DOM.");
     }
+
+    //Prevents the "squish effect" by making the page visible after everything is ready
+    document.documentElement.classList.add("loaded");
 });
-
-
