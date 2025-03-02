@@ -108,6 +108,10 @@ nav {
     font-size: 28px;
     cursor: pointer;
     color: white;
+    position: absolute;
+    right: 30px; /* Push it to the right */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Text Styling */
@@ -242,6 +246,7 @@ button:hover {
 
     .menu-toggle {
         display: block;
+        right: 20px;
         font-size: 28px;
         cursor: pointer;
         color: white;
