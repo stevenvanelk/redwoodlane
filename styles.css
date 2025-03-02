@@ -32,18 +32,17 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adds space between the logo and text */
+    gap: 20px; /* Adds space between the logo and text */
 }
 
 .logo {
-    height: 80px; /* Adjust as needed */
-    width: 80px;  /* Keeps aspect ratio */
+    height: 50px; /* Adjust as needed */
+    width: 50px;  /* Keeps aspect ratio */
 }
 
 header h2 {
     color: white;
     margin: 0;
-    font-size: 24px;
 }
 
 header nav a {
