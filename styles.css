@@ -402,15 +402,6 @@ footer a:hover {
     text-decoration: underline; /* Optional hover effect */
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: linear-gradient(to bottom, #990000, #4d0000);
-    text-align: center;
-}
-
 .footer-social-links {
     display: flex;
     justify-content: center;
@@ -434,7 +425,8 @@ footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Space between text and icons */
+    gap: 10px;
+    vertical-align: middle;
 }
 
 .footer-social-container h3 {
@@ -452,4 +444,14 @@ footer a:hover {
 
 .social-icon:hover {
     transform: scale(1.1); /* Slight zoom effect */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #990000, #4d0000);
+    text-align: center;
 }
