@@ -311,6 +311,10 @@ button:hover {
     text-align: left;
 }
 
+.about-text p {
+    text-align: left;
+}
+
 .about-image {
     width: 25%;
     text-align: center;
@@ -324,6 +328,10 @@ button:hover {
 .certifications {
     list-style: none;
     padding: 0;
+    text-align: center;
+}
+
+.certifications ul {
     text-align: center;
 }
 
