@@ -453,8 +453,3 @@ footer a:hover {
 .social-icon:hover {
     transform: scale(1.1); /* Slight zoom effect */
 }
-
-.footer-content {
-    text-align: center;
-    padding: 10px 20px;
-}
