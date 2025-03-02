@@ -133,13 +133,18 @@ nav {
 }
 
 .nav-links {
-    list-style: none;
-    display: flex; /* Ensure links are visible on desktop */
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-    white-space: nowrap;
-    margin-left: auto;
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 10px;
+    top: 75px;
+    width: 200px;
+    background: #800000;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 9999;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .nav-links.nav-active {
@@ -282,7 +287,7 @@ button:hover {
 @media screen and (max-width: 768px) {
     /* Navigation */
     .menu-toggle {
-        display: block; /* Ensure hamburger is visible */
+        display: block !important; /* Ensure hamburger is visible */
         position: absolute;
         top: 50%;
         right: 20px;
@@ -294,24 +299,27 @@ button:hover {
     }
     
     .nav-links {
+        display: none !important; /* Ensures it stays hidden until toggled */
+        flex-direction: column;
+        align-items: center;
         position: absolute;
-        top: 75px; /* Below header */
+        top: 75px;
         right: 10px;
         width: 200px;
         background: #800000;
         padding: 10px 0;
         border-radius: 5px;
-        z-index: 9999 !important; /* Ensures it's above hero */
-        visibility: hidden; /* Use visibility instead of display */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
         opacity: 0;
+        visibility: hidden;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
 
     .nav-links.nav-active {
         display: flex !important;
-        flex-direction: column;
-        visibility: visible !important;
         opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .nav-links li {
