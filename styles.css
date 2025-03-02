@@ -215,12 +215,23 @@ button:hover {
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
     /* Navigation */
+    .menu-toggle {
+        display: block; /* Ensure hamburger is visible */
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+        z-index: 1100;
+    }
+    
     .nav-links {
         display: none; /* Hidden by default */
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 60px; /* Adjust based on your header height */
+        top: 75px; /* Adjust based on your header height */
         right: 10px;
         background: #800000;
         width: 200px; /* Adjust width */
@@ -251,17 +262,6 @@ button:hover {
         display: block;
         width: 100%;
         padding: 10px;
-    }
-
-    .menu-toggle {
-        display: block; /* Ensure hamburger is visible */
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        font-size: 28px;
-        cursor: pointer;
-        color: white;
-        z-index: 1100;
     }
 
     /* Make containers more mobile-friendly */
