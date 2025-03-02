@@ -418,22 +418,26 @@ footer a:hover {
 
 .footer-social-container h3 {
     margin: 0;
-    font-size: 18px; /* Adjust text size */
-    font-weight: 600;
+    font-size: 18px;
+    align-items: center;
+    margin: 0;
+    font-weight: 500;
+}
+
+.social-icon {
+    width: 18px; /* Small size */
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect */
 }
 
 .footer-content {
     text-align: center;
     padding: 10px 20px;
     background: linear-gradient(to bottom, #990000, #4d0000);
-}
-
-.social-icon {
-    width: 16px; /* Small size */
-    height: 16px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.social-icon:hover {
-    transform: scale(1.1); /* Slight zoom effect */
 }
