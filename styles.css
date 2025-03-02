@@ -68,6 +68,7 @@ header h2 {
 nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -80,6 +81,7 @@ nav {
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
+    margin-left: auto;
 }
 
 .nav-links li {
@@ -218,11 +220,15 @@ button:hover {
         width: 100%;
         position: absolute;
         top: 75px;
-        left: 0;
+        right: 0;
         background: #800000;
         text-align: center;
         padding: 10px 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.nav-active {
+        display: flex; /* Shows the menu when toggled */
     }
 
     .nav-links li {
