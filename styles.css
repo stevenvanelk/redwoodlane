@@ -402,17 +402,6 @@ footer a:hover {
     text-decoration: underline; /* Optional hover effect */
 }
 
-.footer-social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.footer-social-links a {
-    display: inline-block;
-}
-
 .footer-social-section {
     text-align: center;
     padding: 10px 0;
