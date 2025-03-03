@@ -231,7 +231,7 @@ p {
 
 .services li {
     font-size: 18px;
-    text-align: left; /* Align text left instead of center */
+    text-align: center; /* Align text left instead of center */
     background: none; /* Remove background color */
     padding: 5px 0; /* Reduce padding */
     border-radius: 0; /* Remove rounded corners */
