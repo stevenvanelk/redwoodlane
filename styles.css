@@ -71,6 +71,7 @@ html.loaded {
     font-size: 36px;
     margin-bottom: 10px;
     color: white;
+    text-transform: uppercase;
 }
 
 .hero-text p {
@@ -137,7 +138,8 @@ header {
 header h2 {
     color: white;
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
+    text-transform: uppercase;
 }
 
 /* Navigation Styling */
@@ -198,6 +200,7 @@ h1 {
     font-size: 40px;
     text-align: center;
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -205,6 +208,7 @@ h2 {
     font-size: 28px;
     margin-bottom: 10px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 p {
@@ -347,10 +351,12 @@ button:hover {
 
     h1 {
         font-size: 30px;
+        text-transform: uppercase;
     }
 
     h2 {
         font-size: 24px;
+        text-transform: uppercase;
     }
 
     .hero {
@@ -479,6 +485,7 @@ footer a:hover {
     align-items: center;
     margin: 0;
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 .social-icon {
