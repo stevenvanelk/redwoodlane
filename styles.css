@@ -216,7 +216,7 @@ p {
 
 /* Services Section */
 .services {
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -226,22 +226,18 @@ p {
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Centers the whole list */
 }
 
 .services li {
     font-size: 18px;
-    text-align: center; /* Align text left instead of center */
-    background: none; /* Remove background color */
-    padding: 5px 0; /* Reduce padding */
-    border-radius: 0; /* Remove rounded corners */
-    width: auto; /* Allow natural text width */
-    max-width: none; /* Remove width restriction */
-    box-shadow: none; /* Remove the button-like shadow */
-    display: flex; /* Ensures icons and text align properly */
-    align-items: center; /* Vertically align icon & text */
-    gap: 10px; /* Add spacing between icon and text */
-    line-height: 1.6;
+    display: flex;
+    align-items: center; /* Keeps icon and text aligned */
+    gap: 10px; /* Adds space between icon and text */
+    text-align: left; /* Ensures text is properly aligned */
+    width: 100%; /* Ensures list items don't stretch too far */
+    max-width: 500px; /* Keeps a reasonable width on larger screens */
+    justify-content: center; /* Keeps items centered */
 }
 
 .services li i {
