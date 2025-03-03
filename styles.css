@@ -509,3 +509,40 @@ footer a:hover {
     background: linear-gradient(to bottom, #990000, #4d0000);
     box-sizing: border-box;
 }
+
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+#cookie-banner p {
+    display: inline;
+    margin-right: 10px;
+}
+
+#cookie-banner a {
+    color: #f8d7da;
+    text-decoration: underline;
+}
+
+#cookie-banner button {
+    background: #800000;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#cookie-banner button:hover {
+    background: #a00000;
+}
