@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /js/
+Disallow: /css/
+Disallow: /404.html
+Sitemap: https://redwoodlane.net/sitemap.xml
