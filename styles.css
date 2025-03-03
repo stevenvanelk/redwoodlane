@@ -4,6 +4,7 @@
 html {
     visibility: hidden;
     opacity: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
     visibility: visible; /* Ensures body is visible */
     opacity: 1;
     transition: opacity 0.2s ease-in;
+    overflow-x: hidden;
 }
 
 /* Ensure html becomes visible once the styles are loaded */
