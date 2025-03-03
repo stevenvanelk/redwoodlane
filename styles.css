@@ -347,6 +347,25 @@ button:hover {
     h2 {
         font-size: 24px;
     }
+
+    .hero {
+        width: 100vw; /* Ensures full viewport width */
+    }
+
+    .hero-img {
+        width: 100vw;
+        height: auto;
+    }
+
+    .hero-text {
+        width: 90%; /* Keeps text responsive */
+        max-width: 100%; 
+    }
+
+    .hero-content {
+        width: 100%; /* Ensures full width for content */
+        max-width: 90%; /* Keeps some spacing on mobile */
+    }
 }
 
 /* About Me Section Layout */
