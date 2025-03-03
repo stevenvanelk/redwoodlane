@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Redwood Lane</title>
+    <meta name="description" content="Get in touch with Redwood Lane for expert Salesforce consulting services.">
+    <meta name="keywords" content="Salesforce, Consulting, Contact, Admin, Redwood Lane">
+    <meta name="author" content="Redwood Lane">
+    <<meta property="og:title" content="Contact Redwood Lane: Salesforce Consulting">
+    <meta property="og:description" content="Get in touch with Redwood Lane for Salesforce consulting, automation, integrations, and custom development solutions.">
+    <meta property="og:image" content="https://redwoodlane.net/images/global/RL-Sharing.webp">
+    <meta property="og:url" content="https://redwoodlane.net/contact.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Redwood Lane: Salesforce Consulting">
+    <meta name="twitter:description" content="Get in touch with Redwood Lane for Salesforce consulting, automation, integrations, and custom development solutions.">
+    <meta name="twitter:image" content="https://redwoodlane.net/images/global/RL-Sharing.webp">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/global/favicon.ico">
+    <script src="js/cookie-banner.js"></script>
+
+</head>
+<body>
+    <div id="cookie-banner">
+        <p>
+            This site uses cookies and Google Analytics to improve user experience. By clicking "Accept," you consent to
+            tracking as outlined in our
+            <a href="privacy-policy.html">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies">Accept</button>
+        <button id="decline-cookies">Decline</button>
+    </div>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/global/RL-logo.png" alt="Redwood Lane Logo" class="logo">
+            </a>
+            <h2>Redwood Lane</h2>
+        </div>
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <img src="images/contact/contact-hero.webp" alt="Contact Redwood Lane" class="hero-img">
+        <div class="hero-text">
+            <div class="hero-content">
+                <h1>Get in Touch</h1>
+                <p>Have a question or need Salesforce consulting? Let's connect.</p>
+            </div>
+        </div>
+    </div>
+    <div class="contact-container">
+        <h1>Contact</h1>
+        <p>Want to work together? Have a question? Fill out the form below and I'll get back to you as soon as possible.</p>
+        <form action="https://formsubmit.co/f7a9ab0f0afd2b922c29733dd880fe04" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="contact-button">Send Message</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-social-section">
+            <div class="footer-social-container">
+                <h3>Connect with Me:</h3>
+                <a href="https://www.linkedin.com/in/stevenvanelk/" target="_blank">
+                    <img src="images/footer/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://www.salesforce.com/trailblazer/srvanelk" target="_blank">
+                    <img src="images/footer/trailblazer.png" alt="Trailblazer" class="social-icon">
+                </a>
+                <a href="https://social.lol/@stevenvanelk" target="_blank">
+                    <img src="images/footer/mastodon.png" alt="Mastodon" class="social-icon">
+                </a>
+            </div>
+        </div>
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Redwood Lane | <a href="contact.html">Contact</a></p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
