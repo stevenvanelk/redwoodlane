@@ -349,22 +349,31 @@ button:hover {
     }
 
     .hero {
-        width: 100vw; /* Ensures full viewport width */
+        width: 100vw;
+        height: 400px; /* Keeps the same height */
+        overflow: hidden; /* Prevents weird scaling issues */
     }
 
     .hero-img {
-        width: 100vw;
-        height: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image scales correctly without distorting */
     }
 
     .hero-text {
-        width: 90%; /* Keeps text responsive */
-        max-width: 100%; 
+        width: 100%;
+        max-width: 90%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
 
     .hero-content {
-        width: 100%; /* Ensures full width for content */
-        max-width: 90%; /* Keeps some spacing on mobile */
+        max-width: 90%;
+        padding: 15px; /* Slightly reduces padding for better spacing */
+        background: rgba(0, 0, 0, 0.6); 
+        border-radius: 10px;
     }
 }
 
