@@ -1,5 +1,4 @@
 /* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bentham&display=swap');
 
 
@@ -12,7 +11,7 @@ html {
 body {
     margin: 0;
     padding-top: 75px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Bentham', serif;
     background-color: white; /* Removes gray */
     color: #333;
     line-height: 1.7;
