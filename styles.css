@@ -547,3 +547,21 @@ footer a:hover {
 #cookie-banner button:hover {
     background: #a00000;
 }
+
+.certification-images {
+    display: flex;
+    /* Makes images align in a row */
+    justify-content: center;
+    /* Centers the images horizontally */
+    gap: 15px;
+    /* Adds spacing between images */
+    margin-bottom: 15px;
+    /* Adds space below the images */
+}
+
+.certification-images img {
+    width: 50px;
+    /* Adjusts size */
+    height: auto;
+    /* Keeps aspect ratio */
+}
