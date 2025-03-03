@@ -226,7 +226,7 @@ p {
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .services li {
@@ -241,6 +241,7 @@ p {
     display: flex; /* Ensures icons and text align properly */
     align-items: center; /* Vertically align icon & text */
     gap: 10px; /* Add spacing between icon and text */
+    line-height: 1.6;
 }
 
 /* Contact Form */
