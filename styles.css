@@ -244,6 +244,12 @@ p {
     line-height: 1.6;
 }
 
+.services li i {
+    flex-shrink: 0; /* Prevents the icon from resizing */
+    font-size: 20px; /* Adjust icon size */
+    color: #b30000; /* Matches your theme */
+}
+
 /* Contact Form */
 form {
     margin-top: 20px;
