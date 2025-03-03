@@ -30,7 +30,7 @@ html.loaded {
 /* Container: Keeps content centered, but not boxed */
 .container {
     max-width: 800px;
-    margin: 40px auto;
+    margin: 0;
     padding: 40px 20px;
 }
 
