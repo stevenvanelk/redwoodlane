@@ -548,8 +548,8 @@ footer a:hover {
     background: #a00000;
 }
 
-privacy-banner {
-    text-color: white;
+.privacy-banner {
+    color: white;
 }
 
 .certification-images {
