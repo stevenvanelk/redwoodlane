@@ -527,6 +527,7 @@ footer a:hover {
 #cookie-banner p {
     display: inline;
     margin-right: 10px;
+    color: white !important;
 }
 
 #cookie-banner a {
