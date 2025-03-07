@@ -522,16 +522,21 @@ footer a:hover {
     padding: 15px;
     font-size: 14px;
     z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #cookie-banner p {
-    display: inline;
+    display: block;
     margin-right: 10px;
     color: white !important;
+    flex: 1 1 100%;
 }
 
 #cookie-banner a {
-    color: #f8d7da;
+    color: white !important;
     text-decoration: underline;
 }
 
@@ -540,9 +545,11 @@ footer a:hover {
     color: white;
     border: none;
     padding: 8px 15px;
-    margin-left: 10px;
+    margin: 5px;
     cursor: pointer;
     border-radius: 5px;
+    flex: 1 1 auto; 
+    min-width: 100px; 
 }
 
 #cookie-banner button:hover {
