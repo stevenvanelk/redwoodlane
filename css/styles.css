@@ -552,6 +552,10 @@ footer a:hover {
     color: white;
 }
 
+.privacy-banner p {
+    color: white;
+}
+
 .certification-images {
     display: flex;
     /* Makes images align in a row */
