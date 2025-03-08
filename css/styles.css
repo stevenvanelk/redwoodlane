@@ -481,7 +481,7 @@ footer a:hover {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    background: #B0B0B0; /* Slightly darker gray for better contrast */
+    background: #666666; /* Slightly darker gray for better contrast */
     color: white;
     box-sizing: border-box;
 }
