@@ -8,6 +8,14 @@ html {
     overflow-y: scroll;
 }
 
+@font-face {
+    font-family: 'Bentham';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/Bentham-Regular.ttf') format('truetype');
+}
+
 body {
     margin: 0;
     padding-top: 75px;
