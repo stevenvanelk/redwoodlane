@@ -1,6 +1,3 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Bentham&display=swap');
-
 html {
     visibility: hidden;
     opacity: 0;
@@ -9,6 +6,14 @@ html {
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+}
+
+@font-face {
+    font-family: 'Bentham';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/bentham-v19-latin-regular.woff2') format('woff2');
 }
 
 body {
