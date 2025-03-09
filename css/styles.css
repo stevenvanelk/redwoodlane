@@ -13,7 +13,7 @@ html {
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/assets/fonts/bentham-v19-latin-regular.woff2') format('woff2');
+    src: url('/assets/fonts/Bentham-Regular.ttf') format('truetype');
 }
 
 body {
