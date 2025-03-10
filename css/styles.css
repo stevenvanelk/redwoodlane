@@ -1,11 +1,13 @@
+/* Remove forced hidden visibility */
 html {
-    visibility: hidden;
-    opacity: 0;
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+    opacity: 1;
+    /* No need for hidden */
+    transition: opacity 0.2s ease-in;
 }
 
 @font-face {
