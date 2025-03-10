@@ -255,7 +255,7 @@ p {
     font-size: 18px;
     display: flex;
     align-items: center; /* Keeps icon and text aligned */
-    gap: 10px; /* Adds space between icon and text */
+    gap: 8px; /* Adds space between icon and text */
     text-align: left; /* Ensures text is properly aligned */
     width: 100%; /* Ensures list items don't stretch too far */
     max-width: 500px; /* Keeps a reasonable width on larger screens */
