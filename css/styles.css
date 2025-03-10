@@ -268,6 +268,15 @@ p {
     color: #b30000; /* Matches your theme */
 }
 
+.services svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    font-size: 20px;
+    vertical-align: middle;
+    fill: #b30000;
+}
+
 /* Contact Form */
 form {
     margin-top: 20px;
