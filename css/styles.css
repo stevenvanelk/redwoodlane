@@ -14,7 +14,7 @@ html {
     font-family: 'Bentham';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
+    font-display: optional;
     src: url('/assets/fonts/Bentham-Regular.ttf') format('truetype');
 }
 
