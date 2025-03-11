@@ -21,7 +21,7 @@ html {
 body {
     margin: 0;
     padding-top: 75px;
-    font-family: 'Bentham', serif;
+    font-family: 'Bentham', Georgia, 'Times New Roman', serif;
     background-color: white; /* Removes gray */
     color: #333;
     line-height: 1.7;
