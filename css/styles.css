@@ -525,6 +525,7 @@ footer a:hover {
     display: inline-block;
     vertical-align: middle;
     fill: white;
+    color: white;
     transition: transform 0.2s ease-in-out;
 }
 
