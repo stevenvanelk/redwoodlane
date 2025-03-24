@@ -149,10 +149,18 @@ header {
     gap: 15px;
 }
 
+.logo-container h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     height: 50px;
     width: auto;
-    max-width: 100%;
+    display: block;
 }
 
 header h2 {
