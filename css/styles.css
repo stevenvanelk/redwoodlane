@@ -481,7 +481,7 @@ button:hover {
 
 /* Footer Styling */
 footer {
-    height: 50px;
+    height: 75px;
     width: 100%;
     text-align: center;
     color: white;
@@ -491,6 +491,7 @@ footer {
     left: 0;
     box-sizing: border-box;
     padding: 0;
+    display: flex;
 }
 
 footer p, footer a {
@@ -510,6 +511,7 @@ footer a:hover {
     background: #666666; /* Slightly darker gray for better contrast */
     color: white;
     box-sizing: border-box;
+    display: flex;
 }
 
 .footer-social-container {
@@ -562,6 +564,8 @@ footer a:hover {
     width: 100%;
     background: linear-gradient(to bottom, #990000, #4d0000);
     box-sizing: border-box;
+    height: 25px;
+    display: flex;
 }
 
 .footer-content p {
