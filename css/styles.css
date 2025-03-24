@@ -481,7 +481,7 @@ button:hover {
 
 /* Footer Styling */
 footer {
-    height: 85px;
+    height: 100px;
     width: 100%;
     text-align: center;
     color: white;
@@ -505,8 +505,8 @@ footer a:hover {
 .footer-social-section {
     text-align: center;
     width: 100%;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     background: #666666; /* Slightly darker gray for better contrast */
     color: white;
     box-sizing: border-box;
@@ -558,12 +558,11 @@ footer a:hover {
 
 .footer-content {
     text-align: center;
-    padding: 5px 0;
     width: 100%;
     background: linear-gradient(to bottom, #990000, #4d0000);
     box-sizing: border-box;
-    height: 50px;
-    line-height: 50px;
+    height: 60px;
+    line-height: 60px;
 }
 
 .footer-content p {
