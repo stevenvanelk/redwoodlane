@@ -252,7 +252,7 @@
 
 .contact-container .zf-name .zf-tempContDiv span{margin-bottom:5px; margin-left: 4%;}
 .contact-container .zf-name .zf-tempContDiv span.last{ margin-right:0;}
-.contact-container .zf-name .zf-tempContDiv span label{ display: block;padding-top:3px;}
+.contact-container .zf-name .zf-tempContDiv span label{ display: block;padding-top:3px;text-align: left !important;}
 .contact-container .zf-name .zf-tempContDiv input[type="text"] {width:100%;}
 
 
