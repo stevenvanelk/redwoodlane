@@ -1,5 +1,14 @@
 /* $Id: $ */
 @charset "UTF-8";
+
+@font-face {
+	font-family: 'Bentham';
+	font-style: normal;
+	font-weight: 400;
+	font-display: fallback;
+	src: url('/assets/fonts/Bentham-Regular.ttf') format('truetype');
+}
+
 .contact-container body, .contact-container div, .contact-container span, .contact-container applet, .contact-container object, .contact-container iframe, .contact-container h1, .contact-container h2, .contact-container h3, .contact-container h4, .contact-container h5, .contact-container h6, .contact-container p, .contact-container blockquote, .contact-container pre, .contact-container a, .contact-container abbr, .contact-container acronym, .contact-container address, .contact-container big, .contact-container cite, .contact-container code, .contact-container del, .contact-container dfn, .contact-container em, .contact-container img, .contact-container ins, .contact-container kbd, .contact-container q, .contact-container s, .contact-container samp, .contact-container small, .contact-container strike, .contact-container strong, .contact-container sub, .contact-container sup, .contact-container tt, .contact-container var, .contact-container b, .contact-container u, .contact-container i, .contact-container center, .contact-container dl, .contact-container dt, .contact-container dd, .contact-container ol, .contact-container ul, .contact-container li, .contact-container fieldset, .contact-container form, .contact-container label, .contact-container legend, .contact-container caption, .contact-container article, .contact-container aside, .contact-container canvas, .contact-container details, .contact-container embed, .contact-container figure, .contact-container figcaption, .contact-container footer, .contact-container header, .contact-container hgroup, .contact-container menu, .contact-container nav, .contact-container output, .contact-container ruby, .contact-container section, .contact-container summary, .contact-container time, .contact-container mark, .contact-container audio, .contact-container video {
 	margin: 0;
 	padding: 0;
@@ -11,7 +20,7 @@
 .contact-container body {
 	background-attachment: fixed;
 	color: #444444;
-	font: 75%/1.3 Arial, Helvetica, sans-serif;
+	font: 75%/1.3 'Bentham', Georgia, 'Times New Roman', serif;
 	margin: 0 auto;
 }
 
@@ -46,7 +55,7 @@
 	list-style: none outside none;
 }
 .contact-container .zf-normalText {
-	font-size:13px;
+	font-size:16px;
 	line-height:1.5;
 }
 .contact-container .zf-smallText {
@@ -54,7 +63,7 @@
 	font-weight:normal;
 }
 .contact-container .zf-smallHeading {
-	font-size:18px;
+	font-size:20px;
 }
 .contact-container .zf-heading {
 	font-size:2em;
@@ -116,7 +125,7 @@
 	-moz-border-radius:2px;	
 	border-radius:2px;	
 	padding:5px;
-	font-size:13px;	
+	font-size:16px;	
 }
 
 .contact-container .zf-tempContDiv input[type="text"]:hover, .contact-container .zf-tempContDiv textarea:hover{	
@@ -135,7 +144,10 @@
 .contact-container .arrangeAddress .zf-addrCont  span.zf-addtwo{ width: 99% !important;float: none !important;} 		
 /**********Error Message***********/	
 .contact-container .zf-errorMessage {
-	font:12px Arial, Helvetica, sans-serif;
+	font:12px 'Bentham',
+		Georgia,
+		'Times New Roman',
+		serif;
 	color:#ff0000;
 	padding-top:5px;
 }
@@ -146,7 +158,7 @@
 	font-weight: normal;
 	margin-left:0px;
 	padding: 0;
-	font-size:13px !important;
+	font-size:16px !important;
 }
 
 /**********instruction Message***********/
@@ -154,7 +166,7 @@
 	color:#939393;
 	font-style:italic;
 	margin-top:3px;
-	font-size:12px;
+	font-size:14px;
 	overflow:visible !important;
 	word-break: break-all;
 	margin-bottom: 3px;
@@ -175,8 +187,7 @@
 }
 
 .contact-container .zf-tempHeadContBdr {
-	background: #494949;
-	border-bottom:1px solid #EAEAEA;
+	background: white;
 	margin: 0;
 	padding:10px 25px;
 	-webkit-border-radius:2px 2px 0 0;
@@ -184,14 +195,14 @@
 	border-radius:2px 2px 0 0;
 }
 .contact-container .zf-tempHeadContBdr .zf-frmTitle {
-	color: #FFFFFF;
+	color: #b30000;
 	margin: 0;
 	padding: 0;
 	font-size:2em;
 }
 .contact-container .zf-tempHeadContBdr .zf-frmDesc {
-	color: #DDDDDD;
-	font-size: 14px;
+	color: black;
+	font-size: 16px;
 	font-weight: normal;
 	margin: 0;
 	padding: 0;
@@ -218,14 +229,14 @@
 
 .contact-container .zf-tempFrmWrapper .zf-labelName {
 	font-weight:bold;
-	font-size:13px;
-	color:#444;
+	font-size:16px;
+	color: black;
 }
 
 .contact-container .zf-form-sBox{ 
 	padding:4px; 
 	border:1px solid #e5e5e5; 
-	font-size:13px;
+	font-size:16px;
 	}
 
 .contact-container .zf-name .zf-tempContDiv span, .contact-container .zf-phone .zf-tempContDiv span, .contact-container .zf-time .zf-tempContDiv span{
@@ -240,7 +251,7 @@
 
 
 .contact-container .zf-phone .zf-tempContDiv span label, .contact-container .zf-date .zf-tempContDiv span label, .contact-container .zf-time .zf-tempContDiv span label, .contact-container .zf-address .zf-tempContDiv span label, .contact-container .zf-geolocation .zf-tempContDiv span label, .contact-container .zf-name .zf-tempContDiv span label{ 
-	font-size:11px; 
+	font-size:13px; 
 	padding-top:3px;
 	}
 .contact-container .zf-phone .zf-tempContDiv label, .contact-container .zf-date .zf-tempContDiv label, .contact-container .zf-time .zf-tempContDiv label, .contact-container .zf-address .zf-tempContDiv label, .contact-container .zf-name .zf-tempContDiv span label {
@@ -264,7 +275,7 @@
 	padding-top:3px;
 	}
 .contact-container .zf-currency .zf-tempContDiv .zf-symbol {
-	font-size: 14px;
+	font-size: 16px;
     margin-left:5px;
     margin-top: 4px;
 	width:auto;
@@ -345,7 +356,7 @@
 	background:#fff;
 	}
 .contact-container .zf-signContainer a{
-    font-size: 11px;
+    font-size: 13px;
     text-decoration: underline;
     display: block;
 	}	
@@ -355,7 +366,7 @@
 	font-size:22px; 
 	color:#000; 
 	font-weight:500; 
-	font-family:'Open Sans',"Lucida Grande",Arial,Helvetica,sans-serif; 
+	font-family: 'Bentham', Georgia, 'Times New Roman', serif;
 	padding-bottom:10px;
 	}
 .contact-container .zf-section p{ 
@@ -465,7 +476,7 @@
 	display: block;
 	margin: 0 0 0 20px;
 	padding:0;
-	font-size:13px;
+	font-size:16px;
 }
 .contact-container .zf-twoColumns .zf-tempContDiv span {
 	margin: 0 5px 13px 0;
@@ -524,7 +535,7 @@
 	padding: 0 0 5px;
 }
 
-.contact-container .zf-mSelect select{ font-size:13px;}	
+.contact-container .zf-mSelect select{ font-size:16px;}	
 
 .contact-container .zf-fmFooter {
 	margin:0;
@@ -532,27 +543,22 @@
 	text-align:center;
 }
 
-.contact-container .zf-fmFooter .zf-submitColor{ font-size:14px; padding:4px 10px;}
+.contact-container .zf-fmFooter .zf-submitColor{ font-size:16px; padding:4px 10px;}
 
 .contact-container .zf-submitColor{
-	color: #fff;
-	border:1px solid;
-	border-color: #2F9EEC #1988D6 #1988D6;
+	color: white;
 	background: #2596e6;
-	background: -webkit-gradient(linear, left top, left bottom, from(#2f9eec), to(#1988d6));
-	background: -moz-linear-gradient(top,  #2f9eec,  #1988d6);
+	background: rgb(128,0,0);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f9eec', endColorstr='#1988d6');
 	-moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.15);
 	box-shadow:0 1px 2px rgba(0, 0, 0, 0.15);
 	text-shadow:0 1px 0 rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
 	}
 	
 .contact-container .zf-submitColor:hover{
-	background: #1988d6;
-	background: -webkit-gradient(linear, left top, left bottom, from(#1988d6), to(#1988d6));
-	background: -moz-linear-gradient(top,  #1988d6,  #1988d6);
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#1988d6', endColorstr='#1988d6');
+	background: rgb(179,0,0);
 	}	   	
 
 /****************Field Small/Medium/Large Starts Here****************/
@@ -703,7 +709,7 @@
 	display:block;
 }
 .contact-container .zf-leftAlign .zf-tempFrmWrapper .zf-labelName {
-	float:left;
+	float:left !important;
 	width:30%;
 	line-height:20px;
 	margin-right:15px;
@@ -720,7 +726,7 @@
 	display:block;
 }
 .contact-container .zf-rightAlign .zf-tempFrmWrapper .zf-labelName {
-	float:left;
+	float:left !important;
 	width:30%;
 	line-height: 20px;
 	text-align:right;
@@ -729,12 +735,12 @@
 .contact-container .zf-rightAlign .zf-tempFrmWrapper .zf-tempContDiv {
 	 margin-left: 35%;
 }
-.contact-container .zf-matrixTable{ font-size:13px; overflow-x: scroll;padding-bottom: 15px !important;}
+.contact-container .zf-matrixTable{ font-size:16px; overflow-x: scroll;padding-bottom: 15px !important;}
 .contact-container .zf-matrixTable table th, .zf-matrixTable table td{padding:10px;}
 .contact-container .zf-matrixTable thead th, .zf-matrixTable table td{ text-align:center;}
 .contact-container .zf-matrixTable table td input[type="radio"], .zf-matrixTable table td input[type="checkbox"]{ display:inline-block;}
-.contact-container .zf-matrixTable tbody th{ font-weight:normal;font-size: 13px;text-align: left;}
-.contact-container .zf-matrixTable thead th { font-weight:600;font-size: 13px;}
+.contact-container .zf-matrixTable tbody th{ font-weight:normal;font-size: 16px;text-align: left;}
+.contact-container .zf-matrixTable thead th { font-weight:600;font-size: 16px;}
 
 /****************Form Top Align Starts Here****************/	
 
@@ -743,7 +749,7 @@
 .contact-container .zf-termsContainer .zf-termScrollRemove {border: 1px solid #E1E1E1;padding:10px;  margin-bottom:6px;}
 .contact-container .zf-termsAccept{ margin-top:2px !important;}
 .contact-container .zf-termsAccept input[type="checkbox"]{ margin-top:2px !important; float:left;}
-.contact-container .zf-termsAccept label{ margin-left: 20px;font-size: 13px;float: none;display: block;}
+.contact-container .zf-termsAccept label{ margin-left: 20px;font-size: 16px;float: none;display: block;}
 
 .contact-container .zf-termsWrapper .zf-tempContDiv{ margin-left:0 !important;}
 .contact-container .zf-termsWrapper .zf-labelName{ width:100% !important; text-align:left !important; padding-bottom:8px !important;}
@@ -762,7 +768,7 @@
 .contact-container .zf-phwrapper label {
     display: block;
     color: #888888;
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 2px;
 }
 .contact-container .zf-medium .zf-phonefld input[type="text"], .contact-container .zf-small .zf-phonefld input[type="text"] {
@@ -815,23 +821,29 @@
     -moz-user-select: none;
     color: #058BC2;
     float: left;
-    font: bold 50px Arial,Helvetica,sans-serif;
+    font: bold 50px 'Bentham',
+		Georgia,
+		'Times New Roman',
+		serif;
     margin: -10px 0 0 -30px;
 }
 .contact-container .zf-descFld  blockquote.block_quote {
     background: url("../images/newQuote.gif") no-repeat scroll 12px 10px rgba(0, 0, 0, 0);
     border-left: 3px solid #EFEFEF;
-    font: 13px/20px georgia,Arial,verdana,Helvetica,sans-serif;
+    font: 13px/20px 'Bentham',
+		Georgia,
+		'Times New Roman',
+		serif;
     margin: 15px 3px 15px 15px;
     padding: 10px 10px 10px 40px;
 }
 .contact-container .zf-descFld  body {
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 13px;
+	font-family: 'Bentham', Georgia, 'Times New Roman', serif;
+    font-size: 16px;
     margin: 8px;
 }
 .contact-container .note .noteCont{ overflow:hidden;}
 .contact-container .note .zf-descFld{
 	overflow:hidden;
-	font-size: 13px;
+	font-size: 16px;
 }
