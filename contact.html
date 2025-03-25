@@ -18,8 +18,10 @@
     <meta name="twitter:image" content="https://redwoodlane.net/images/global/RL-Sharing.webp">
     <link rel="preload" href="/assets/fonts/Bentham-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="css/form.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="images/global/favicon.ico">
     <script src="js/cookie-banner.js" defer></script>
+    <script src="js/validation.js" defer></script>
 </head>
 <body>
     <div id="cookie-banner">
@@ -67,15 +69,103 @@
         </div>
     </div>
     <div class="contact-container">
-        <h2>Contact</h2>
-        <p>Want to work together? Have a question? Fill out the form below and I'll get back to you as soon as possible.</p>
-        <form action="https://formsubmit.co/f7a9ab0f0afd2b922c29733dd880fe04" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="contact-button">Send Message</button>
+        <!--<h2>Contact</h2> -->
+        <!-- <p>Want to work together? Have a question? Fill out the form below and I'll get back to you as soon as possible.</p> -->
+        <!-- Zoho Form Start -->        
+        <form
+            action='https://forms.zohopublic.com/redwoodlane1/form/CONTACT/formperma/H7C9B1f-OoPxZni98kpq6EjpUYjQWARAFcDtPBPPD0s/htmlRecords/submit'
+            name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
+            accept-charset='UTF-8' enctype='multipart/form-data' id='form'>
+            <input type="hidden" name="zf_referrer_name" value="">
+            <input type="hidden" name="zf_redirect_url" value="">
+            <input type="hidden" name="zc_gad" value="">
+            <div class="zf-templateWrapper">
+                <ul class="zf-tempHeadBdr">
+                    <li class="zf-tempHeadContBdr">
+                        <h2 class="zf-frmTitle"><em>CONTACT</em></h2>
+                        <p class="zf-frmDesc">Want to work together? Have a question? Fill out the form below and I'll get back
+                            to you as soon as possible.</p>
+                        <div class="zf-clearBoth"></div>
+                    </li>
+                </ul>
+        
+                <div class="zf-subContWrap zf-topAlign">
+                    <ul>
+                        <li class="zf-tempFrmWrapper zf-large">
+                            <label class="zf-labelName">Company <em class="zf-important">*</em></label>
+                            <div class="zf-tempContDiv">
+                                <span><input type="text" name="SingleLine" maxlength="255" /></span>
+                                <p id="SingleLine_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                        </li>
+                        <li class="zf-tempFrmWrapper zf-name zf-namelarge">
+                            <label class="zf-labelName">Name <em class="zf-important">*</em></label>
+                            <div class="zf-tempContDiv zf-twoType">
+                                <div class="zf-nameWrapper">
+                                    <span><input type="text" name="Name_First" maxlength="255" /><label>First
+                                            Name</label></span>
+                                    <span><input type="text" name="Name_Last" maxlength="255" /><label>Last Name</label></span>
+                                </div>
+                                <p id="Name_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                        </li>
+                        <li class="zf-tempFrmWrapper zf-large">
+                            <label class="zf-labelName">Email <em class="zf-important">*</em></label>
+                            <div class="zf-tempContDiv">
+                                <span><input type="text" name="Email" maxlength="255" /></span>
+                                <p id="Email_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                        </li>
+                        <li class="zf-tempFrmWrapper zf-large">
+                            <label class="zf-labelName">Phone</label>
+                            <div class="zf-tempContDiv zf-phonefld">
+                                <div class="zf-phwrapper zf-phNumber">
+                                    <span><input type="text" name="PhoneNumber_countrycode"
+                                            maxlength="20" /><label>Number</label></span>
+                                </div>
+                                <p id="PhoneNumber_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                        </li>
+                        <li class="zf-tempFrmWrapper zf-large">
+                            <label class="zf-labelName">Website</label>
+                            <div class="zf-tempContDiv">
+                                <span><input type="text" name="Website" maxlength="2083" /></span>
+                                <p id="Website_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                        </li>
+                        <li class="zf-tempFrmWrapper zf-large">
+                            <label class="zf-labelName">How Can I Help With Your Salesforce Org?</label>
+                            <div class="zf-tempContDiv zf-mSelect">
+                                <select name="MultipleChoice" multiple>
+                                    <option value="CRM Administration">CRM Administration</option>
+                                    <option value="Process Automation (Flows)">Process Automation (Flows)</option>
+                                    <option value="Custom Development">Custom Development</option>
+                                    <option value="CRM Architecture">CRM Architecture</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <p class="zf-instruction">Select one option and leave a message below with your specific needs
+                                </p>
+                            </div>
+                        </li>
+                        <li class="zf-tempFrmWrapper zf-large">
+                            <label class="zf-labelName">Message <em class="zf-important">*</em></label>
+                            <div class="zf-tempContDiv">
+                                <span><textarea name="MultiLine" maxlength="65535"></textarea></span>
+                                <p id="MultiLine_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        
+                <ul>
+                    <li class="zf-fmFooter">
+                        <button class="zf-submitColor">Submit</button>
+                    </li>
+                </ul>
+            </div>
         </form>
+        <!-- Zoho Form End -->
+
     </div>
     </div>
     <footer>
