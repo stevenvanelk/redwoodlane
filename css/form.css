@@ -13,7 +13,10 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font: inherit;
+	font: 'Bentham',
+		Georgia,
+		'Times New Roman',
+		serif;
 	vertical-align: baseline;
 }
 
