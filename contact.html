@@ -69,8 +69,49 @@
         </div>
     </div>
     <div class="contact-container">
-        <iframe aria-label='CONTACT' frameborder="0" style="height:500px;width:99%;border:none;"
-            src='https://forms.zohopublic.com/redwoodlane1/form/CONTACT/formperma/9RbHyQiFn_rpMlkiQ8J7k2sORy1jx2cHGEAiRDtxw_k'></iframe>
+        <div id="zf_div_9RbHyQiFn_rpMlkiQ8J7k2sORy1jx2cHGEAiRDtxw_k"></div>
+        <script type="text/javascript">(function () {
+                try {
+                    var f = document.createElement("iframe");
+                    f.src = 'https://forms.zohopublic.com/redwoodlane1/form/CONTACT/formperma/9RbHyQiFn_rpMlkiQ8J7k2sORy1jx2cHGEAiRDtxw_k?zf_rszfm=1';
+                    f.style.border = "none";
+                    f.style.height = "1667px";
+                    f.style.width = "90%";
+                    f.style.transition = "all 0.5s ease";
+                    f.setAttribute("aria-label", 'CONTACT');
+
+                    var d = document.getElementById("zf_div_9RbHyQiFn_rpMlkiQ8J7k2sORy1jx2cHGEAiRDtxw_k");
+                    d.appendChild(f);
+                    window.addEventListener('message', function () {
+                        var evntData = event.data;
+                        if (evntData && evntData.constructor == String) {
+                            var zf_ifrm_data = evntData.split("|");
+                            if (zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3) {
+                                var zf_perma = zf_ifrm_data[0];
+                                var zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
+                                var iframe = document.getElementById("zf_div_9RbHyQiFn_rpMlkiQ8J7k2sORy1jx2cHGEAiRDtxw_k").getElementsByTagName("iframe")[0];
+                                if ((iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0) {
+                                    var prevIframeHeight = iframe.style.height;
+                                    var zf_tout = false;
+                                    if (zf_ifrm_data.length == 3) {
+                                        iframe.scrollIntoView();
+                                        zf_tout = true;
+                                    }
+                                    if (prevIframeHeight != zf_ifrm_ht_nw) {
+                                        if (zf_tout) {
+                                            setTimeout(function () {
+                                                iframe.style.height = zf_ifrm_ht_nw;
+                                            }, 500);
+                                        } else {
+                                            iframe.style.height = zf_ifrm_ht_nw;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }, false);
+                } catch (e) { }
+            })();</script>
         <!--<h2>Contact</h2> -->
         <!-- <p>Want to work together? Have a question? Fill out the form below and I'll get back to you as soon as possible.</p> -->
         <!-- Zoho Form Start -->        
