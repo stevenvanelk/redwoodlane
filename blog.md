@@ -4,6 +4,9 @@ title: Blog
 permalink: /blog/
 pagination:
   enabled: true
+  collection: posts
+  per_page: 5
+  permalink: /blog/page/:num/
 ---
 <h1>Redwood Lane Blog</h1>
 <div class="blog-wrapper">
