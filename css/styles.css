@@ -11,17 +11,17 @@ html {
 }
 
 @font-face {
-    font-family: 'Bentham';
+    font-family: "Bentham";
+    src: url("/assets/fonts/Bentham.otf") format("opentype");
+    font-weight: normal;
     font-style: normal;
-    font-weight: 400;
-    font-display: fallback;
-    src: url('/assets/fonts/Bentham-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 
 body {
     margin: 0;
     padding-top: 75px;
-    font-family: 'Bentham', Georgia, 'Times New Roman', serif;
+    font-family: "Bentham", Georgia, 'Times New Roman', serif;
     background-color: white; /* Removes gray */
     color: #333;
     line-height: 1.7;
@@ -35,9 +35,31 @@ body {
     min-height: 100vh;
 }
 
+h1, h2 {
+    font-family: "Bentham", Georgia, 'Times New Roman', serif;
+}
+
 .page-wrapper {
     flex: 1;
     /* Pushes footer down */
+}
+
+.privacy-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.privacy-wrapper ul {
+    padding-left: 0;
+    text-align: left; 
+}
+
+.privacy-wrapper p {
+    padding-left: 0;
+    text-align: left;
 }
 
 * {
@@ -65,6 +87,18 @@ html.loaded {
     margin: 40px auto; /* Centers it on the page */
     padding: 40px 20px; /* Adds spacing inside the container */
     text-align: center;
+}
+
+.contact-container ul {
+    list-style-type: none;
+}
+
+.contact-container li {
+    list-style: none; 
+}
+
+#contact-content ul {
+    list-style: none;
 }
 
 /* Hero Section */
@@ -99,6 +133,9 @@ html.loaded {
     margin-bottom: 10px;
     color: white;
     text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .hero-text p {
@@ -164,6 +201,9 @@ header {
     line-height: 1;
     display: flex;
     align-items: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .logo {
@@ -177,6 +217,9 @@ header h2 {
     margin: 0;
     font-size: 28px;
     text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* Navigation Styling */
@@ -239,6 +282,9 @@ h1 {
     text-align: center;
     margin-bottom: 15px;
     text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 h2 {
@@ -247,6 +293,9 @@ h2 {
     margin-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 p {
@@ -394,11 +443,17 @@ button:hover {
     h1 {
         font-size: 30px;
         text-transform: uppercase;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
     }
 
     h2 {
         font-size: 24px;
         text-transform: uppercase;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
     }
 
     .hero {
@@ -494,7 +549,7 @@ footer {
     width: 100%;
     text-align: center;
     color: white;
-    margin-top: 25px;
+    margin-top: 10px;
     position: relative;
     bottom: 0;
     left: 0;
@@ -631,7 +686,7 @@ footer a:hover {
     min-width: 100px;
     max-width: 300px;
     text-transform: uppercase;
-    font-family: 'Bentham', Georgia, 'Times New Roman', serif;
+    font-family: "Bentham", Georgia, 'Times New Roman', serif;
 }
 
 .cookie-buttons button:hover {
@@ -663,3 +718,8 @@ footer a:hover {
     height: auto;
     /* Keeps aspect ratio */
 }
+
+h1, h2, h3, .hero-text {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility; }

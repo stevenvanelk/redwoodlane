@@ -1,0 +1,17 @@
+---
+layout: blog
+---
+<article class="blog-post">
+  {% if page.hero_image %}
+  <div class="hero-container">
+    <img src="{{ page.hero_image | relative_url }}" alt="{{ page.title }} hero image" class="post-hero-img">
+    <div class="hero-title">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+  {% endif %}
+  <div class="blog-wrapper">
+    <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
+    {{ content }}
+</div>
+</article>

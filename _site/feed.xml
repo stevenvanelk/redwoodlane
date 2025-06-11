@@ -1,1 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-03-05T09:35:32-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-11T15:00:47-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Redwood Lane is Open for Business</title><link href="http://localhost:4000/open-for-business/" rel="alternate" type="text/html" title="Redwood Lane is Open for Business" /><published>2020-03-20T00:00:00-04:00</published><updated>2020-03-20T00:00:00-04:00</updated><id>http://localhost:4000/open-for-business</id><content type="html" xml:base="http://localhost:4000/open-for-business/"><![CDATA[<p>We’re excited to announce the launch of <strong>Redwood Lane</strong>, a new Salesforce consulting company focused on helping businesses unlock the full potential of their CRM.</p>
+
+<p>After years of hands-on experience working in Salesforce environments, we saw a need for smarter, more thoughtful support—especially for growing teams who need more than just out-of-the-box solutions. Redwood Lane was founded to meet that need.</p>
+
+<p>We specialize in:</p>
+
+<ul>
+  <li><strong>Salesforce Administration</strong>: Streamlining workflows, managing users, and keeping data clean.</li>
+  <li><strong>Automation</strong>: From Flows to email triggers, we build systems that reduce manual work.</li>
+  <li><strong>Integrations</strong>: Connecting Salesforce to the tools your team already uses.</li>
+  <li><strong>Custom Development</strong>: When clicks aren’t enough, we bring in code.</li>
+</ul>
+
+<p>Whether you’re just getting started with Salesforce or you’re ready to take your org to the next level, Redwood Lane is here to help.</p>
+
+<p>Stay tuned—we’ll be sharing tips, stories, and insights from the road ahead.</p>
+
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Insights, tips, and stories from a Salesforce consultant.]]></summary></entry></feed>
