@@ -3,7 +3,7 @@ description: Expert Salesforce consulting, specializing in automation, integrati
 url: "https://redwoodlane.net"
 baseurl: "" # Only set this if your site is hosted in a subfolder (leave it blank for GitHub Pages root)
 author: Steven Van Elk
-email: steven@redwoodlane.net
+email: info@redwoodlane.net
 
 markdown: kramdown
 highlighter: rouge
@@ -12,21 +12,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-paginate-v2
+  - jekyll-paginate
 
 # Permalinks and pagination
 permalink: /:categories/:title/
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: /blog/page/:num/
-  title: ":title - page :num"
-  limit: 0
-  sort_field: "date"
-  sort_reverse: true
-  trail:
-    before: 2
-    after: 2
+paginate: 5
+paginate_path: "/blog/page:num/" 
 
 # Defaults to help SEO and layout
 defaults:
@@ -37,7 +28,7 @@ defaults:
       layout: post
       author: Steven Van Elk
       description: "Insights, tips, and stories from a Salesforce consultant."
-      tags: [Salesforce, Consulting, CRM]
+      tags: [Salesforce, Salesforce Administrator, Salesforce Developer, Salesforce Consulting, Consulting, CRM]
 
 # Exclude non-web assets
 exclude:
