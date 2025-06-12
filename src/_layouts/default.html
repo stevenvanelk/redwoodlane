@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | Redwood Lane</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | Redwood Lane</title>
-  <meta name="description" content="{{ page.description }}">
-  <meta name="keywords" content="{{ page.keywords }}">
-  <meta name="author" content="Redwood Lane">  
-  <meta property="og:title" content="{{ page.title }} | Redwood Lane Salesforce Consulting">
-  <meta property="og:description" content="{{ page.description }}">
-  {% if page.image %}
-  <meta property="og:image" content="{{ page.image | relative_url }}">
-  {% endif %}
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:type" content="website">  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title }} | Redwood Lane">
-  <meta name="twitter:description" content="{{ page.description }}">
-  {% if page.image %}
-  <meta name="twitter:image" content="{{ page.image | relative_url }}">
-  {% endif %}
-  <link rel="preload" href="{{ '/assets/fonts/Bentham.otf' | relative_url }}" as="font" type="font/otf" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
-  <link rel="icon" href="{{ '/images/global/favicon.ico' | relative_url }}">
-  <script src="{{ '/js/cookie-banner.js' | relative_url }}" defer></script>
-</head>
-{% include cookie-banner.html %}
-{% include header.html %}
-  <main>
-    {{ content }}
-  </main>
-  <footer>
-    {% include footer.html %}
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Redwood Lane</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Redwood Lane</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+    <meta name="author" content="Redwood Lane">  
+    <meta property="og:title" content="{{ page.title }} | Redwood Lane Salesforce Consulting">
+    <meta property="og:description" content="{{ page.description }}">
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image | relative_url }}">
+    {% endif %}
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="website">  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }} | Redwood Lane">
+    <meta name="twitter:description" content="{{ page.description }}">
+    {% if page.image %}
+    <meta name="twitter:image" content="{{ page.image | relative_url }}">
+    {% endif %}
+    <link rel="preload" href="{{ '/assets/fonts/Bentham.otf' | relative_url }}" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+    <link rel="icon" href="{{ '/images/global/favicon.ico' | relative_url }}">
+    <script src="{{ '/js/cookie-banner.js' | relative_url }}" defer></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      {% include cookie-banner.html %}
+      {% include header.html %}
+      <main>
+        {{ content }}
+      </main>
+      <footer>
+        {% include footer.html %}
+      </footer>
+    </div>
+  </body>
 </html>
