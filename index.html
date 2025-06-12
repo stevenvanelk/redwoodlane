@@ -20,25 +20,26 @@
     <meta name="twitter:description"
         content="Expert Salesforce consulting for administration, automation, integrations, and custom development.">
     <meta name="twitter:image" content="https://redwoodlane.net/images/global/RL-Sharing.webp">
+    <link rel="preload" href="/assets/fonts/Bentham.otf" as="font" type="font/otf" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" href="/images/global/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/global/favicon.ico">
     <script src="/js/cookie-banner.js" defer></script>
 </head>
 <body>
-    <div id="cookie-banner">
+    <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
     <div class="privacy-banner">
         <p>This site uses cookies and Google Analytics to improve user experience. By clicking "Accept," you consent
             to tracking as outlined in our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
     </div>
     <div class="cookie-buttons">
-        <button id="accept-cookies">Accept</button>
-        <button id="decline-cookies">Decline</button>
+        <button id="accept-cookies" aria-label="Accept cookies">Accept</button>
+        <button id="decline-cookies" aria-label="Decline cookies">Decline</button>
     </div>
 </div>
     <header>
     <div class="logo-container">
         <a href="/">
-            <img src="/images/global/RL-logo.webp" alt="Redwood Lane Logo" class="logo" width="50" height="50">
+            <img src="/images/global/RL-logo.webp" alt="Redwood Lane Logo" class="logo" width="50" height="50">      
         </a>
         <h2>Redwood Lane</h2>
     </div>
@@ -54,10 +55,11 @@
 </header>
     <main>
         <div class="hero">
-    <img src="images/index/rl-hero.webp" srcset="
-        images/index/rl-hero-small.webp 480w,
-        images/index/rl-hero-medium.webp 768w,
-        images/index/rl-hero.webp 1920w" sizes="100vw" alt="Redwood Lane Salesforce Consulting" class="hero-img" />
+    <img src="/images/index/rl-hero.webp" srcset="
+            /images/index/rl-hero-small.webp 480w,
+            /images/index/rl-hero-medium.webp 768w,
+            /images/index/rl-hero.webp 1920w
+        " sizes="100vw" alt="Redwood Lane Salesforce Consulting" class="hero-img" />
     <div class="hero-text">
         <div class="hero-content">
             <h1>Expert Salesforce Consulting</h1>
