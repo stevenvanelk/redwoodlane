@@ -733,4 +733,5 @@ footer a:hover {
 h1, h2, h3, .hero-text {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility; }
+    text-rendering: optimizeLegibility; 
+}

@@ -27,11 +27,12 @@
 </head>
 <body>
     {% include cookie-banner.html %}
-    {% include header.html %}
+    <header>
+        {% include header.html %}
+    </header>
     <main class="page-wrapper-md">
         {{ content }}
     </main>
-
     <footer>
         {% include footer.html %}
     </footer>
