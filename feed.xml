@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-06-12T05:11:41+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">The Best Time to Future-Proof Your Org Is Right Now</title><link href="https://redwoodlane.net/blog/future-proof-salesforce/" rel="alternate" type="text/html" title="The Best Time to Future-Proof Your Org Is Right Now" /><published>2024-10-25T00:00:00+00:00</published><updated>2024-10-25T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/future-proof-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/future-proof-salesforce/"><![CDATA[<p>If your Salesforce org only works for today, it’s already behind.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-06-12T05:20:08+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Why We Still Love Lightning Record Pages</title><link href="https://redwoodlane.net/blog/lightning-record-pages-design/" rel="alternate" type="text/html" title="Why We Still Love Lightning Record Pages" /><published>2025-05-01T00:00:00+00:00</published><updated>2025-05-01T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/lightning-record-pages-design</id><content type="html" xml:base="https://redwoodlane.net/blog/lightning-record-pages-design/"><![CDATA[<p>We get it—Flows and Apex get all the attention. But <strong>great Lightning Record Pages</strong> can change how your team works every single day.</p>
+
+<p>Here’s what we focus on:</p>
+
+<ul>
+  <li><strong>Page layouts that match business flow</strong>, not object structure</li>
+  <li><strong>Tabs and visibility rules</strong> that reduce cognitive overload</li>
+  <li><strong>Highlights, quick actions, and contextual components</strong> that help people do the right thing faster</li>
+</ul>
+
+<p>If your team has to scroll, guess, or tab-hop, your page layout is slowing them down. Let’s fix that.</p>
+
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Sometimes the best improvements come from layout, not logic. Here’s how we design Lightning pages that keep users focused and productive.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/lightning-pages-love.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/lightning-pages-love.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Your Salesforce Org Is Only as Good as Its Worst Flow</title><link href="https://redwoodlane.net/blog/flows-that-dont-fail/" rel="alternate" type="text/html" title="Your Salesforce Org Is Only as Good as Its Worst Flow" /><published>2025-02-06T00:00:00+00:00</published><updated>2025-02-06T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/flows-that-dont-fail</id><content type="html" xml:base="https://redwoodlane.net/blog/flows-that-dont-fail/"><![CDATA[<p>One bad flow can tank user trust, block record saves, or misroute leads. We’ve seen it all.</p>
+
+<p>At Redwood Lane, we approach Flow like infrastructure: <strong>built to last, safe to fail, easy to maintain.</strong></p>
+
+<p>Our approach:</p>
+
+<ul>
+  <li><strong>We test with real-world data</strong>, not perfect-case scenarios.</li>
+  <li><strong>We document branches and logic</strong>, so anyone can understand how it works.</li>
+  <li><strong>We create reusable subflows</strong>, so changes don’t require a rebuild every time.</li>
+</ul>
+
+<p>Flow is powerful. But with power comes responsibility—and we take that seriously.</p>
+
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[A single unstable automation can create ripple effects across your business. Here’s how we design flows that don’t fail under pressure.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/flow-stability.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/flow-stability.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Best Time to Future-Proof Your Org Is Right Now</title><link href="https://redwoodlane.net/blog/future-proof-salesforce/" rel="alternate" type="text/html" title="The Best Time to Future-Proof Your Org Is Right Now" /><published>2024-10-25T00:00:00+00:00</published><updated>2024-10-25T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/future-proof-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/future-proof-salesforce/"><![CDATA[<p>If your Salesforce org only works for today, it’s already behind.</p>
 
 <p>We help clients think a step ahead—not by building bloated systems, but by designing <strong>flexibility</strong> into the foundation.</p>
 
@@ -110,30 +136,4 @@
 
 <p>You shouldn’t need to convince your team to use Salesforce. You should make it something they <em>want</em> to use. We can help with that.</p>
 
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[If your team is working around Salesforce instead of with it, it’s time for a rethink. Here’s how we align systems with real-life workflows.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/stop-fighting-crm.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/stop-fighting-crm.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Integrations Should Feel Invisible</title><link href="https://redwoodlane.net/blog/invisible-integrations/" rel="alternate" type="text/html" title="Integrations Should Feel Invisible" /><published>2022-10-05T00:00:00+00:00</published><updated>2022-10-05T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/invisible-integrations</id><content type="html" xml:base="https://redwoodlane.net/blog/invisible-integrations/"><![CDATA[<p>The best integrations feel like magic.</p>
-
-<p>Whether it’s marketing data from Mailchimp, client forms via JotForm, or travel planning through Axus, we make data move between platforms <strong>without your team lifting a finger</strong>.</p>
-
-<p>Here’s our integration checklist:</p>
-
-<ul>
-  <li><strong>Is it secure?</strong> We prioritize authentication and audit logging.</li>
-  <li><strong>Is it stable?</strong> We monitor for API limits, schema changes, and error handling.</li>
-  <li><strong>Is it invisible?</strong> The experience should feel native—no spreadsheets, no delays.</li>
-</ul>
-
-<p>If your team is still copying data manually between tools, we should talk.</p>
-
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[If your team has to think about the integration, it’s not seamless enough. Here’s how we make data flow painlessly.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/invisible-integrations.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/invisible-integrations.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why We Document Everything</title><link href="https://redwoodlane.net/blog/documentation-salesforce-consulting/" rel="alternate" type="text/html" title="Why We Document Everything" /><published>2022-07-20T00:00:00+00:00</published><updated>2022-07-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/documentation-salesforce-consulting</id><content type="html" xml:base="https://redwoodlane.net/blog/documentation-salesforce-consulting/"><![CDATA[<p>At Redwood Lane, we document <em>everything</em>. Not just for compliance—but for continuity, training, and trust.</p>
-
-<p>Here’s what we deliver to clients as part of every major project:</p>
-
-<ul>
-  <li><strong>Field maps and flow diagrams</strong> that explain what’s happening behind the scenes</li>
-  <li><strong>Admin guides</strong> that show how to update and maintain what we’ve built</li>
-  <li><strong>Change logs</strong> that track what changed, why, and when</li>
-</ul>
-
-<p>Why? Because your system should outlast any single admin or consultant—including us.</p>
-
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Documentation might not be glamorous, but it’s one of the most valuable deliverables we provide. Here’s why.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/document-everything.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/document-everything.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[If your team is working around Salesforce instead of with it, it’s time for a rethink. Here’s how we align systems with real-life workflows.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/stop-fighting-crm.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/stop-fighting-crm.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
