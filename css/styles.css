@@ -7,7 +7,7 @@ html {
     overflow-y: scroll;
     opacity: 1;
     /* No need for hidden */
-    transition: opacity 0.2s ease-in;
+    /* transition: opacity 0.2s ease-in; */
 }
 
 @font-face {
@@ -27,7 +27,7 @@ body {
     line-height: 1.7;
     visibility: visible; /* Ensures body is visible */
     opacity: 1;
-    transition: opacity 0.2s ease-in;
+    /* transition: opacity 0.2s ease-in; */
     width: 100%;
     overflow-x: hidden;
     display: flex;
@@ -70,7 +70,7 @@ h1, h2 {
 html.loaded {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.2s ease-in;
+    /* transition: opacity 0.2s ease-in; */
 }
 
 /* Container: Keeps content centered, but not boxed */
@@ -171,7 +171,8 @@ html.loaded {
 
 /* Header Styling */
 header {
-    position: fixed;
+    /* position: fixed; */
+    position: sticky; /* Trying this out to see if it fixes scrolling issues */
     top: 0;
     left: 0;
     width: 100%;
@@ -653,7 +654,7 @@ footer a:hover {
     box-sizing: border-box;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    /* transition: opacity 0.3s ease-in-out; */
 }
 
 #cookie-banner p {
