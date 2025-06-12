@@ -15,7 +15,7 @@ plugins:
   - jekyll-paginate-v2
 
 # Permalinks and pagination
-permalink: /:categories/:title/
+permalink: /blog/:title/
 pagination:
   enabled: true
   per_page: 5
