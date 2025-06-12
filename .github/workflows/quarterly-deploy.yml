@@ -1,5 +1,3 @@
-# 🤖 Trigger update: forcing GitHub to recognize this workflow
-
 name: Quarterly Site Build
 
 on:
