@@ -15,12 +15,15 @@ At Redwood Lane, we design automations that do more than just “trigger” emai
 
 Here’s our automation philosophy:
 
-Start With the People
+1. **Start With the People**
 Automation should support your team, not surprise them. We build with clarity and training in mind.
-Build for Exceptions
+
+2. **Build for Exceptions**
 Real-world processes aren’t linear. We design for edge cases so your flows don’t break the first time something unusual happens.
-Measure and Iterate
+
+3. **Measure and Iterate**
 Every automation includes a feedback loop. If it isn’t improving the process, we adjust.
+
 Automation done right means fewer mistakes, faster service, and happier teams. Ready to start?
 
 ---

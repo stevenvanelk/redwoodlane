@@ -11,12 +11,15 @@ permalink: /blog/quick-wins-clean-salesforce/
 
 A messy Salesforce org is like a cluttered workspace—eventually, it slows everyone down. At Redwood Lane, one of the first things we help clients do is declutter. Here are three simple—but powerful—ways to start cleaning up your Salesforce org today:
 
-Audit Your Fields
+1. **Audit Your Fields**
 Too many fields = overwhelmed users. We identify unused or redundant fields and recommend consolidations that make pages more usable and reporting more meaningful.
-Simplify Page Layouts
+
+2. **Simplify Page Layouts**
 Just because a field exists doesn’t mean it needs to be visible. We streamline layouts to reduce scroll time and surface only the info your team really needs.
-Deactivate Unused Automations
+
+3. **Deactivate Unused Automations**
 We often find outdated workflows or process builders still firing in the background. We review and retire the ones that no longer serve you.
+
 If your org is starting to feel sluggish or confusing, let’s talk. A cleaner CRM isn’t just nicer—it’s smarter business.
 
 ---
