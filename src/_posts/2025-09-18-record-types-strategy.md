@@ -5,7 +5,7 @@ description: "Record Types can empower your team—or slow everything down. Here
 keywords: Salesforce Record Types, Admin Strategy, Data Design, CRM Best Practices
 hero_image: /images/blog/record-types-strategy.webp
 image: /images/blog/record-types-strategy.webp
-date: 2025-09-20
+date: 2025-09-18
 permalink: /blog/record-types-strategy/
 ---
 

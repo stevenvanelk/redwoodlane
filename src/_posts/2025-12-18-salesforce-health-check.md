@@ -5,7 +5,7 @@ description: "Whether we’re onboarding a new client or auditing an org before 
 keywords: Salesforce Audit, CRM Optimization, Org Health, Consulting Onboarding
 hero_image: /images/blog/salesforce-health-check.webp
 image: /images/blog/salesforce-health-check.webp
-date: 2025-12-20
+date: 2025-12-18
 permalink: /blog/salesforce-health-check/
 ---
 
