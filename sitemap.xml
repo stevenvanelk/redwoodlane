@@ -1,27 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://redwoodlane.net/</loc>
-        <lastmod>2024-03-03</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://redwoodlane.net/about.html</loc>
-        <lastmod>2024-03-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://redwoodlane.net/contact.html</loc>
-        <lastmod>2024-03-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://redwoodlane.net/privacy-policy.html</loc>
-        <lastmod>2024-03-03</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://redwoodlane.net/blog/redwood-lane-is-open/</loc>
+<lastmod>2020-03-20T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/quick-wins-clean-salesforce/</loc>
+<lastmod>2020-06-20T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/salesforce-roi-checkup/</loc>
+<lastmod>2020-09-10T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/automation-approach/</loc>
+<lastmod>2020-12-15T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/flows-backbone-salesforce/</loc>
+<lastmod>2021-02-11T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/good-data-is-quiet/</loc>
+<lastmod>2021-05-10T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/when-to-customize-salesforce/</loc>
+<lastmod>2021-08-01T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/salesforce-user-experience/</loc>
+<lastmod>2021-11-12T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/right-report-right-time/</loc>
+<lastmod>2022-01-20T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/slow-salesforce-org/</loc>
+<lastmod>2022-04-15T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/documentation-salesforce-consulting/</loc>
+<lastmod>2022-07-20T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/invisible-integrations/</loc>
+<lastmod>2022-10-05T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/stop-fighting-your-crm/</loc>
+<lastmod>2023-01-18T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/spring-cleaning-salesforce/</loc>
+<lastmod>2023-04-12T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/building-for-scale/</loc>
+<lastmod>2023-07-07T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/dont-automate-noise/</loc>
+<lastmod>2023-10-30T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/one-size-crm-problems/</loc>
+<lastmod>2024-01-24T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/simple-salesforce-design/</loc>
+<lastmod>2024-04-17T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/crm-strategic-advantage/</loc>
+<lastmod>2024-07-10T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/future-proof-salesforce/</loc>
+<lastmod>2024-10-25T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/flows-that-dont-fail/</loc>
+<lastmod>2025-02-06T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/lightning-record-pages-design/</loc>
+<lastmod>2025-05-01T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://redwoodlane.net/about/</loc>
+</url>
+<url>
+<loc>https://redwoodlane.net/contact/</loc>
+</url>
+<url>
+<loc>https://redwoodlane.net/</loc>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/</loc>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/blog/page/2/</loc>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/blog/page/3/</loc>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/blog/page/4/</loc>
+</url>
+<url>
+<loc>https://redwoodlane.net/blog/blog/page/5/</loc>
+</url>
+<url>
+<loc>https://redwoodlane.net/privacy-policy.html</loc>
+<lastmod>2025-06-12T06:19:09+00:00</lastmod>
+</url>
 </urlset>
