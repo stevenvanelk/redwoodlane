@@ -18,7 +18,7 @@ title: Home
         <div class="hero-content">
             <h1>Expert Salesforce Consulting</h1>
             <p>Helping businesses automate, integrate, and scale</p>
-            <a href="/contact/" class="cta-button">Get in Touch</a>
+            <a href="{{ '/contact/' | relative_url }}" class="cta-button">Get in Touch</a>
         </div>
     </div>
 </div>

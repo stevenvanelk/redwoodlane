@@ -11,6 +11,25 @@ pagination:
   per_page: 5
   permalink: /blog/page/:num/
 ---
+<div class="hero">
+    <img 
+        src="{{ '/images/blog/rl-hero-blog.webp' | relative_url }}" 
+        srcset="
+            {{ '/images/blog/rl-hero-blog-small.webp' | relative_url }} 480w,
+            {{ '/images/blog/rl-hero-blog-medium.webp' | relative_url }} 768w,
+            {{ '/images/blog/rl-hero-blog.webp' | relative_url }} 1920w
+        "
+        sizes="100vw" 
+        alt="Redwood Lane Blog" 
+        class="hero-img">
+    <div class="hero-text">
+        <div class="hero-content">
+            <h1>Welcome to the Blog</h1>
+            <p>Advice to help businesses automate, integrate, and scale</p>
+            <a href="{{ '/contact/' | relative_url }}" class="cta-button">Get in Touch</a>
+        </div>
+    </div>
+</div>
 <h1>Redwood Lane Blog</h1>
 <div class="blog-wrapper">
 <div class="blog-list">
