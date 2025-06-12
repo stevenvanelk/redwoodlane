@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-06-12T04:03:43+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Building Smarter Workflows: Our Approach to Automation</title><link href="https://redwoodlane.net/blog/automation-approach/" rel="alternate" type="text/html" title="Building Smarter Workflows: Our Approach to Automation" /><published>2020-12-15T00:00:00+00:00</published><updated>2020-12-15T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/automation-approach</id><content type="html" xml:base="https://redwoodlane.net/blog/automation-approach/"><![CDATA[<p>We believe good automation doesn’t just save time—it eliminates friction.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-06-12T04:24:51+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Let’s Talk About User Experience</title><link href="https://redwoodlane.net/blog/salesforce-user-experience/" rel="alternate" type="text/html" title="Let’s Talk About User Experience" /><published>2021-11-12T00:00:00+00:00</published><updated>2021-11-12T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-user-experience</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-user-experience/"><![CDATA[<p>If your team dreads opening Salesforce, something’s broken—and it’s not their attitude.</p>
+
+<p>We believe a good Salesforce org should feel like a <em>tool</em>, not a test.</p>
+
+<p>Here’s how we improve the experience:</p>
+
+<ul>
+  <li>
+    <p><strong>Smarter Lightning Pages</strong><br />
+We remove clutter, surface the most relevant info, and design for speed—not endless scrolling.</p>
+  </li>
+  <li>
+    <p><strong>Guided Flows &amp; Quick Actions</strong><br />
+We reduce guesswork by guiding users through complex processes with buttons, paths, and automation.</p>
+  </li>
+  <li>
+    <p><strong>Feedback Loops</strong><br />
+We listen to your team, iterate based on usage, and measure what’s working.</p>
+  </li>
+</ul>
+
+<p>If your team isn’t using Salesforce the way you hoped, the problem might not be them. It might be the system. Let’s fix that.</p>
+
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[User adoption isn’t just about training—it’s about building Salesforce to support the way people *actually* work.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/user-experience-salesforce.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/user-experience-salesforce.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">When to Customize Salesforce—and When Not To</title><link href="https://redwoodlane.net/blog/when-to-customize-salesforce/" rel="alternate" type="text/html" title="When to Customize Salesforce—and When Not To" /><published>2021-08-01T00:00:00+00:00</published><updated>2021-08-01T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/when-to-customize-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/when-to-customize-salesforce/"><![CDATA[<p>Salesforce is flexible—but that doesn’t mean <em>everything</em> needs to be custom-built.</p>
+
+<p>At Redwood Lane, we help clients make smart customization decisions. Because the goal isn’t “custom”—it’s <strong>effective</strong>.</p>
+
+<p>Here’s how we think about it:</p>
+
+<ul>
+  <li>
+    <p><strong>Start With Configuration</strong><br />
+Can a field, Flow, or Lightning page solve it? Use the tools Salesforce gives you first.</p>
+  </li>
+  <li>
+    <p><strong>Only Build What Adds Lasting Value</strong><br />
+Custom objects, Apex, or LWCs should solve a real, ongoing need—not just this quarter’s pain point.</p>
+  </li>
+  <li>
+    <p><strong>Design With Change in Mind</strong><br />
+We always ask: will this be easy to maintain six months from now?</p>
+  </li>
+</ul>
+
+<p>Our best builds aren’t just clever—they’re durable. If your org feels like it’s overbuilt or underperforming, we can help rebalance it.</p>
+
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Customization can be powerful—but too much, and you lose agility. Here’s how we help clients strike the right balance.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/customization-balance.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/customization-balance.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Good Data is Quiet Data</title><link href="https://redwoodlane.net/blog/good-data-is-quiet/" rel="alternate" type="text/html" title="Good Data is Quiet Data" /><published>2021-05-10T00:00:00+00:00</published><updated>2021-05-10T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/good-data-is-quiet</id><content type="html" xml:base="https://redwoodlane.net/blog/good-data-is-quiet/"><![CDATA[<p>Great data doesn’t shout for attention—it just works.</p>
+
+<p>When Redwood Lane audits a Salesforce org, we often find silent problems: inconsistent picklist values, empty required fields, or data that’s entered manually but used inconsistently.</p>
+
+<p>Here’s our approach to keeping data clean <em>without</em> overwhelming your team:</p>
+
+<ul>
+  <li>
+    <p><strong>Validation Where It Matters</strong><br />
+We apply rules thoughtfully—enough to prevent mistakes, not enough to frustrate.</p>
+  </li>
+  <li>
+    <p><strong>Helpful Automation</strong><br />
+We use Flows to populate fields, assign records, and trigger reminders so users don’t have to.</p>
+  </li>
+  <li>
+    <p><strong>Field Cleanups &amp; Conventions</strong><br />
+We simplify field names, eliminate redundancies, and document standards so the CRM stays usable as you grow.</p>
+  </li>
+</ul>
+
+<p>Want a quieter, more reliable org? Let’s clean it up.</p>
+
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[If users are constantly fixing or questioning data, your CRM isn’t working hard enough. Let’s fix that.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/quiet-data.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/quiet-data.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why Flows Are the Backbone of Modern Salesforce Orgs</title><link href="https://redwoodlane.net/blog/flows-backbone-salesforce/" rel="alternate" type="text/html" title="Why Flows Are the Backbone of Modern Salesforce Orgs" /><published>2021-02-11T00:00:00+00:00</published><updated>2021-02-11T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/flows-backbone-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/flows-backbone-salesforce/"><![CDATA[<p>A well-designed Flow can replace dozens of clicks, reduce errors, and improve team experience. At Redwood Lane, we treat Salesforce Flows like infrastructure—because they are.</p>
+
+<p>Here’s how we use them to create real impact for clients:</p>
+
+<ol>
+  <li>
+    <p><strong>Lead-to-Opportunity Automation</strong><br />
+We set up Flows to qualify and route leads based on smart logic—no more manual handoffs or missed follow-ups.</p>
+  </li>
+  <li>
+    <p><strong>Onboarding Workflows</strong><br />
+New client? New hire? We design Flows that kick off checklists, tasks, and emails the moment a record hits a certain stage.</p>
+  </li>
+  <li>
+    <p><strong>Alerting and Escalation</strong><br />
+Need to know when something’s off? We build intelligent Flows that notify the right person at the right time—automatically.</p>
+  </li>
+</ol>
+
+<p>If your org still relies heavily on manual updates or older tools like Workflow Rules, let’s talk. Flows aren’t just better—they’re the future.</p>
+
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Visual Flows are no longer optional—they’re the glue that holds efficient processes together. Here’s how we help clients make the most of them.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/flows-backbone.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/flows-backbone.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Building Smarter Workflows: Our Approach to Automation</title><link href="https://redwoodlane.net/blog/automation-approach/" rel="alternate" type="text/html" title="Building Smarter Workflows: Our Approach to Automation" /><published>2020-12-15T00:00:00+00:00</published><updated>2020-12-15T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/automation-approach</id><content type="html" xml:base="https://redwoodlane.net/blog/automation-approach/"><![CDATA[<p>We believe good automation doesn’t just save time—it eliminates friction.</p>
 
 <p>At Redwood Lane, we design automations that do more than just “trigger” emails or change statuses. We build process-aware systems that reflect how your business really works.</p>
 
@@ -10,7 +100,9 @@ Build for Exceptions
 Real-world processes aren’t linear. We design for edge cases so your flows don’t break the first time something unusual happens.
 Measure and Iterate
 Every automation includes a feedback loop. If it isn’t improving the process, we adjust.
-Automation done right means fewer mistakes, faster service, and happier teams. Ready to start?</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Automation is more than speed—it’s about consistency, accuracy, and freeing up your team. Here’s how we do it right.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/automation.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/automation.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Are You Getting the Most From Your Salesforce Investment?</title><link href="https://redwoodlane.net/blog/salesforce-roi-checkup/" rel="alternate" type="text/html" title="Are You Getting the Most From Your Salesforce Investment?" /><published>2020-09-10T00:00:00+00:00</published><updated>2020-09-10T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-roi-checkup</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-roi-checkup/"><![CDATA[<p>Salesforce is a powerful platform—but many businesses barely scratch the surface.</p>
+Automation done right means fewer mistakes, faster service, and happier teams. Ready to start?</p>
+
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Automation is more than speed—it’s about consistency, accuracy, and freeing up your team. Here’s how we do it right.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/automation.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/automation.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Are You Getting the Most From Your Salesforce Investment?</title><link href="https://redwoodlane.net/blog/salesforce-roi-checkup/" rel="alternate" type="text/html" title="Are You Getting the Most From Your Salesforce Investment?" /><published>2020-09-10T00:00:00+00:00</published><updated>2020-09-10T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-roi-checkup</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-roi-checkup/"><![CDATA[<p>Salesforce is a powerful platform—but many businesses barely scratch the surface.</p>
 
 <p>At Redwood Lane, we offer a Salesforce ROI Checkup: a quick but thorough review of your setup to identify where you’re underutilizing features you’re already paying for.</p>
 
@@ -20,7 +112,9 @@ Automation done right means fewer mistakes, faster service, and happier teams. R
 Reports that could drive better decision-making (if they existed)
 Licensing inefficiencies that quietly increase cost
 Data gaps that are blocking marketing or customer success
-Salesforce isn’t cheap—but when it’s configured strategically, it more than pays for itself. Let’s make sure that’s true for you.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[You’re paying for Salesforce—are you truly using its full potential? Here’s how we help businesses find hidden value.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/roi-checkup.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/roi-checkup.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">3 Quick Wins to Clean Up Your Salesforce Org</title><link href="https://redwoodlane.net/blog/quick-wins-clean-salesforce/" rel="alternate" type="text/html" title="3 Quick Wins to Clean Up Your Salesforce Org" /><published>2020-06-20T00:00:00+00:00</published><updated>2020-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/quick-wins-clean-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/quick-wins-clean-salesforce/"><![CDATA[<p>A messy Salesforce org is like a cluttered workspace—eventually, it slows everyone down. At Redwood Lane, one of the first things we help clients do is declutter. Here are three simple—but powerful—ways to start cleaning up your Salesforce org today:</p>
+Salesforce isn’t cheap—but when it’s configured strategically, it more than pays for itself. Let’s make sure that’s true for you.</p>
+
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[You’re paying for Salesforce—are you truly using its full potential? Here’s how we help businesses find hidden value.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/roi-checkup.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/roi-checkup.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">3 Quick Wins to Clean Up Your Salesforce Org</title><link href="https://redwoodlane.net/blog/quick-wins-clean-salesforce/" rel="alternate" type="text/html" title="3 Quick Wins to Clean Up Your Salesforce Org" /><published>2020-06-20T00:00:00+00:00</published><updated>2020-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/quick-wins-clean-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/quick-wins-clean-salesforce/"><![CDATA[<p>A messy Salesforce org is like a cluttered workspace—eventually, it slows everyone down. At Redwood Lane, one of the first things we help clients do is declutter. Here are three simple—but powerful—ways to start cleaning up your Salesforce org today:</p>
 
 <p>Audit Your Fields
 Too many fields = overwhelmed users. We identify unused or redundant fields and recommend consolidations that make pages more usable and reporting more meaningful.
@@ -28,7 +122,9 @@ Simplify Page Layouts
 Just because a field exists doesn’t mean it needs to be visible. We streamline layouts to reduce scroll time and surface only the info your team really needs.
 Deactivate Unused Automations
 We often find outdated workflows or process builders still firing in the background. We review and retire the ones that no longer serve you.
-If your org is starting to feel sluggish or confusing, let’s talk. A cleaner CRM isn’t just nicer—it’s smarter business.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[A tidy Salesforce org saves time, reduces errors, and builds trust. Here are three ways we help clients clean up fast.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/cleanup.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/cleanup.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Redwood Lane is Open for Business</title><link href="https://redwoodlane.net/blog/redwood-lane-is-open/" rel="alternate" type="text/html" title="Redwood Lane is Open for Business" /><published>2020-03-20T00:00:00+00:00</published><updated>2020-03-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/open-for-business</id><content type="html" xml:base="https://redwoodlane.net/blog/redwood-lane-is-open/"><![CDATA[<p>We’re excited to announce the launch of <strong>Redwood Lane</strong>, a new Salesforce consulting company focused on helping businesses unlock the full potential of their CRM.</p>
+If your org is starting to feel sluggish or confusing, let’s talk. A cleaner CRM isn’t just nicer—it’s smarter business.</p>
+
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[A tidy Salesforce org saves time, reduces errors, and builds trust. Here are three ways we help clients clean up fast.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/cleanup.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/cleanup.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Redwood Lane is Open for Business</title><link href="https://redwoodlane.net/blog/redwood-lane-is-open/" rel="alternate" type="text/html" title="Redwood Lane is Open for Business" /><published>2020-03-20T00:00:00+00:00</published><updated>2020-03-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/open-for-business</id><content type="html" xml:base="https://redwoodlane.net/blog/redwood-lane-is-open/"><![CDATA[<p>We’re excited to announce the launch of <strong>Redwood Lane</strong>, a new Salesforce consulting company focused on helping businesses unlock the full potential of their CRM.</p>
 
 <p>After years of hands-on experience working in Salesforce environments, we saw a need for smarter, more thoughtful support—especially for growing teams who need more than just out-of-the-box solutions. Redwood Lane was founded to meet that need.</p>
 
