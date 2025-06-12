@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Redwood Lane</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+    <meta name="author" content="Redwood Lane">
+    <meta property="og:title" content="Contact Redwood Lane: Salesforce Consulting">
+    <meta property="og:description" content="Get in touch with Redwood Lane for Salesforce consulting, automation, integrations, and custom development solutions.">
+    <meta property="og:title" content="{{ page.title }} | Redwood Lane">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="{{ page.image }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta name="twitter:title" content="{{ page.title }} | Redwood Lane">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ page.image }}">
+    <link rel="preload" href="/assets/fonts/Bentham-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="icon" href="/images/global/favicon.ico" type="image/x-icon">
+    <script src="/js/cookie-banner.js" defer></script>
+    <script src="/js/validation.js" defer></script>
+
+</head>
+<body>
+    {% include cookie-banner.html %}
+    {% include header.html %}
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        {% include footer.html %}
+    </footer>
+</body>
+</html>
