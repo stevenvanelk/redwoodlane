@@ -171,8 +171,7 @@ html.loaded {
 
 /* Header Styling */
 header {
-    /* position: fixed; */
-    position: sticky; /* Trying this out to see if it fixes scrolling issues */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
