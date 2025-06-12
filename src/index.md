@@ -11,9 +11,6 @@ title: Home
             {{ '/images/index/rl-hero-medium.webp' | relative_url }} 768w,
             {{ '/images/index/rl-hero.webp' | relative_url }} 1920w
         "
-        width="1920" 
-        height="400"
-        style="width: 100%; height: auto;"
         sizes="100vw" 
         alt="Redwood Lane Salesforce Consulting" 
         class="hero-img">
