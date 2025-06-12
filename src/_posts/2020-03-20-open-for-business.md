@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "Redwood Lane is Open for Business"
+description: "We’re officially open! Redwood Lane is ready to bring thoughtful, strategic Salesforce consulting to growing businesses."
+keywords: Salesforce, Consulting, Redwood Lane, CRM, Admin, Automation
 hero_image: /images/index/rl-hero.webp
-excerpt: "We’re officially open! Redwood Lane is ready to bring thoughtful, strategic Salesforce consulting to growing businesses."
+image: /images/index/rl-hero.webp
 date: 2020-03-20
+permalink: /blog/redwood-lane-is-open/
 ---
 
 We’re excited to announce the launch of **Redwood Lane**, a new Salesforce consulting company focused on helping businesses unlock the full potential of their CRM.

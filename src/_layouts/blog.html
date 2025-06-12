@@ -4,26 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | Redwood Lane</title>
-  <meta name="description"
-    content="Redwood Lane provides expert Salesforce consulting, specializing in administration, integrations, automation, and custom development to optimize business performance.">
-  <meta name="keywords"
-    content="Salesforce consulting, Salesforce administration, CRM optimization, automation, Salesforce integrations, reporting, business processes, Salesforce Development, LWC, Visualforce, Apex">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="{{ page.keywords }}">
   <meta name="author" content="Redwood Lane">
-  <meta property="og:title" content="Redwood Lane: Salesforce Consulting">
-  <meta property="og:description"
-    content="Expert Salesforce consulting for administration, automation, integrations, and custom development.">
-  <meta property="og:image" content="https://redwoodlane.net/images/global/RL-Sharing.webp">
-  <meta property="og:url" content="https://redwoodlane.net">
+  <meta property="og:title" content="{{ page.title }} | Redwood Lane Salesforce Consulting">
+  <meta property="og:description" content="{{ page.description }}">
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image | relative_url }}">
+  {% endif %}
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Redwood Lane: Salesforce Consulting">
-  <meta name="twitter:description"
-    content="Expert Salesforce consulting for administration, automation, integrations, and custom development.">
-  <meta name="twitter:image" content="https://redwoodlane.net/images/global/RL-Sharing.webp">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="icon" href="/images/global/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="/css/blog.css">
-  <script src="/js/cookie-banner.js" defer></script>
+  <meta name="twitter:title" content="{{ page.title }} | Redwood Lane">
+  <meta name="twitter:description" content="{{ page.description }}">
+  {% if page.image %}
+  <meta name="twitter:image" content="{{ page.image | relative_url }}">
+  {% endif %}
+  <link rel="preload" href="{{ '/assets/fonts/Bentham.otf' | relative_url }}" as="font" type="font/otf" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+  <link rel="icon" href="{{ '/images/global/favicon.ico' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/blog.css' | relative_url }}">
+  <script src="{{ '/js/cookie-banner.js' | relative_url }}" defer></script>
 </head>
 {% include cookie-banner.html %}
 {% include header.html %}

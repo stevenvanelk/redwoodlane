@@ -2,6 +2,9 @@
 layout: blog
 title: Blog
 permalink: /blog/
+description: Articles and insights from Redwood Lane on Salesforce automation, development, consulting, and more.
+keywords: Salesforce, Blog, Admin Tips, Developer Insights, Automation, CRM, Redwood Lane
+image: /images/global/RL-Sharing.webp
 pagination:
   enabled: true
   collection: posts

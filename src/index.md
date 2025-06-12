@@ -4,10 +4,16 @@ title: Home
 ---
 
 <div class="hero">
-    <img src="images/index/rl-hero.webp" srcset="
-        images/index/rl-hero-small.webp 480w,
-        images/index/rl-hero-medium.webp 768w,
-        images/index/rl-hero.webp 1920w" sizes="100vw" alt="Redwood Lane Salesforce Consulting" class="hero-img">
+    <img 
+        src="{{ '/images/index/rl-hero.webp' | relative_url }}" 
+        srcset="
+            {{ '/images/index/rl-hero-small.webp' | relative_url }} 480w,
+            {{ '/images/index/rl-hero-medium.webp' | relative_url }} 768w,
+            {{ '/images/index/rl-hero.webp' | relative_url }} 1920w
+        "
+        sizes="100vw" 
+        alt="Redwood Lane Salesforce Consulting" 
+        class="hero-img">
     <div class="hero-text">
         <div class="hero-content">
             <h1>Expert Salesforce Consulting</h1>

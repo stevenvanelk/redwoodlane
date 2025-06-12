@@ -7,22 +7,23 @@
     <meta name="description" content="{{ page.description }}">
     <meta name="keywords" content="{{ page.keywords }}">
     <meta name="author" content="Redwood Lane">
-    <meta property="og:title" content="Contact Redwood Lane: Salesforce Consulting">
-    <meta property="og:description" content="Get in touch with Redwood Lane for Salesforce consulting, automation, integrations, and custom development solutions.">
-    <meta property="og:title" content="{{ page.title }} | Redwood Lane">
+    <meta property="og:title" content="{{ page.title }} | Redwood Lane Salesforce Consulting">
     <meta property="og:description" content="{{ page.description }}">
-    <meta property="og:image" content="{{ page.image }}">
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image | relative_url }}">
+    {% endif%}
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta name="twitter:title" content="{{ page.title }} | Redwood Lane">
     <meta name="twitter:description" content="{{ page.description }}">
-    <meta name="twitter:image" content="{{ page.image }}">
-    <link rel="preload" href="/assets/fonts/Bentham-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/form.css">
-    <link rel="icon" href="/images/global/favicon.ico" type="image/x-icon">
-    <script src="/js/cookie-banner.js" defer></script>
-    <script src="/js/validation.js" defer></script>
-
+    {% if page.image %}
+    <meta name="twitter:image" content="{{ page.image | relative_url }}">
+    {% endif%}
+    <link rel="preload" href="{{ '/assets/fonts/Bentham.otf' | relative_url }}" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ '/css/form.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+    <link rel="icon" href="{{ '/images/global/favicon.ico' | relative_url }}">
+    <script src="{{ '/js/cookie-banner.js' | relative_url }}" defer></script>
+    <script src="{{ '/js/validation.js' | relative_url }}" defer></script>
 </head>
 <body>
     {% include cookie-banner.html %}

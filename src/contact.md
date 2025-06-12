@@ -2,19 +2,20 @@
 layout: contact
 title: Contact
 permalink: /contact/
-description: Get in touch with Redwood Lane for expert Salesforce consulting services.
+description: Get in touch with Redwood Lane for Salesforce consulting, automation, integrations, and custom development solutions.
 keywords: Salesforce, Consulting, Contact, Admin, Redwood Lane
 image: /images/global/RL-Sharing.webp
 ---
 
 <div class="hero">
-  <img src="/images/contact/contact-hero.webp" 
-       srcset="/images/contact/contact-hero-small.webp 480w,
-               /images/contact/contact-hero-medium.webp 768w,
-               /images/contact/contact-hero.webp 1920w"
-       sizes="100vw" 
-       alt="Contact Redwood Lane Salesforce Consulting" 
-       class="hero-img" />
+  <img src="{{ '/images/contact/contact-hero.webp' | relative_url }}" 
+        srcset="
+        {{ '/images/contact/contact-hero-small.webp' | relative_url }} 480w,
+        {{ '/images/contact/contact-hero-medium.webp' | relative_url }} 768w,
+        {{ '/images/contact/contact-hero.webp' | relative_url }}  1920w"
+        sizes="100vw" 
+        alt="Contact Redwood Lane Salesforce Consulting" 
+        class="hero-img" />
   <div class="hero-text">
     <div class="hero-content">
       <h1>Get in Touch</h1>

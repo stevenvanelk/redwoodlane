@@ -2,18 +2,23 @@
 layout: default
 title: About
 permalink: /about/
+description: Learn more about Steven Van Elk, the founder of Redwood Lane, and his journey from creative professional to Salesforce consultant.
+keywords: Steven Van Elk, Redwood Lane, Salesforce Consulting, Admin, Platform App Builder, About
+image: /images/global/RL-Sharing.webp
 ---
 
 <div class="hero">
-    <img src="/images/about/aboutme-hero.webp" srcset="
-        /images/about/aboutme-hero-small.webp 480w,
-        /images/about/aboutme-hero-medium.webp 768w,
-        /images/about/aboutme-hero.webp 1920w" sizes="100vw" alt="About Redwood Lane Salesforce Consulting" class="hero-img">
+    <img src="{{ '/images/about/aboutme-hero.webp' | relative_url }}" srcset="
+      {{ '/images/about/aboutme-hero-small.webp' | relative_url }} 480w,
+      {{ '/images/about/aboutme-hero-medium.webp' | relative_url }} 768w,
+      {{ '/images/about/aboutme-hero.webp' | relative_url }} 1920w
+    " sizes="100vw" alt="About Redwood Lane Salesforce Consulting" class="hero-img">
+
     <div class="hero-text">
         <div class="hero-content">
             <h1>Meet the Founder</h1>
             <p>Passionate about helping businesses grow with Salesforce.</p>
-            <a href="/contact/" class="cta-button">Get in Touch</a>
+            <a href="{{ '/contact/' | relative_url }}" class="cta-button">Get in Touch</a>
         </div>
     </div>
 </div>
@@ -26,7 +31,7 @@ permalink: /about/
       <p>With years of experience optimizing Salesforce environments, I’ve helped businesses streamline their workflows, improve data management, and automate key processes.</p>
     </div>
     <div class="about-image">
-      <img src="/images/about/me.webp" alt="Headshot of Steven Van Elk">
+      <img src="{{ '/images/about/me.webp' | relative_url }}" alt="Headshot of Steven Van Elk">
     </div>
   </div>
 
@@ -48,8 +53,8 @@ permalink: /about/
             </li>
         </ul>
   <div class="certification-images">
-    <img src="/images/about/SF-Admin.webp" alt="Salesforce Certified Administrator">
-    <img src="/images/about/SF-PAB.webp" alt="Salesforce Certified Platform App Builder">
+    <img src="{{ '/images/about/SF-Admin.webp' | relative_url }}" alt="Salesforce Certified Administrator">
+    <img src="{{ '/images/about/SF-PAB.webp' | relative_url }}" alt="Salesforce Certified Platform App Builder">
   </div>
 
   <h2>Beyond Salesforce</h2>
