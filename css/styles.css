@@ -32,6 +32,7 @@ body {
     transition: opacity 0.2s ease-in;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -73,13 +74,6 @@ h1, h2 {
 
 * {
     box-sizing: border-box;
-}
-
-/* Ensure html becomes visible once the styles are loaded */
-html.loaded {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.2s ease-in;
 }
 
 /* Container: Keeps content centered, but not boxed */
