@@ -23,10 +23,8 @@
     <link rel="preload" href="{{ '/assets/fonts/Bentham.otf' | relative_url }}" as="font" type="font/otf" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
     <link rel="icon" href="{{ '/images/global/favicon.ico' | relative_url }}">
-    <script src="{{ '/js/cookie-banner.js' | relative_url }}" defer></script>
 </head>
 <body>
-    {% include cookie-banner.html %}
     {% include header.html %}
     <main>
         {{ content }}
