@@ -15,8 +15,12 @@ layout: blog
     {{ content }}
 </div>
 </article>
+{% assign nav_count = 0 %}
+{% if page.next %}{% assign nav_count = nav_count | plus: 1 %}{% endif %}
+{% if page.previous %}{% assign nav_count = nav_count | plus: 1 %}{% endif %}
+
 {% if page.previous or page.next %}
-<nav class="post-navigation">
+<nav class="post-navigation {% if nav_count == 1 %}single-nav{% endif %}">
   {% if page.next %}
   <div class="nav-item nav-next">
     <a href="{{ page.next.url }}">
@@ -25,6 +29,7 @@ layout: blog
     </a>
   </div>
   {% endif %}
+
   {% if page.previous %}
   <div class="nav-item nav-prev">
     <a href="{{ page.previous.url }}">

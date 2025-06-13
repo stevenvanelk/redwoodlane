@@ -159,6 +159,10 @@ h1, h2, h3, .hero-title {
     gap: 2rem;
 }
 
+.post-navigation.single-nav {
+    justify-content: flex-end; 
+}
+
 .post-navigation .nav-item {
     max-width: 45%;
     min-height: 3rem;
@@ -197,6 +201,16 @@ h1, h2, h3, .hero-title {
     align-items: flex-end;
 }
 
+.post-navigation .nav-prev a {
+    direction: rtl;
+    text-align: right; 
+}
+
+.post-navigation .nav-prev .nav-label,
+.post-navigation .nav-prev .nav-title {
+    direction: ltr;
+}
+
 .post-navigation .nav-next {
     display: flex;
     flex-direction: column;
@@ -204,19 +218,21 @@ h1, h2, h3, .hero-title {
 }
 
 .post-navigation .nav-title {
+    display: block;
     font-weight: 400;
     color: inherit;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
 }
 
 @media (max-width: 600px) {
     .post-navigation {
-        /* flex-direction: column; */
-        align-items: stretch;
+        flex-wrap: wrap;
     }
 
     .post-navigation .nav-item {
+        width: 100%;
         max-width: 100%;
     }
 
