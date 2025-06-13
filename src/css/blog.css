@@ -152,17 +152,20 @@ h1, h2, h3, .hero-title {
 
 .post-navigation {
     max-width: 800px;
-    margin: 3rem auto 0 auto;
+    margin: 1rem auto 0 auto;
+    /* less vertical space */
+    padding: 0.75rem 0;
+    /* less vertical padding */
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    padding: 1.5rem 0;
-    border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    /* ONLY bottom border */
 }
 
 .post-navigation .nav-item {
     max-width: 45%;
+    min-height: 3rem;
 }
 
 .post-navigation .nav-label {
@@ -171,13 +174,14 @@ h1, h2, h3, .hero-title {
     text-transform: uppercase;
     color: #888;
     margin-bottom: 0.25rem;
+    font-weight: 500;
 }
 
 .post-navigation a {
     font-size: 1rem;
-    text-decoration: none;
-    color: #333;
     font-weight: 600;
+    color: #333;
+    text-decoration: none;
     line-height: 1.4;
 }
 
@@ -194,5 +198,9 @@ h1, h2, h3, .hero-title {
     .post-navigation .nav-item {
         max-width: 100%;
         text-align: center;
+    }
+
+    .post-navigation .nav-label {
+        margin-top: 1rem;
     }
 }
