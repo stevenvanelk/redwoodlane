@@ -149,3 +149,20 @@ h1, h2, h3, .hero-title {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility; 
 }
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.post-navigation a {
+    color: var(--primary-color, #333);
+    text-decoration: none;
+}
+
+.post-navigation a:hover {
+    text-decoration: underline; 
+}
