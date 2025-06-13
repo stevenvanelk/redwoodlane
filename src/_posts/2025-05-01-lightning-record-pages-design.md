@@ -18,3 +18,5 @@ Here’s what we focus on:
 - **Highlights, quick actions, and contextual components** that help people do the right thing faster
 
 If your team has to scroll, guess, or tab-hop, your page layout is slowing them down. Let’s fix that.
+
+---

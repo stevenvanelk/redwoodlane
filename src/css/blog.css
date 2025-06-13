@@ -60,7 +60,7 @@
 .blog .blog-wrapper {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 0.5rem 1rem;
 }
 
 .blog-post .hero-container {
@@ -199,7 +199,7 @@ h1, h2, h3, .hero-title {
 
 @media (max-width: 600px) {
     .post-navigation {
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: stretch;
     }
 
