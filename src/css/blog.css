@@ -156,12 +156,13 @@ h1, h2, h3, .hero-title {
     padding: 0 1rem 1rem 1rem;
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .post-navigation .nav-item {
     max-width: 45%;
     min-height: 3rem;
+    overflow: hidden;
 }
 
 .post-navigation .nav-label {
@@ -175,7 +176,7 @@ h1, h2, h3, .hero-title {
 
 .post-navigation a {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     color: #333;
     text-decoration: none;
     line-height: 1.4;
