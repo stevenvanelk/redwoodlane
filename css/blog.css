@@ -166,6 +166,7 @@ h1, h2, h3, .hero-title {
 .post-navigation .nav-item {
     max-width: 45%;
     min-height: 3rem;
+    min-width: 0;
     overflow: hidden;
 }
 
