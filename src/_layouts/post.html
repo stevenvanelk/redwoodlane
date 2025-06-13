@@ -15,3 +15,17 @@ layout: blog
     {{ content }}
 </div>
 </article>
+{% if page.previous or page.next %}
+<nav class="post-navigation">
+  <div class="prev-post">
+    {% if page.previous %}
+    ← <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+    {% endif %}
+  </div>
+  <div class="next-post">
+    {% if page.next %}
+    <a href="{{ page.next.url }}">{{ page.next.title }}</a> →
+    {% endif %}
+  </div>
+</nav>
+{% endif %}
