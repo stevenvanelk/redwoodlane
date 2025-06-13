@@ -17,15 +17,17 @@ layout: blog
 </article>
 {% if page.previous or page.next %}
 <nav class="post-navigation">
-  <div class="prev-post">
-    {% if page.previous %}
-    ← <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-    {% endif %}
+  {% if page.next %}
+  <div class="nav-item nav-next">
+    <span class="nav-label">← Next Post</span>
+    <a href="{{ page.next.url }}">{{ page.next.title }}</a>
   </div>
-  <div class="next-post">
-    {% if page.next %}
-    <a href="{{ page.next.url }}">{{ page.next.title }}</a> →
-    {% endif %}
+  {% endif %}
+  {% if page.previous %}
+  <div class="nav-item nav-prev">
+    <span class="nav-label">Previous Post →</span>
+    <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
   </div>
+  {% endif %}
 </nav>
 {% endif %}
