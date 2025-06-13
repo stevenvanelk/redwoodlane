@@ -23,5 +23,3 @@ We specialize in:
 Whether you’re just getting started with Salesforce or you're ready to take your org to the next level, Redwood Lane is here to help.
 
 Stay tuned—we’ll be sharing tips, stories, and insights from the road ahead.
-
----
