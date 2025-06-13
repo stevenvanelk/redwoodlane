@@ -183,10 +183,18 @@ h1, h2, h3, .hero-title {
     color: #333;
     text-decoration: none;
     line-height: 1.4;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 .post-navigation a:hover {
     text-decoration: underline;
+}
+
+.post-navigation .nav-prev {
+    text-align: right; 
 }
 
 @media (max-width: 600px) {
