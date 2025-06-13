@@ -156,7 +156,7 @@ h1, h2, h3, .hero-title {
     padding: 0 1rem 1rem 1rem;
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .post-navigation .nav-item {
@@ -193,6 +193,17 @@ h1, h2, h3, .hero-title {
 .post-navigation .nav-prev {
     text-align: right; 
 }
+
+.post-navigation .nav-next {
+    text-align: left;
+}
+
+.post-navigation .nav-next .nav-label {
+    text-align: left;
+}
+
+.post-navigation .nav-prev .nav-label {
+    text-align: right; }
 
 @media (max-width: 600px) {
     .post-navigation {
