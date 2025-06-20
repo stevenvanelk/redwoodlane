@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why We Still Love Lightning Record Pages | Redwood Lane</title>
-    <meta name="description" content="Sometimes the best improvements come from layout, not logic. Here’s how we design Lightning pages that keep users focused and productive.">
-    <meta name="keywords" content="Lightning Record Pages, Salesforce UX, Admin Tools, Productivity">
+    <title>Apex Try-Catch Blocks That Actually Help You Debug | Redwood Lane</title>
+    <meta name="description" content="Catching an error isn’t enough. Here’s how to write Apex try-catch blocks that give you real insight when something goes wrong.">
+    <meta name="keywords" content="Apex, Error Handling, Debugging, Salesforce Development">
     <meta name="author" content="Redwood Lane">
-    <meta property="og:title" content="Why We Still Love Lightning Record Pages | Redwood Lane Salesforce Consulting">
-    <meta property="og:description" content="Sometimes the best improvements come from layout, not logic. Here’s how we design Lightning pages that keep users focused and productive.">
+    <meta property="og:title" content="Apex Try-Catch Blocks That Actually Help You Debug | Redwood Lane Salesforce Consulting">
+    <meta property="og:description" content="Catching an error isn’t enough. Here’s how to write Apex try-catch blocks that give you real insight when something goes wrong.">
     
-    <meta property="og:image" content="/images/blog/lightning-pages-love.webp">
+    <meta property="og:image" content="/images/blog/apex-error-handling.webp">
     
-    <meta property="og:url" content="https://redwoodlane.net/blog/lightning-record-pages-design/">
+    <meta property="og:url" content="https://redwoodlane.net/blog/apex-error-handling-best-practices/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Why We Still Love Lightning Record Pages | Redwood Lane">
-    <meta name="twitter:description" content="Sometimes the best improvements come from layout, not logic. Here’s how we design Lightning pages that keep users focused and productive.">
+    <meta name="twitter:title" content="Apex Try-Catch Blocks That Actually Help You Debug | Redwood Lane">
+    <meta name="twitter:description" content="Catching an error isn’t enough. Here’s how to write Apex try-catch blocks that give you real insight when something goes wrong.">
     
-    <meta name="twitter:image" content="/images/blog/lightning-pages-love.webp">
+    <meta name="twitter:image" content="/images/blog/apex-error-handling.webp">
     
     <link rel="preload" href="/assets/fonts/Bentham.otf" as="font" type="font/otf" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
@@ -59,27 +59,33 @@
         <article class="blog-post">
   
   <div class="hero-container">
-    <img src="/images/blog/lightning-pages-love.webp" alt="Why We Still Love Lightning Record Pages hero image" class="post-hero-img">
+    <img src="/images/blog/apex-error-handling.webp" alt="Apex Try-Catch Blocks That Actually Help You Debug hero image" class="post-hero-img">
     <div class="hero-title">
-      <h1>Why We Still Love Lightning Record Pages</h1>
+      <h1>Apex Try-Catch Blocks That Actually Help You Debug</h1>
     </div>
   </div>
   
   <div class="blog-wrapper">
-    <p><em>May 01, 2025</em></p>
-    <p>We get it—Flows and Apex get all the attention. But <strong>great Lightning Record Pages</strong> can change how your team works every single day.</p>
+    <p><em>June 19, 2025</em></p>
+    <p>We’ve all seen it — an Apex class with a try-catch block that does… nothing.</p>
 
-<p>Here’s what we focus on:</p>
+<p>```apex
+try {
+    // business logic
+} catch (Exception e) {
+    // 🙈 quietly fail
+}</p>
 
-<ul>
-  <li><strong>Page layouts that match business flow</strong>, not object structure</li>
-  <li><strong>Tabs and visibility rules</strong> that reduce cognitive overload</li>
-  <li><strong>Highlights, quick actions, and contextual components</strong> that help people do the right thing faster</li>
-</ul>
+<p>That kind of error handling makes troubleshooting a nightmare. If something breaks, you get no logs, no visibility, and no clue why.</p>
 
-<p>If your team has to scroll, guess, or tab-hop, your page layout is slowing them down. Let’s fix that.</p>
+<p>Instead, here’s how we structure try-catch blocks to help us debug efficiently:</p>
 
-<hr />
+<p>Log the error using System.debug(), or better yet, store it in a custom Error Log object with e.getMessage() and e.getStackTraceString()
+Surface user-friendly messages only when appropriate — don’t expose internals in UI errors
+Avoid overbroad exception types — catching everything hides root causes
+And when possible, wrap risky logic in helper methods to isolate failures. If you’re logging email failures the same way you handle DML errors, it’s time to refactor.</p>
+
+<p>Solid error handling turns surprises into signals — and lets you fix issues before your users even notice.</p>
 
 </div>
 </article>
@@ -91,18 +97,18 @@
 <nav class="post-navigation ">
   
   <div class="nav-item nav-next">
-    <a href="/blog/flows-with-custom-metadata/">
+    <a href="/blog/salesforce-requirements-analysis/">
       <span class="nav-label">← Next Post</span>
-      <span class="nav-title">Why We Use Custom Metadata to Simplify Flows</span>
+      <span class="nav-title">Ask Better Questions: How to Get the Right Requirements</span>
     </a>
   </div>
   
 
   
   <div class="nav-item nav-prev">
-    <a href="/blog/flows-that-dont-fail/">
+    <a href="/blog/flows-with-custom-metadata/">
       <span class="nav-label">Previous Post →</span>
-      <span class="nav-title">Your Salesforce Org Is Only as Good as Its Worst Flow</span>
+      <span class="nav-title">Why We Use Custom Metadata to Simplify Flows</span>
     </a>
   </div>
   

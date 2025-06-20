@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-06-13T13:51:34+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Why We Still Love Lightning Record Pages</title><link href="https://redwoodlane.net/blog/lightning-record-pages-design/" rel="alternate" type="text/html" title="Why We Still Love Lightning Record Pages" /><published>2025-05-01T00:00:00+00:00</published><updated>2025-05-01T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/lightning-record-pages-design</id><content type="html" xml:base="https://redwoodlane.net/blog/lightning-record-pages-design/"><![CDATA[<p>We get it—Flows and Apex get all the attention. But <strong>great Lightning Record Pages</strong> can change how your team works every single day.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-06-20T15:34:05+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Ask Better Questions: How to Get the Right Requirements</title><link href="https://redwoodlane.net/blog/salesforce-requirements-analysis/" rel="alternate" type="text/html" title="Ask Better Questions: How to Get the Right Requirements" /><published>2025-06-20T00:00:00+00:00</published><updated>2025-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-requirements-analysis</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-requirements-analysis/"><![CDATA[<p>Early in my Salesforce career, I used to build exactly what was asked.</p>
+
+<p>“Can you add a checkbox?”
+“Can you make a flow that assigns this to marketing?”
+“Can we just copy this old spreadsheet into Salesforce?”</p>
+
+<p>And guess what? Half the time, what I built wasn’t actually what they needed.</p>
+
+<p>These days, I ask a better question first:</p>
+<blockquote>
+  <p>“What’s the problem you’re trying to solve?”</p>
+</blockquote>
+
+<p>That question alone has changed my approach.</p>
+
+<p>When a client asked for a “training completed” checkbox, it led to a conversation about tracking attendance across multiple sessions, logging instructor feedback, and showing a full training history — not something you can solve with a checkbox.</p>
+
+<p><strong>Great admins and developers don’t just gather requirements — we uncover them.</strong></p>
+
+<p>That means:</p>
+<ul>
+  <li>Listening for pain points, not just feature requests</li>
+  <li>Digging into how users work, not just what they say</li>
+  <li>Validating your understanding before writing a single line of automation</li>
+</ul>
+
+<p>Salesforce is powerful, but only when we solve the <em>right</em> problems. Better questions lead to better systems — and happier teams.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[People ask for features, but what they really need is a solution. Here’s how we go beyond requests to uncover real business needs.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/requirements-interviewing.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/requirements-interviewing.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Apex Try-Catch Blocks That Actually Help You Debug</title><link href="https://redwoodlane.net/blog/apex-error-handling-best-practices/" rel="alternate" type="text/html" title="Apex Try-Catch Blocks That Actually Help You Debug" /><published>2025-06-19T00:00:00+00:00</published><updated>2025-06-19T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/apex-error-handling-best-practices</id><content type="html" xml:base="https://redwoodlane.net/blog/apex-error-handling-best-practices/"><![CDATA[<p>We’ve all seen it — an Apex class with a try-catch block that does… nothing.</p>
+
+<p>```apex
+try {
+    // business logic
+} catch (Exception e) {
+    // 🙈 quietly fail
+}</p>
+
+<p>That kind of error handling makes troubleshooting a nightmare. If something breaks, you get no logs, no visibility, and no clue why.</p>
+
+<p>Instead, here’s how we structure try-catch blocks to help us debug efficiently:</p>
+
+<p>Log the error using System.debug(), or better yet, store it in a custom Error Log object with e.getMessage() and e.getStackTraceString()
+Surface user-friendly messages only when appropriate — don’t expose internals in UI errors
+Avoid overbroad exception types — catching everything hides root causes
+And when possible, wrap risky logic in helper methods to isolate failures. If you’re logging email failures the same way you handle DML errors, it’s time to refactor.</p>
+
+<p>Solid error handling turns surprises into signals — and lets you fix issues before your users even notice.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Catching an error isn’t enough. Here’s how to write Apex try-catch blocks that give you real insight when something goes wrong.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/apex-error-handling.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/apex-error-handling.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why We Use Custom Metadata to Simplify Flows</title><link href="https://redwoodlane.net/blog/flows-with-custom-metadata/" rel="alternate" type="text/html" title="Why We Use Custom Metadata to Simplify Flows" /><published>2025-06-18T00:00:00+00:00</published><updated>2025-06-18T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/flows-with-custom-metadata</id><content type="html" xml:base="https://redwoodlane.net/blog/flows-with-custom-metadata/"><![CDATA[<p>If you’ve ever had to update a flow because a picklist value changed or a rule shifted, you already know the pain of hardcoded logic.</p>
+
+<p>One of our favorite ways to reduce that friction is using <strong>Custom Metadata Types</strong> to drive logic in flows. Instead of multiple decision elements tied to static values, we set up records in a metadata type that map inputs to outcomes — think categories, priorities, or assignment rules.</p>
+
+<p>Then in the flow, we use a <strong>Get Records</strong> element to query the matching metadata and determine what to do next.</p>
+
+<p>Benefits?</p>
+<ul>
+  <li>Admins can change behavior without modifying the flow</li>
+  <li>Logic stays readable, reusable, and scalable</li>
+  <li>No more chasing down every branch when something changes</li>
+</ul>
+
+<p>Metadata-driven automation doesn’t just simplify updates — it helps you <strong>build smarter, more resilient flows</strong> from the start.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Hardcoding values into flows leads to frustration down the road. Here’s how Custom Metadata Types let us scale automation cleanly.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/flows-metadata-clean.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/flows-metadata-clean.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why We Still Love Lightning Record Pages</title><link href="https://redwoodlane.net/blog/lightning-record-pages-design/" rel="alternate" type="text/html" title="Why We Still Love Lightning Record Pages" /><published>2025-05-01T00:00:00+00:00</published><updated>2025-05-01T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/lightning-record-pages-design</id><content type="html" xml:base="https://redwoodlane.net/blog/lightning-record-pages-design/"><![CDATA[<p>We get it—Flows and Apex get all the attention. But <strong>great Lightning Record Pages</strong> can change how your team works every single day.</p>
 
 <p>Here’s what we focus on:</p>
 
@@ -94,46 +151,4 @@
 
 <p>Automation should make things smoother—not louder. We’ll help you get there.</p>
 
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Automation can make you faster—or just amplify chaos. Here’s how we help teams automate the *right* things.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/automate-right-things.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/automate-right-things.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Building for Scale Without Overbuilding</title><link href="https://redwoodlane.net/blog/building-for-scale/" rel="alternate" type="text/html" title="Building for Scale Without Overbuilding" /><published>2023-07-07T00:00:00+00:00</published><updated>2023-07-07T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/building-for-scale</id><content type="html" xml:base="https://redwoodlane.net/blog/building-for-scale/"><![CDATA[<p>You want your Salesforce org to support growth—but if you over-engineer it too early, you’ll slow down before you even speed up.</p>
-
-<p>At Redwood Lane, we help teams <strong>build for where they’re going</strong>—<em>without</em> burdening them with features they don’t need yet.</p>
-
-<p>How?</p>
-
-<ul>
-  <li><strong>We design systems in phases</strong>, focusing on what drives value <em>right now</em></li>
-  <li><strong>We create extensible structures</strong>, so new record types, processes, or users can be added cleanly later</li>
-  <li><strong>We document the roadmap</strong>, so future devs (and admins) know what’s coming and why</li>
-</ul>
-
-<p>Scalable doesn’t have to mean complex. Let’s build smart—and stay nimble.</p>
-
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Planning for growth is smart. Building things you don’t need yet? That’s tech debt. Here’s how we keep clients agile.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/build-for-scale.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/build-for-scale.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Spring Cleaning Your Salesforce Org</title><link href="https://redwoodlane.net/blog/spring-cleaning-salesforce/" rel="alternate" type="text/html" title="Spring Cleaning Your Salesforce Org" /><published>2023-04-12T00:00:00+00:00</published><updated>2023-04-12T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/spring-cleaning-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/spring-cleaning-salesforce/"><![CDATA[<p>The best time to clean up your Salesforce org? Right before it becomes a problem.</p>
-
-<p>At Redwood Lane, we run regular <strong>org health checks</strong> for clients—especially in the spring. Here’s what we look for:</p>
-
-<ul>
-  <li><strong>Unused fields</strong> that clutter layouts and confuse users</li>
-  <li><strong>Old automation</strong> (especially legacy Workflow Rules) that may still be running behind the scenes</li>
-  <li><strong>Broken reports and dashboards</strong> that no longer reflect real business priorities</li>
-</ul>
-
-<p>We also help document what stays, what goes, and what gets archived—so your system stays lean, fast, and easy to manage.</p>
-
-<p>A clean org is a healthy org. Let’s make it happen.</p>
-
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Old fields, broken flows, unused reports... sound familiar? Let’s clean house and set your org up for future growth.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/spring-cleaning.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/spring-cleaning.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Stop Fighting Your CRM</title><link href="https://redwoodlane.net/blog/stop-fighting-your-crm/" rel="alternate" type="text/html" title="Stop Fighting Your CRM" /><published>2023-01-18T00:00:00+00:00</published><updated>2023-01-18T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/stop-fighting-your-crm</id><content type="html" xml:base="https://redwoodlane.net/blog/stop-fighting-your-crm/"><![CDATA[<p>We’ve all seen it—teams using spreadsheets, sticky notes, or side conversations to avoid dealing with their CRM. It’s not laziness—it’s friction.</p>
-
-<p>At Redwood Lane, we help clients <strong>bridge the gap between process and platform</strong> so Salesforce actually <em>works</em> the way your team does.</p>
-
-<p>Here’s what we focus on:</p>
-
-<ul>
-  <li><strong>Listening to users first</strong>, then configuring second</li>
-  <li><strong>Reducing required clicks and fields</strong>—less busywork, more focus</li>
-  <li><strong>Making it easy to do the right thing</strong>, so adoption is a natural outcome</li>
-</ul>
-
-<p>You shouldn’t need to convince your team to use Salesforce. You should make it something they <em>want</em> to use. We can help with that.</p>
-
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[If your team is working around Salesforce instead of with it, it’s time for a rethink. Here’s how we align systems with real-life workflows.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/stop-fighting-crm.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/stop-fighting-crm.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Automation can make you faster—or just amplify chaos. Here’s how we help teams automate the *right* things.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/automate-right-things.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/automate-right-things.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
