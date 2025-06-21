@@ -2,7 +2,7 @@ name: Quarterly Site Build
 
 on:
   schedule:
-    - cron: '0 10 21 3,6,9,12 *' # Runs at 10:00 UTC on March 19, June 19, Sept 19, Dec 19
+    - cron: '0 10 19 3,6,9,12 *' # Runs at 10:00 UTC on March 19, June 19, Sept 19, Dec 19
   workflow_dispatch:
 
 jobs:
