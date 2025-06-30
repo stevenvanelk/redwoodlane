@@ -724,3 +724,10 @@ h1, h2, h3, .hero-text {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility; 
 }
+
+.search-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+}
