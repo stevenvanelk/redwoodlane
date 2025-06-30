@@ -13,4 +13,13 @@ hero_heading: Search Redwood Lane
 hero_subheading: Find blog posts, resources, and pages across the Redwood Lane site.
 ---
 
+{% include hero-image.html
+  image=page.hero_image
+  image_small=page.hero_image_small
+  image_medium=page.hero_image_medium
+  alt=page.hero_alt
+  heading=page.hero_heading
+  subheading=page.hero_subheading
+%}
+
 {% include search-body.html %}
