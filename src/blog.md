@@ -6,9 +6,6 @@ keywords: Salesforce, Blog, Admin Tips, Developer Insights, Automation, CRM, Red
 image: /images/global/RL-Sharing.webp
 pagination:
   enabled: true
-  collection: posts
-  per_page: 5
-  permalink: /page/:num/
 hero_image: /images/blog/rl-hero-blog.webp
 hero_image_small: /images/blog/rl-hero-blog-small.webp
 hero_image_medium: /images/blog/rl-hero-blog-medium.webp

@@ -21,6 +21,7 @@ pagination:
   enabled: true
   per_page: 5
   permalink: /page/:num/
+  first_page_url: /blog/
   title: ":title - page :num"
   sort_field: "date"
   sort_reverse: true
