@@ -45,8 +45,15 @@ h1, h2 {
 }
 
 .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrapper {
     flex: 1;
-    /* Pushes footer down */
+    display: flex;
+    flex-direction: column;
 }
 
 .privacy-wrapper {
