@@ -49,6 +49,10 @@ h1, h2 {
     /* Pushes footer down */
 }
 
+main {
+    flex: 1;
+}
+
 .privacy-wrapper {
     max-width: 800px;
     margin: 0 auto;
