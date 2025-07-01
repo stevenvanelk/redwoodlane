@@ -8,7 +8,7 @@ pagination:
   enabled: true
   collection: posts
   per_page: 5
-  permalink: /blog/page/:num/
+  permalink: /page/:num/
 hero_image: /images/blog/rl-hero-blog.webp
 hero_image_small: /images/blog/rl-hero-blog-small.webp
 hero_image_medium: /images/blog/rl-hero-blog-medium.webp
@@ -18,6 +18,7 @@ hero_subheading: Advice to help businesses automate, integrate, and scale
 hero_cta_label: Get in Touch
 hero_cta_url: /contact/
 ---
+
 {% include hero-image.html
   image=page.hero_image
   image_small=page.hero_image_small

@@ -20,7 +20,7 @@ permalink: /blog/:title/
 pagination:
   enabled: true
   per_page: 5
-  permalink: /blog/page/:num/
+  permalink: /page/:num/
   title: ":title - page :num"
   sort_field: "date"
   sort_reverse: true
@@ -38,7 +38,15 @@ defaults:
       layout: post
       author: Steven Van Elk
       description: "Insights, tips, and stories from a Salesforce consultant."
-      tags: [Salesforce, Salesforce Administrator, Salesforce Developer, Salesforce Consulting, Consulting, CRM]
+      tags:
+        [
+          Salesforce,
+          Salesforce Administrator,
+          Salesforce Developer,
+          Salesforce Consulting,
+          Consulting,
+          CRM,
+        ]
 
 # Exclude non-web assets
 exclude:

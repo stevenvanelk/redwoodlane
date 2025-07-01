@@ -27,6 +27,8 @@
         {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
         <strong>{{ page }}</strong>
+        {% elsif page == 1 %}
+        <a href="{{ paginator.first_page_path | relative_url }}">{{ page }}</a>
         {% else %}
         <a href="{{ paginator.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a>
         {% endif %}
