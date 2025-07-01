@@ -1,0 +1,14 @@
+# Ignore build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.bundle/
+
+# Ignore system files
+.DS_Store
+
+# Ignore node modules if using npm tooling
+node_modules/
+
+# Ignore log files
+*.log
