@@ -10,33 +10,36 @@ layout: blog
     </div>
   </div>
   {% endif %}
+
   <div class="blog-wrapper">
     <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
     {{ content }}
-</div>
+  </div>
 </article>
+
+{% assign newerPost = page.next %}
+{% assign olderPost = page.previous %}
 {% assign nav_count = 0 %}
-{% if page.next %}{% assign nav_count = nav_count | plus: 1 %}{% endif %}
-{% if page.previous %}{% assign nav_count = nav_count | plus: 1 %}{% endif %}
+{% if newerPost %}{% assign nav_count = nav_count | plus: 1 %}{% endif %}
+{% if olderPost %}{% assign nav_count = nav_count | plus: 1 %}{% endif %}
 
-{% if page.previous or page.next %}
+{% if newerPost or olderPost %}
 <nav class="post-navigation {% if nav_count == 1 %}single-nav{% endif %}">
-  {% if page.next %}
-  <div class="nav-item nav-next">
-    <a href="{{ page.next.url }}">
-      <span class="nav-label">← Next Post</span>
-      <span class="nav-title">{{ page.next.title }}</span>
+  <div class="nav-col">
+    {% if newerPost %}
+    <a href="{{ newerPost.url }}" class="nav-link newer">
+      <span class="nav-label">← Newer Post</span>
+      <span class="nav-title">{{ newerPost.title }}</span>
     </a>
+    {% endif %}
   </div>
-  {% endif %}
-
-  {% if page.previous %}
-  <div class="nav-item nav-prev">
-    <a href="{{ page.previous.url }}">
-      <span class="nav-label">Previous Post →</span>
-      <span class="nav-title">{{ page.previous.title }}</span>
+  <div class="nav-col">
+    {% if olderPost %}
+    <a href="{{ olderPost.url }}" class="nav-link older">
+      <span class="nav-label">Older Post →</span>
+      <span class="nav-title">{{ olderPost.title }}</span>
     </a>
+    {% endif %}
   </div>
-  {% endif %}
 </nav>
 {% endif %}
