@@ -399,6 +399,7 @@ button:hover {
     /* Navigation */
     .menu-toggle {
         display: block;
+        z-index: 4000;
     }
     
     .nav-links {
