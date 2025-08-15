@@ -394,6 +394,114 @@ button:hover {
     background: #8b1b1b;
 }
 
+.section {
+    padding: 0;
+}
+
+.card-grid.two {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.card-grid.three {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 720px) {
+    .card-grid.two {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-grid.three {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+    padding: 1.25rem;
+}
+
+.card.compact {
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card h3 {
+    margin: .75rem 0 0;
+    font-size: 1.05rem;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: .6rem .95rem;
+    border-radius: 10px;
+    text-decoration: none;
+    background: #990000;
+    color: #fff;
+}
+
+.button.alt {
+    background: #990000;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.services-feature {
+    margin-top: 1rem;
+}
+
+.projects-strip img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Make all lists left-aligned with tight bullets/numbers */
+.container ul,
+.container ol,
+.section ul,
+.section ol {
+    margin: 0 0 0 1.25rem;
+    /* small indent so bullets/numbers aren’t hanging */
+    padding: 0;
+    text-align: left;
+}
+
+.container li,
+.section li {
+    margin: 0 0 .05rem;
+    line-height: 1.6;
+    padding-left: 0;
+    /* removes extra indent some themes add */
+}
+
+/* Optional: make numbers bold for OL */
+.container ol li::marker,
+.section ol li::marker {
+    font-weight: bold;
+}
+
+/* Optional: unify bullet style */
+.container ul li::marker,
+.section ul li::marker {
+    color: var(--rl-red-500, #990000);
+    /* or your brand color */
+}
+
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
     /* Navigation */
