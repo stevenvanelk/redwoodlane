@@ -662,25 +662,34 @@ button:hover {
 
 /* Footer Styling */
 footer {
-    height: 100px;
     width: 100%;
     text-align: center;
     color: white;
-    margin-top: 10px;
-    position: relative;
-    bottom: 0;
+    position: static;
+    margin-top: auto;
     left: 0;
     box-sizing: border-box;
     padding: 0;
 }
 
-footer p, footer a {
+footer p {
     color: white;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 footer a:hover {
     text-decoration: underline; /* Optional hover effect */
+    color: white;
+    background-color: transparent;
 }
 
 .footer-social-section {
