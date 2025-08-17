@@ -17,6 +17,7 @@ try {
 } catch (Exception e) {
     // 🙈 quietly fail
 }
+```
 
 That kind of error handling makes troubleshooting a nightmare. If something breaks, you get no logs, no visibility, and no clue why.
 
@@ -51,14 +52,17 @@ If you’re catching email failures and DML errors in the same block, it’s tim
 ## Example: From Weak to Strong
 Here’s a weak example:
 
+```apex
 try {
     insert newOpportunity;
 } catch (Exception e) {
     // do nothing
 }
+```
 
 Here’s the stronger version:
 
+```apex
 try {
     insert newOpportunity;
 } catch (DmlException e) {
@@ -70,6 +74,7 @@ try {
     );
     throw new AuraHandledException('We hit an error creating your Opportunity. Please contact support.');
 }
+```
 
 With this pattern:
 - Errors are logged in a central place.
