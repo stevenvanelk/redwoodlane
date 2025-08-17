@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-08-17T23:46:47+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Ask Better Questions: How to Get the Right Requirements</title><link href="https://redwoodlane.net/blog/salesforce-requirements-analysis/" rel="alternate" type="text/html" title="Ask Better Questions: How to Get the Right Requirements" /><published>2025-06-20T00:00:00+00:00</published><updated>2025-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-requirements-analysis</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-requirements-analysis/"><![CDATA[<p>Early in my Salesforce career, I used to build exactly what was asked.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-08-17T23:57:53+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Ask Better Questions: How to Get the Right Requirements</title><link href="https://redwoodlane.net/blog/salesforce-requirements-analysis/" rel="alternate" type="text/html" title="Ask Better Questions: How to Get the Right Requirements" /><published>2025-06-20T00:00:00+00:00</published><updated>2025-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-requirements-analysis</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-requirements-analysis/"><![CDATA[<p>Early in my Salesforce career, I used to build exactly what was asked.</p>
 
 <p>“Can you add a checkbox?”<br />
 “Can you make a flow that assigns this to marketing?”<br />
@@ -213,18 +213,87 @@ If you’re catching email failures and DML errors in the same block, it’s tim
 
 <p>Solid error handling turns surprises into signals — and lets you fix issues before your users even notice.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Catching an error isn’t enough. Here’s how to write Apex try-catch blocks that give you real insight when something goes wrong.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/apex-error-handling.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/apex-error-handling.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why We Use Custom Metadata to Simplify Flows</title><link href="https://redwoodlane.net/blog/flows-with-custom-metadata/" rel="alternate" type="text/html" title="Why We Use Custom Metadata to Simplify Flows" /><published>2025-06-18T00:00:00+00:00</published><updated>2025-06-18T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/flows-with-custom-metadata</id><content type="html" xml:base="https://redwoodlane.net/blog/flows-with-custom-metadata/"><![CDATA[<p>If you’ve ever had to update a flow because a picklist value changed or a rule shifted, you already know the pain of hardcoded logic.</p>
 
-<p>One of our favorite ways to reduce that friction is using <strong>Custom Metadata Types</strong> to drive logic in flows. Instead of multiple decision elements tied to static values, we set up records in a metadata type that map inputs to outcomes — think categories, priorities, or assignment rules.</p>
-
-<p>Then in the flow, we use a <strong>Get Records</strong> element to query the matching metadata and determine what to do next.</p>
-
-<p>Benefits?</p>
+<p>Example:</p>
 <ul>
-  <li>Admins can change behavior without modifying the flow</li>
-  <li>Logic stays readable, reusable, and scalable</li>
-  <li>No more chasing down every branch when something changes</li>
+  <li>Sales adds a new <strong>Lead Source</strong> value.</li>
+  <li>A flow breaks because a Decision element was checking for exact text.</li>
+  <li>You spend the afternoon updating multiple branches just to keep the automation running.</li>
 </ul>
 
-<p>Metadata-driven automation doesn’t just simplify updates — it helps you <strong>build smarter, more resilient flows</strong> from the start.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Hardcoding values into flows leads to frustration down the road. Here’s how Custom Metadata Types let us scale automation cleanly.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/flows-metadata-clean.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/flows-metadata-clean.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why We Still Love Lightning Record Pages</title><link href="https://redwoodlane.net/blog/lightning-record-pages-design/" rel="alternate" type="text/html" title="Why We Still Love Lightning Record Pages" /><published>2025-05-01T00:00:00+00:00</published><updated>2025-05-01T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/lightning-record-pages-design</id><content type="html" xml:base="https://redwoodlane.net/blog/lightning-record-pages-design/"><![CDATA[<p>We get it—Flows and Apex get all the attention. But <strong>great Lightning Record Pages</strong> can change how your team works every single day.</p>
+<p>That’s the hidden cost of hardcoding.</p>
+
+<hr />
+
+<h2 id="the-case-for-custom-metadata-types">The Case for Custom Metadata Types</h2>
+
+<p>One of our favorite ways to reduce that friction is using <strong>Custom Metadata Types (CMDT)</strong> to drive logic in flows.</p>
+
+<p>Instead of multiple Decision elements tied to static values, we set up <strong>metadata records</strong> that map inputs to outcomes — things like categories, priorities, or assignment rules.</p>
+
+<p>Then in the flow, we simply <strong>Get Records</strong> from that metadata type to determine the right path forward.</p>
+
+<hr />
+
+<h2 id="example-assignment-by-priority">Example: Assignment by Priority</h2>
+
+<p>Let’s say you want Cases with different priorities to route differently.<br />
+The hardcoded version might look like this:</p>
+
+<div class="language-apex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// In a flow Decision element</span>
+<span class="k">IF</span> <span class="n">Priority</span> <span class="o">=</span> <span class="s2">"High"</span> <span class="err">→</span> <span class="n">Assign</span> <span class="n">to</span> <span class="n">Escalation</span> <span class="n">Queue</span>
+<span class="k">IF</span> <span class="n">Priority</span> <span class="o">=</span> <span class="s2">"Medium"</span> <span class="err">→</span> <span class="n">Assign</span> <span class="n">to</span> <span class="n">Support</span> <span class="n">Queue</span>
+<span class="k">IF</span> <span class="n">Priority</span> <span class="o">=</span> <span class="s2">"Low"</span> <span class="err">→</span> <span class="n">Assign</span> <span class="n">to</span> <span class="n">Triage</span> <span class="n">Queue</span>
+</code></pre></div></div>
+
+<p>The CMDT-driven version replaces all that branching with a single lookup:</p>
+<ol>
+  <li><strong>Custom Metadata Type:</strong> Case_Routing__mdt
+    <ul>
+      <li>Fields: Priority__c, Queue__c</li>
+      <li>Records:</li>
+    </ul>
+    <ul>
+      <li>High → Escalation Queue</li>
+      <li>Medium → Support Queue</li>
+      <li>Low → Triage Queue</li>
+    </ul>
+  </li>
+  <li><strong>Flow:</strong>
+    <ul>
+      <li>Get Records: Case_Routing__mdt where Priority__c = {!Case.Priority}</li>
+      <li>Assignment: Route to the Queue__c returned</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Now, when business changes? You just add or update a metadata record — no flow edit required.</p>
+
+<hr />
+
+<h2 id="benefits">Benefits</h2>
+<ul>
+  <li><strong>Admins can change behavior without modifying the flow</strong><br />
+No need to open Flow Builder for every new picklist value or rule.</li>
+  <li><strong>Logic stays readable, reusable, and scalable</strong><br />
+A single Get Records replaces a tangle of Decision branches.</li>
+  <li><strong>No more chasing down every branch when something changes</strong><br />
+All the logic lives in one metadata table, not scattered across flows.</li>
+</ul>
+
+<hr />
+
+<h2 id="pro-tips">Pro Tips</h2>
+<ul>
+  <li><strong>Pair with Permission Sets</strong> so only admins can update metadata.</li>
+  <li><strong>Document your metadata model</strong> — if someone adds a record later, they should understand how it impacts flows.</li>
+  <li><strong>Think reusability</strong> — the same metadata type can be referenced in multiple flows or even Apex.</li>
+</ul>
+
+<hr />
+
+<h2 id="key-takeaway">Key Takeaway</h2>
+<p>Metadata-driven automation doesn’t just simplify updates — it helps you <strong>build smarter, more resilient flows</strong> from the start.<br />
+The next time you’re tempted to hardcode a value in a Decision element, pause and ask: Should this live in Custom Metadata instead?</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Hardcoding values into flows leads to frustration down the road. Here’s how Custom Metadata Types let us scale automation cleanly.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/flows-metadata-clean.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/flows-metadata-clean.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why We Still Love Lightning Record Pages</title><link href="https://redwoodlane.net/blog/lightning-record-pages-design/" rel="alternate" type="text/html" title="Why We Still Love Lightning Record Pages" /><published>2025-05-01T00:00:00+00:00</published><updated>2025-05-01T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/lightning-record-pages-design</id><content type="html" xml:base="https://redwoodlane.net/blog/lightning-record-pages-design/"><![CDATA[<p>We get it—Flows and Apex get all the attention. But <strong>great Lightning Record Pages</strong> can change how your team works every single day.</p>
 
 <p>Here’s what we focus on:</p>
 
