@@ -72,8 +72,8 @@
     <p><em>June 20, 2025</em></p>
     <p>Early in my Salesforce career, I used to build exactly what was asked.</p>
 
-<p>“Can you add a checkbox?”
-“Can you make a flow that assigns this to marketing?”
+<p>“Can you add a checkbox?”<br />
+“Can you make a flow that assigns this to marketing?”<br />
 “Can we just copy this old spreadsheet into Salesforce?”</p>
 
 <p>And guess what? Half the time, what I built wasn’t actually what they needed.</p>
@@ -87,6 +87,91 @@
 
 <p>When a client asked for a “training completed” checkbox, it led to a conversation about tracking attendance across multiple sessions, logging instructor feedback, and showing a full training history — not something you can solve with a checkbox.</p>
 
+<hr />
+
+<h2 id="why-requirements-gathering-fails">Why Requirements Gathering Fails</h2>
+
+<p>The biggest trap Salesforce admins and developers fall into is becoming “order takers.” It’s easy to capture what people <em>say</em> they want and miss what the business <em>actually</em> needs. When you only document requests, you risk:</p>
+<ul>
+  <li>Building features that don’t solve the root issue</li>
+  <li>Wasting time re-working automation after rollout</li>
+  <li>Creating clutter in Salesforce that confuses users</li>
+</ul>
+
+<p>A checkbox might work for one department, but what happens when another team needs reporting across sessions, managers want dashboards, and compliance requires audit tracking? Suddenly, that “simple checkbox” turns into three different projects.</p>
+
+<hr />
+
+<h2 id="the-shift-from-requests-to-needs">The Shift: From Requests to Needs</h2>
+
+<p>The way out is asking better questions. Instead of writing down “add checkbox,” start uncovering the real requirement:</p>
+
+<ul>
+  <li><strong>Ask about the process, not just the feature</strong><br />
+<em>“Walk me through what happens when training is completed today.”</em></li>
+  <li><strong>Clarify the why</strong><br />
+<em>“Why do you need to know if training is completed? Who uses that info?”</em></li>
+  <li><strong>Surface the impact</strong><br />
+<em>“What happens if we don’t track this correctly?”</em></li>
+</ul>
+
+<p>By focusing on context, you uncover needs that the business user may not have fully articulated.</p>
+
+<hr />
+
+<h2 id="techniques-for-asking-better-questions">Techniques for Asking Better Questions</h2>
+
+<p>Here are three approaches I use when running requirements sessions:</p>
+
+<ol>
+  <li><strong>The “Five Whys”</strong><br />
+Keep asking <em>why</em> until you uncover the root need. Example:
+    <ul>
+      <li>“Why do you need the checkbox?” → “To see if someone finished training.”</li>
+      <li>“Why do you need to see that?” → “So managers know who’s certified.”</li>
+      <li>“Why is that important?” → “Because compliance requires it.”</li>
+    </ul>
+
+    <p>By the third or fourth why, you’re already closer to the real business driver.</p>
+  </li>
+  <li>
+    <p><strong>Scenario Walkthroughs</strong><br />
+Instead of asking abstract questions, walk through a real example.<br />
+<em>“Pretend I’m a new hire finishing training — what happens step by step?”</em><br />
+These walkthroughs often reveal edge cases and exceptions that wouldn’t come up otherwise.</p>
+  </li>
+  <li><strong>Future-State Thinking</strong><br />
+Ask how they’d like things to look ideally, without technical constraints.<br />
+<em>“If you could wave a magic wand, how would you track training?”</em><br />
+This helps surface aspirations that can shape a scalable design.</li>
+</ol>
+
+<hr />
+
+<h2 id="validating-requirements-before-building">Validating Requirements Before Building</h2>
+
+<p>Even after uncovering needs, don’t jump straight into Flow Builder. Validate what you heard by:</p>
+<ul>
+  <li>Summarizing the problem back to the user in plain language</li>
+  <li>Sketching a simple diagram or mockup before development</li>
+  <li>Confirming how success will be measured</li>
+</ul>
+
+<p>This not only prevents wasted development time, it builds trust with stakeholders who feel heard.</p>
+
+<hr />
+
+<h2 id="salesforce-in-practice">Salesforce in Practice</h2>
+
+<p>Here’s a quick example.<br />
+A manager once asked me for a “button to mass-assign leads.” After questions, I learned the real pain was inconsistent territory assignment rules. The solution wasn’t a button — it was refining lead assignment logic and automating the process with criteria-based assignment rules. The manager’s job got easier, the team stopped fighting over leads, and reporting became cleaner.</p>
+
+<p>Salesforce gives us powerful tools (Flows, Apex, validation rules, custom objects, etc.), but those tools only shine when they’re applied to the <em>right</em> problem.</p>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+
 <p><strong>Great admins and developers don’t just gather requirements — we uncover them.</strong></p>
 
 <p>That means:</p>
@@ -97,6 +182,10 @@
 </ul>
 
 <p>Salesforce is powerful, but only when we solve the <em>right</em> problems. Better questions lead to better systems — and happier teams.</p>
+
+<hr />
+
+<p>👉 Next time someone asks you for a checkbox, flow, or button, pause before opening Setup. Ask the better question first.</p>
 
   </div>
 </article>
