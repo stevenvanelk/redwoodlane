@@ -81,12 +81,90 @@ try {
 
 <p>That kind of error handling makes troubleshooting a nightmare. If something breaks, you get no logs, no visibility, and no clue why.</p>
 
-<p>Instead, here’s how we structure try-catch blocks to help us debug efficiently:</p>
+<hr />
 
-<p>Log the error using System.debug(), or better yet, store it in a custom Error Log object with e.getMessage() and e.getStackTraceString()
-Surface user-friendly messages only when appropriate — don’t expose internals in UI errors
-Avoid overbroad exception types — catching everything hides root causes
-And when possible, wrap risky logic in helper methods to isolate failures. If you’re logging email failures the same way you handle DML errors, it’s time to refactor.</p>
+<h2 id="what-a-good-try-catch-should-do">What a Good Try-Catch Should Do</h2>
+
+<p>A try-catch block isn’t just about preventing crashes. It’s about capturing enough context to fix the issue without drowning yourself in noise.</p>
+
+<p>Here’s how we structure ours:</p>
+<ol>
+  <li>Log the error properly
+    <ul>
+      <li>At a minimum, call System.debug(e.getMessage());</li>
+      <li>Better: store errors in a custom Error Log object with fields for message, stack trace, user, and record context.</li>
+      <li>Best: centralize logging in a utility class so every team member uses the same approach.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Show user-friendly messages when appropriate
+Don’t throw raw stack traces back to an end user. Use AuraHandledException (or similar) to show clear but safe messages like:
+“Something went wrong while saving. Please contact support with error ID: 12345.”</p>
+  </li>
+  <li>Catch the right type of exception
+Avoid catch (Exception e) everywhere. Be more specific when you can:
+    <ul>
+      <li>DmlException for database errors</li>
+      <li>NullPointerException for unexpected nulls</li>
+      <li>CalloutException for integration failures
+This makes your logs easier to read and helps pinpoint root causes.</li>
+    </ul>
+  </li>
+  <li>Isolate risky logic in helper methods
+If you’re catching email failures and DML errors in the same block, it’s time to refactor. Put each “risky” operation in its own method so you can handle failures independently.</li>
+</ol>
+
+<hr />
+
+<h2 id="example-from-weak-to-strong">Example: From Weak to Strong</h2>
+<p>Here’s a weak example:</p>
+
+<p>try {
+    insert newOpportunity;
+} catch (Exception e) {
+    // do nothing
+}</p>
+
+<p>Here’s the stronger version:</p>
+
+<p>try {
+    insert newOpportunity;
+} catch (DmlException e) {
+    ErrorLogger.logError(
+        ‘Opportunity Insert’,
+        e.getMessage(),
+        e.getStackTraceString(),
+        UserInfo.getUserId()
+    );
+    throw new AuraHandledException(‘We hit an error creating your Opportunity. Please contact support.’);
+}</p>
+
+<p>With this pattern:</p>
+<ul>
+  <li>Errors are logged in a central place.</li>
+  <li>The user sees a friendly message.</li>
+  <li>You still preserve the root cause in logs for debugging.</li>
+</ul>
+
+<hr />
+
+<h2 id="why-this-matters">Why This Matters</h2>
+<ul>
+  <li><strong>Faster troubleshooting</strong> → You get the stack trace tied to the user and record, not just a vague debug log.</li>
+  <li><strong>Cleaner user experience</strong> → End users aren’t confused by raw Apex error messages.</li>
+  <li><strong>Scalable orgs</strong> → Centralized logging means consistent patterns, not a dozen one-off debug statements.</li>
+</ul>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+  <li>Don’t let exceptions disappear silently.</li>
+  <li>Log errors with enough context to debug later.</li>
+  <li>Use user-friendly messages instead of exposing internals.</li>
+  <li>Catch specific exceptions when possible.</li>
+  <li>Keep risky logic isolated so failures don’t snowball.</li>
+</ul>
 
 <p>Solid error handling turns surprises into signals — and lets you fix issues before your users even notice.</p>
 
