@@ -1,3 +1,22 @@
+/* Make body content in single blog posts left-aligned */
+.blog-post .blog-wrapper {
+    text-align: left;
+}
+
+/* Left-align typical prose elements inside the post body */
+.blog-post .blog-wrapper p,
+.blog-post .blog-wrapper ul,
+.blog-post .blog-wrapper ol,
+.blog-post .blog-wrapper li,
+.blog-post .blog-wrapper blockquote,
+.blog-post .blog-wrapper figure,
+.blog-post .blog-wrapper figcaption,
+.blog-post .blog-wrapper pre,
+.blog-post .blog-wrapper code {
+    text-align: left;
+    margin-left: 0;
+}
+
 .blog .blog-list {
     display: flex;
     flex-direction: column;
