@@ -17,6 +17,10 @@
     margin-left: 0;
 }
 
+.blog-date {
+    text-align: center;
+}
+
 .blog .blog-list {
     display: flex;
     flex-direction: column;
