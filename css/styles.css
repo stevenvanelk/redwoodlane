@@ -459,6 +459,23 @@ button:hover {
     background: #990000;
 }
 
+.button-row {
+    display: flex;
+    justify-content: center;
+    /* center horizontally */
+    flex-wrap: wrap;
+    /* allow wrapping on mobile */
+    gap: 10px;
+    /* even spacing between buttons */
+    margin: 0;
+    /* reset <p> margin if needed */
+}
+
+.button-row .button {
+    flex: 0 0 auto;
+    /* keep buttons sized to content */
+}
+
 .link {
     text-decoration: underline;
 }
