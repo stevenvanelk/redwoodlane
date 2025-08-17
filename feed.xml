@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-08-17T23:42:01+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Ask Better Questions: How to Get the Right Requirements</title><link href="https://redwoodlane.net/blog/salesforce-requirements-analysis/" rel="alternate" type="text/html" title="Ask Better Questions: How to Get the Right Requirements" /><published>2025-06-20T00:00:00+00:00</published><updated>2025-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-requirements-analysis</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-requirements-analysis/"><![CDATA[<p>Early in my Salesforce career, I used to build exactly what was asked.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-08-17T23:46:47+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Ask Better Questions: How to Get the Right Requirements</title><link href="https://redwoodlane.net/blog/salesforce-requirements-analysis/" rel="alternate" type="text/html" title="Ask Better Questions: How to Get the Right Requirements" /><published>2025-06-20T00:00:00+00:00</published><updated>2025-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-requirements-analysis</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-requirements-analysis/"><![CDATA[<p>Early in my Salesforce career, I used to build exactly what was asked.</p>
 
 <p>“Can you add a checkbox?”<br />
 “Can you make a flow that assigns this to marketing?”<br />
@@ -115,12 +115,12 @@ A manager once asked me for a “button to mass-assign leads.” After questions
 
 <p>👉 Next time someone asks you for a checkbox, flow, or button, pause before opening Setup. Ask the better question first.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[People ask for features, but what they really need is a solution. Here’s how we go beyond requests to uncover real business needs.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/requirements-interviewing.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/requirements-interviewing.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Apex Try-Catch Blocks That Actually Help You Debug</title><link href="https://redwoodlane.net/blog/apex-error-handling-best-practices/" rel="alternate" type="text/html" title="Apex Try-Catch Blocks That Actually Help You Debug" /><published>2025-06-19T00:00:00+00:00</published><updated>2025-06-19T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/apex-error-handling-best-practices</id><content type="html" xml:base="https://redwoodlane.net/blog/apex-error-handling-best-practices/"><![CDATA[<p>We’ve all seen it — an Apex class with a try-catch block that does… nothing.</p>
 
-<p>```apex
-try {
-    // business logic
-} catch (Exception e) {
-    // 🙈 quietly fail
-}</p>
+<div class="language-apex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="p">{</span>
+    <span class="c1">// business logic</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 🙈 quietly fail</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>That kind of error handling makes troubleshooting a nightmare. If something breaks, you get no logs, no visibility, and no clue why.</p>
 
@@ -162,25 +162,27 @@ If you’re catching email failures and DML errors in the same block, it’s tim
 <h2 id="example-from-weak-to-strong">Example: From Weak to Strong</h2>
 <p>Here’s a weak example:</p>
 
-<p>try {
-    insert newOpportunity;
-} catch (Exception e) {
-    // do nothing
-}</p>
+<div class="language-apex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="p">{</span>
+    <span class="k">insert</span> <span class="n">newOpportunity</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// do nothing</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Here’s the stronger version:</p>
 
-<p>try {
-    insert newOpportunity;
-} catch (DmlException e) {
-    ErrorLogger.logError(
-        ‘Opportunity Insert’,
-        e.getMessage(),
-        e.getStackTraceString(),
-        UserInfo.getUserId()
-    );
-    throw new AuraHandledException(‘We hit an error creating your Opportunity. Please contact support.’);
-}</p>
+<div class="language-apex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="p">{</span>
+    <span class="k">insert</span> <span class="n">newOpportunity</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">DmlException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ErrorLogger</span><span class="o">.</span><span class="nf">logError</span><span class="p">(</span>
+        <span class="s1">'</span><span class="s2">Opportunity Insert'</span><span class="p">,</span>
+        <span class="n">e</span><span class="o">.</span><span class="nf">getMessage</span><span class="p">(),</span>
+        <span class="n">e</span><span class="o">.</span><span class="nf">getStackTraceString</span><span class="p">(),</span>
+        <span class="n">UserInfo</span><span class="o">.</span><span class="nf">getUserId</span><span class="p">()</span>
+    <span class="p">);</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">AuraHandledException</span><span class="p">(</span><span class="s1">'</span><span class="s2">We hit an error creating your Opportunity. Please contact support.'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>With this pattern:</p>
 <ul>
