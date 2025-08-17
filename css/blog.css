@@ -19,6 +19,17 @@
 
 .blog-date {
     text-align: center;
+    /* center inline content */
+    display: block;
+    /* ensures it's a block element */
+    margin: 0 auto 1.5rem;
+    /* centers the whole block and adds spacing below */
+    width: 100%;
+    /* stretches it full width so text-align works properly */
+    font-size: 0.95rem;
+    /* optional: slightly smaller date */
+    color: #666;
+    /* optional: subtle styling */
 }
 
 .blog .blog-list {
