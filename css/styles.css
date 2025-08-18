@@ -308,11 +308,11 @@ p {
 }
 
 .services ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px auto;
-    display: block;
-    max-width: 600px;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 20px auto !important;
+    display: block !important;
+    max-width: 600px !important;
 }
 
 .services li {
