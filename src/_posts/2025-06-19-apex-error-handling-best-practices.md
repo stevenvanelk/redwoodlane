@@ -29,23 +29,23 @@ A try-catch block isn’t just about preventing crashes. It’s about capturing 
 
 Here’s how we structure ours:
 1. Log the error properly
-- At a minimum, call System.debug(e.getMessage());
-- Better: store errors in a custom Error Log object with fields for message, stack trace, user, and record context.
-- Best: centralize logging in a utility class so every team member uses the same approach.
+    - At a minimum, call System.debug(e.getMessage());
+    - Better: store errors in a custom Error Log object with fields for message, stack trace, user, and record context.
+    - Best: centralize logging in a utility class so every team member uses the same approach.
 
 2. Show user-friendly messages when appropriate
-Don’t throw raw stack traces back to an end user. Use AuraHandledException (or similar) to show clear but safe messages like:
-“Something went wrong while saving. Please contact support with error ID: 12345.”
+    Don’t throw raw stack traces back to an end user. Use AuraHandledException (or similar) to show clear but safe messages like:
+    “Something went wrong while saving. Please contact support with error ID: 12345.”
 
 3. Catch the right type of exception
-Avoid catch (Exception e) everywhere. Be more specific when you can:
-- DmlException for database errors
-- NullPointerException for unexpected nulls
-- CalloutException for integration failures
-This makes your logs easier to read and helps pinpoint root causes.
+    Avoid catch (Exception e) everywhere. Be more specific when you can:
+    - DmlException for database errors
+    - NullPointerException for unexpected nulls
+    - CalloutException for integration failures
+    This makes your logs easier to read and helps pinpoint root causes.
 
 4. Isolate risky logic in helper methods
-If you’re catching email failures and DML errors in the same block, it’s time to refactor. Put each “risky” operation in its own method so you can handle failures independently.
+    If you’re catching email failures and DML errors in the same block, it’s time to refactor. Put each “risky” operation in its own method so you can handle failures independently.
 
 ---
 
