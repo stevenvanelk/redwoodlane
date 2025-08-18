@@ -24,4 +24,3 @@ Whether you’re just getting started with Salesforce or you're ready to take yo
 
 Stay tuned—we’ll be sharing tips, stories, and insights from the road ahead.
 
----
