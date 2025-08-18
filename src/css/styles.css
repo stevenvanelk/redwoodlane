@@ -317,23 +317,30 @@ p {
 }
 
 .services li {
-    font-size: 18px;
-    display: flex;
-    align-items: center; /* Keeps icon and text aligned */
-    gap: 8px; /* Adds space between icon and text */
-    text-align: left; /* Ensures text is properly aligned */
-    width: 100%; /* Ensures list items don't stretch too far */
-    max-width: 500px; /* Keeps a reasonable width on larger screens */
-    justify-content: center; /* Keeps items centered */
+    /* two-column layout: fixed icon + flexible text */
+    display: grid;
+    grid-template-columns: 1.25em 1fr;
+    column-gap: 0.6rem;
+
+    align-items: start;
+    /* top-align icon with first text line */
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+    margin: .25rem 0;
 }
 
-.services svg {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    font-size: 20px;
-    vertical-align: middle;
+.services li svg {
+    width: 1em;
+    height: 1em;
     fill: #b30000;
+    display: block;
+    line-height: 1;
+    transform: translateY(.15em);
+}
+
+.services li .txt {
+    line-height: 1.5;
 }
 
 /* Contact Form */
@@ -928,5 +935,11 @@ h3,
         /* keeps headshot a nice size */
         width: 100%;
         height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .services li {
+        grid-template-columns: 1.1em 1fr;
     }
 }
