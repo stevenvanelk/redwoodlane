@@ -546,6 +546,7 @@ button:hover {
 .certifications {
     list-style: none;
     padding: 0;
+    margin: 0;
     text-align: center;
 }
 
@@ -556,8 +557,8 @@ button:hover {
 
 .certifications li {
     font-size: 18px;
-    margin: 5px 0;
-    display: flex;
+    margin: 0.5rem 0;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -572,6 +573,9 @@ button:hover {
     fill: #b30000;
 }
 
+.certifications svg[aria-hidden="true"] {
+    pointer-events: none;
+}
 
 /* Footer Styling */
 footer {
