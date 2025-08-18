@@ -132,6 +132,20 @@ h1, h2, h3, .hero-title {
     text-rendering: optimizeLegibility; 
 }
 
+/* Pagination Styling */
+
+.blog-wrapper .pagination {
+    text-align: center;
+    /* centers inline elements like <a> and <strong> */
+    margin-top: 2rem;
+}
+
+.blog-wrapper .pagination a,
+.blog-wrapper .pagination strong {
+    display: inline-block;
+    margin: 0 0.25rem;
+}
+
 /* Blog Post Bottom Navigation */
 .post-navigation {
     max-width: 800px;
