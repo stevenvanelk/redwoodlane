@@ -543,55 +543,27 @@ button:hover {
 }
 
 /* Certifications Section */
-.certifications {
+.container ul.certifications {
     list-style: none;
     padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.certifications li {
-    font-size: 18px;
-    margin: 0.5rem 0;
-    display: inline-flex;
+    margin: 0 auto 1rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.certifications svg {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    font-size: 20px;
-    vertical-align: middle;
-    fill: #b30000;
-}
-
-.certifications svg[aria-hidden="true"] {
-    pointer-events: none;
-}
-
-ul.certifications {
-    list-style: none;
-    margin: 0 auto 0.75rem;
-    padding: 0;
-    text-align: center;
-    display: grid;
-    justify-items: center;
     gap: 0.5rem;
+    text-align: center;
 }
 
-ul.certifications li {
-    display: inline-flex;
+.container ul.certifications li {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 8px;
     margin: 0;
+    font-size: 18px;
     line-height: 1.4;
 }
 
-ul.certifications svg {
+.container ul.certifications svg {
     width: 16px;
     height: 16px;
     fill: #b30000;
