@@ -367,6 +367,29 @@ h1, h2, h3, .hero-title {
     /* or keep #c4412f */
 }
 
+/* Blog post card title link */
+.blog-wrapper .post-content .post-link-title a {
+    color: #b30000;
+    /* match your brand red */
+    text-decoration: underline;
+    /* keep your link style */
+    font-size: 28px;
+    /* override the smaller clamp size if you want */
+    text-align: center;
+    /* optional, if you want centered */
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-weight: 300;
+}
+
+/* Optional hover effect */
+.blog-wrapper .post-content .post-link-title a:hover {
+    color: #b30000;
+    /* a slightly darker red on hover */
+}
+
 /* Mobile behavior — stack and auto-height like WH */
 @media (max-width: 480px) {
     .blog-wrapper .post-card {
