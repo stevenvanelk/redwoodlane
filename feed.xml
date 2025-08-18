@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-08-18T00:01:30+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Ask Better Questions: How to Get the Right Requirements</title><link href="https://redwoodlane.net/blog/salesforce-requirements-analysis/" rel="alternate" type="text/html" title="Ask Better Questions: How to Get the Right Requirements" /><published>2025-06-20T00:00:00+00:00</published><updated>2025-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-requirements-analysis</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-requirements-analysis/"><![CDATA[<p>Early in my Salesforce career, I used to build exactly what was asked.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-08-18T00:04:17+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Ask Better Questions: How to Get the Right Requirements</title><link href="https://redwoodlane.net/blog/salesforce-requirements-analysis/" rel="alternate" type="text/html" title="Ask Better Questions: How to Get the Right Requirements" /><published>2025-06-20T00:00:00+00:00</published><updated>2025-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-requirements-analysis</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-requirements-analysis/"><![CDATA[<p>Early in my Salesforce career, I used to build exactly what was asked.</p>
 
 <p>“Can you add a checkbox?”<br />
 “Can you make a flow that assigns this to marketing?”<br />
@@ -141,20 +141,20 @@ A manager once asked me for a “button to mass-assign leads.” After questions
   </li>
   <li>
     <p>Show user-friendly messages when appropriate
-Don’t throw raw stack traces back to an end user. Use AuraHandledException (or similar) to show clear but safe messages like:
-“Something went wrong while saving. Please contact support with error ID: 12345.”</p>
+ Don’t throw raw stack traces back to an end user. Use AuraHandledException (or similar) to show clear but safe messages like:
+ “Something went wrong while saving. Please contact support with error ID: 12345.”</p>
   </li>
   <li>Catch the right type of exception
-Avoid catch (Exception e) everywhere. Be more specific when you can:
+ Avoid catch (Exception e) everywhere. Be more specific when you can:
     <ul>
       <li>DmlException for database errors</li>
       <li>NullPointerException for unexpected nulls</li>
       <li>CalloutException for integration failures
-This makes your logs easier to read and helps pinpoint root causes.</li>
+ This makes your logs easier to read and helps pinpoint root causes.</li>
     </ul>
   </li>
   <li>Isolate risky logic in helper methods
-If you’re catching email failures and DML errors in the same block, it’s time to refactor. Put each “risky” operation in its own method so you can handle failures independently.</li>
+ If you’re catching email failures and DML errors in the same block, it’s time to refactor. Put each “risky” operation in its own method so you can handle failures independently.</li>
 </ol>
 
 <hr />
