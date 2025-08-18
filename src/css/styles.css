@@ -924,7 +924,7 @@ h3,
     }
 
     .about-image img {
-        max-width: 250px;
+        max-width: 150px;
         /* keeps headshot a nice size */
         width: 100%;
         height: auto;
