@@ -44,14 +44,14 @@ IF Priority = "Low" → Assign to Triage Queue
 
 The CMDT-driven version replaces all that branching with a single lookup:
 1. **Custom Metadata Type:** Case_Routing__mdt
-- Fields: Priority__c, Queue__c
-- Records:
-    - High → Escalation Queue
-    - Medium → Support Queue
-    - Low → Triage Queue
+    - Fields: Priority__c, Queue__c
+    - Records:
+        - High → Escalation Queue
+        - Medium → Support Queue
+        - Low → Triage Queue
 2. **Flow:**
-- Get Records: Case_Routing__mdt where Priority__c = {!Case.Priority}
-- Assignment: Route to the Queue__c returned  
+    - Get Records: Case_Routing__mdt where Priority__c = {!Case.Priority}
+    - Assignment: Route to the Queue__c returned  
 
 Now, when business changes? You just add or update a metadata record — no flow edit required.
 
