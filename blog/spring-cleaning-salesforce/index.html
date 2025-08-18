@@ -72,19 +72,57 @@
     <p class="blog-date"><em>April 12, 2023</em></p>
     <p>The best time to clean up your Salesforce org? Right before it becomes a problem.</p>
 
-<p>At Redwood Lane, we run regular <strong>org health checks</strong> for clients—especially in the spring. Here’s what we look for:</p>
+<p>Just like clearing out your garage or finally tackling that overflowing email inbox, your Salesforce org can benefit from a <strong>regular spring cleaning</strong>. A messy org slows down your team, creates user frustration, and makes it harder to roll out new features.</p>
 
+<p>At Redwood Lane, we run <strong>org health checks</strong> for clients—especially in the spring. Here’s what we look for (and what you can do too):</p>
+
+<h2 id="1-clear-out-unused-fields">1. Clear Out Unused Fields</h2>
+<p>Every admin has been there: dozens of fields created “just in case,” sitting unused. Too many fields clutter page layouts, overwhelm users, and make reporting messy.</p>
 <ul>
-  <li><strong>Unused fields</strong> that clutter layouts and confuse users</li>
-  <li><strong>Old automation</strong> (especially legacy Workflow Rules) that may still be running behind the scenes</li>
-  <li><strong>Broken reports and dashboards</strong> that no longer reflect real business priorities</li>
+  <li>Run a <strong>Field Utilization Report</strong> or use Salesforce’s <strong>Field Trip app</strong> to identify fields with little or no data.</li>
+  <li>Work with stakeholders before removing anything—sometimes a field is critical for a small but important process.</li>
+  <li>Hide, retire, or archive fields to keep layouts clean and user-friendly.</li>
 </ul>
 
-<p>We also help document what stays, what goes, and what gets archived—so your system stays lean, fast, and easy to manage.</p>
+<h2 id="2-retire-old-automation">2. Retire Old Automation</h2>
+<p>Still running Workflow Rules or multiple overlapping Processes? Old automation can cause conflicts, errors, and unexpected behavior.</p>
+<ul>
+  <li>Audit <strong>Workflow Rules, Process Builder flows, and Apex triggers</strong> to make sure they’re still relevant.</li>
+  <li>Consolidate into <strong>Flows</strong>, Salesforce’s preferred automation tool.</li>
+  <li>Document what’s being replaced and test carefully before deactivating.</li>
+</ul>
 
-<p>A clean org is a healthy org. Let’s make it happen.</p>
+<h2 id="3-fix-broken-reports-and-dashboards">3. Fix Broken Reports and Dashboards</h2>
+<p>Reports and dashboards are only useful if they reflect today’s priorities.</p>
+<ul>
+  <li>Review reports with <strong>zero or very low usage</strong>.</li>
+  <li>Check for filters, groupings, or fields that reference data you’ve already retired.</li>
+  <li>Archive outdated dashboards and refresh key ones so executives and users can trust the numbers.</li>
+</ul>
+
+<h2 id="4-review-permissions-and-profiles">4. Review Permissions and Profiles</h2>
+<p>Security often gets overlooked in cleanup efforts.</p>
+<ul>
+  <li>Look for <strong>profiles with outdated permissions</strong> or unused permission sets.</li>
+  <li>Simplify by moving toward a <strong>Permission Set + Permission Set Group</strong> model instead of relying heavily on profiles.</li>
+  <li>Ensure users have just the access they need—no more, no less.</li>
+</ul>
+
+<h2 id="5-document-everything">5. Document Everything</h2>
+<p>The best cleanup is the one you can repeat.</p>
+<ul>
+  <li>Keep a simple <strong>change log or Confluence page</strong> noting what was archived, deleted, or consolidated.</li>
+  <li>Include why decisions were made and who approved them.</li>
+  <li>This prevents surprises later and makes future cleanups faster.</li>
+</ul>
 
 <hr />
+
+<h3 id="why-spring-cleaning-matters">Why Spring Cleaning Matters</h3>
+<p>A clean org is a <strong>healthy org</strong>. By removing clutter and staying proactive, you make Salesforce faster, easier to manage, and more scalable for future growth.</p>
+
+<p>Think of it like changing the oil in your car—you don’t wait for the engine to seize before giving it attention.</p>
+
 
   </div>
 </article>

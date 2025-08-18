@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why We Still Love Lightning Record Pages | Redwood Lane</title>
-    <meta name="description" content="Sometimes the best improvements come from layout, not logic. Here’s how we design Lightning pages that keep users focused and productive.">
-    <meta name="keywords" content="Lightning Record Pages, Salesforce UX, Admin Tools, Productivity">
+    <title>Mastering Loops in Salesforce Flows | Redwood Lane</title>
+    <meta name="description" content="Loops in Salesforce Flows can feel intimidating at first, but they’re one of the most powerful tools you have as an Admin. Let’s talk about when to use them, why they’re useful, and how to get them right.">
+    <meta name="keywords" content="">
     <meta name="author" content="Redwood Lane">
-    <meta property="og:title" content="Why We Still Love Lightning Record Pages | Redwood Lane Salesforce Consulting">
-    <meta property="og:description" content="Sometimes the best improvements come from layout, not logic. Here’s how we design Lightning pages that keep users focused and productive.">
+    <meta property="og:title" content="Mastering Loops in Salesforce Flows | Redwood Lane Salesforce Consulting">
+    <meta property="og:description" content="Loops in Salesforce Flows can feel intimidating at first, but they’re one of the most powerful tools you have as an Admin. Let’s talk about when to use them, why they’re useful, and how to get them right.">
     
-    <meta property="og:image" content="/images/blog/lightning-pages-love.webp">
+    <meta property="og:image" content="/images/blog/posts/2025/loops.webp">
     
-    <meta property="og:url" content="https://redwoodlane.net/blog/lightning-record-pages-design/">
+    <meta property="og:url" content="https://redwoodlane.net/blog/mastering-loops-salesforce/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Why We Still Love Lightning Record Pages | Redwood Lane">
-    <meta name="twitter:description" content="Sometimes the best improvements come from layout, not logic. Here’s how we design Lightning pages that keep users focused and productive.">
+    <meta name="twitter:title" content="Mastering Loops in Salesforce Flows | Redwood Lane">
+    <meta name="twitter:description" content="Loops in Salesforce Flows can feel intimidating at first, but they’re one of the most powerful tools you have as an Admin. Let’s talk about when to use them, why they’re useful, and how to get them right.">
     
-    <meta name="twitter:image" content="/images/blog/lightning-pages-love.webp">
+    <meta name="twitter:image" content="/images/blog/posts/2025/loops.webp">
     
     <meta name="fediverse:creator" content="@redwoodlane@mastodon.social">
     <link rel="preload" href="/assets/fonts/Bentham.otf" as="font" type="font/otf" crossorigin="anonymous">
@@ -60,92 +60,135 @@
       <main class="blog">
         <article class="blog-post">
   
-  <div class="hero-container">
-    <img src="/images/blog/lightning-pages-love.webp" alt="Why We Still Love Lightning Record Pages hero image" class="post-hero-img">
-    <div class="hero-title">
-      <h1>Why We Still Love Lightning Record Pages</h1>
-    </div>
-  </div>
-  
 
   <div class="blog-wrapper">
-    <p class="blog-date"><em>May 01, 2025</em></p>
-    <p>We get it—Flows and Apex get all the attention. But <strong>great Lightning Record Pages</strong> can change how your team works every single day.</p>
+    <p class="blog-date"><em>August 17, 2025</em></p>
+    <h1 id="mastering-loops-in-salesforce-flows">Mastering Loops in Salesforce Flows</h1>
+
+<p>When I first started building flows, loops honestly scared me. They felt like this mysterious piece of the puzzle that I’d mess up and create infinite flow runs or crash the org. But the truth is, loops are one of the most powerful features of Salesforce Flows. If you’re comfortable using them, they can save you time, reduce clicks, and automate tasks that would otherwise be tedious or error-prone.</p>
+
+<p>In this post, I’m going to break down <strong>when you use loops</strong>, <strong>why you use loops</strong>, and <strong>how to use them properly</strong> so you can build cleaner, smarter automations.</p>
 
 <hr />
 
-<h2 id="why-lightning-record-pages-matter">Why Lightning Record Pages Matter</h2>
+<h2 id="what-is-a-loop-in-a-flow">What Is a Loop in a Flow?</h2>
 
-<p>When users complain about Salesforce being “clunky” or “slow,” it’s not always automation or data model issues. Often, the problem is the <strong>record page design</strong>.</p>
+<p>In Salesforce Flow, a loop lets you cycle through a collection of records (or values) one at a time. Think of it like saying:<br />
+<em>“Hey Flow, I’ve got a list of stuff. Please take one item, do something with it, then move to the next one until you’ve gone through the entire list.”</em></p>
 
+<p>For example:</p>
 <ul>
-  <li>Too many sections = endless scrolling</li>
-  <li>Important fields buried in side panels = wasted clicks</li>
-  <li>Generic layouts reused everywhere = confusion about what’s relevant</li>
+  <li>You’ve got 10 open Cases related to an Account.</li>
+  <li>You want to close all of them at once when the Account status changes.</li>
+  <li>Instead of manually updating each case (or creating 10 separate updates in your flow), you use a loop to go one by one through all 10 cases and update them automatically.</li>
 </ul>
 
-<p>A well-designed Lightning page makes Salesforce feel more intuitive and keeps people focused on the task at hand.</p>
+<hr />
+
+<h2 id="why-use-loops">Why Use Loops?</h2>
+
+<p>Loops help you automate <strong>repetitive record updates</strong> or actions across multiple items without hardcoding each one. Here are some common reasons you’d use a loop in a flow:</p>
+
+<ol>
+  <li>
+    <p><strong>Bulk Record Updates</strong><br />
+Say you need to update all Contact records when an Account field changes. Loops let you cycle through each Contact and apply updates dynamically.</p>
+  </li>
+  <li><strong>Conditional Logic for Each Item</strong><br />
+Sometimes you don’t want to apply the same change to every record. A loop lets you check conditions for each record individually. For example:
+    <ul>
+      <li>If a Case is “High Priority,” reassign it.</li>
+      <li>If a Case is “Low Priority,” close it.</li>
+      <li>If a Case is something else, leave it alone.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Creating Related Records</strong><br />
+You might want to loop through a collection of Contacts and create a new Task for each one. Without a loop, that would be impossible to do dynamically.</p>
+  </li>
+  <li><strong>Cleaning Up Data</strong><br />
+Loops make it easy to find and fix issues like missing fields or inconsistent data across related records.</li>
+</ol>
 
 <hr />
 
-<h2 id="what-we-focus-on">What We Focus On</h2>
+<h2 id="when-should-you-avoid-loops">When Should You Avoid Loops?</h2>
+
+<p>Loops are powerful, but they can also create performance issues if you’re not careful. Avoid using loops if:</p>
+<ul>
+  <li>You’re dealing with very large data sets (thousands of records).</li>
+  <li>You’re performing operations that could be done in a <strong>single Update Records element</strong> instead of looping one by one.</li>
+</ul>
+
+<p>The golden rule: <strong>If you can bulk update, do it.</strong> Only loop when you need individual attention per record.</p>
+
+<hr />
+
+<h2 id="how-to-use-loops-in-a-flow">How to Use Loops in a Flow</h2>
+
+<p>Here’s the step-by-step of how I typically set one up:</p>
 
 <ol>
-  <li><strong>Page layouts that match business flow, not object structure</strong><br />
-Users don’t think in terms of “field groups” or “schema.” They think in steps: <em>qualify a lead, log activity, close a deal.</em>
-    <ul>
-      <li>Group fields by workflow stage</li>
-      <li>Put the most important info <strong>above the fold</strong></li>
-      <li>Push reference-only data into collapsible sections</li>
-    </ul>
+  <li>
+    <p><strong>Get Your Collection</strong><br />
+Use a <strong>Get Records</strong> element to pull in the records you want to work with. Example: all open Cases on an Account.</p>
   </li>
-  <li><strong>Tabs and visibility rules that reduce cognitive overload</strong><br />
-Instead of dumping everything on one screen:
-    <ul>
-      <li>Use <strong>Tabs</strong> for “Details,” “Related,” “Collaboration,” etc.</li>
-      <li>Apply <strong>Component Visibility</strong> so users only see what matters to them (e.g., show Service fields only to Support, not Sales).</li>
-    </ul>
+  <li>
+    <p><strong>Add the Loop Element</strong><br />
+Drag in a Loop element and tell it to iterate over the collection you just grabbed.</p>
   </li>
-  <li><strong>Highlights, quick actions, and contextual components</strong>
-    <ul>
-      <li>Add key fields to the <strong>Highlights Panel</strong> so users can scan quickly.</li>
-      <li>Place <strong>Quick Actions</strong> where they make sense—like “Log a Call” or “Send Email” at the top, not buried.</li>
-      <li>Drop in <strong>Dynamic Related Lists</strong> or custom components to give instant context (open cases, past interactions, key contacts).</li>
-    </ul>
+  <li>
+    <p><strong>Do Something Inside the Loop</strong><br />
+This is where the magic happens. You can use <strong>Assignment</strong>, <strong>Update Records</strong>, or even create new records as you go.</p>
+
+    <p>Example: Inside the loop, set each Case’s status to “Closed.”</p>
+  </li>
+  <li>
+    <p><strong>Add the Record to a Collection Variable</strong><br />
+This step is crucial! Instead of updating records one by one inside the loop (which can hit limits), assign the changes to a <strong>record collection variable</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Update All at Once</strong><br />
+After the loop finishes, use a single <strong>Update Records</strong> element to save all the changes at once. This avoids governor limit errors and keeps things efficient.</p>
   </li>
 </ol>
 
 <hr />
 
-<h2 id="example-in-practice">Example in Practice</h2>
+<h2 id="example-closing-all-open-cases">Example: Closing All Open Cases</h2>
 
-<p>We once redesigned an Account page where reps had to scroll through <strong>five full screens</strong> to see everything. By reorganizing:</p>
+<p>Here’s a quick real-world example:</p>
 
 <ul>
-  <li>Key fields moved into the Highlights Panel</li>
-  <li>Activity Timeline given its own tab</li>
-  <li>Service-related components hidden unless the Account Type = “Support”</li>
+  <li><strong>Trigger:</strong> When an Account is deactivated.</li>
+  <li><strong>Get Records:</strong> Find all open Cases related to the Account.</li>
+  <li><strong>Loop:</strong> Go through each Case.</li>
+  <li><strong>Assignment (inside loop):</strong> Set the Case Status to “Closed.” Add it to a “CasesToUpdate” collection variable.</li>
+  <li><strong>Update Records (after loop):</strong> Update all the cases in one go.</li>
 </ul>
 
-<p>Scrolling dropped by 70%. Reps reported they could prep for calls “at a glance” instead of hunting through fields.</p>
+<p>This design pattern is efficient, avoids hitting limits, and works reliably.</p>
 
 <hr />
 
-<h2 id="pro-tips">Pro Tips</h2>
+<h2 id="pro-tips-for-loops">Pro Tips for Loops</h2>
 
 <ul>
-  <li><strong>Prototype first</strong> → Spin up a draft page in a sandbox and test with one power user.</li>
-  <li><strong>Use the App Builder preview</strong> → Test for different form factors (desktop, tablet, phone).</li>
-  <li><strong>Don’t duplicate layouts</strong> → Use <strong>Dynamic Forms</strong> to reduce the need for dozens of page variations.</li>
+  <li><strong>Name your variables clearly.</strong> You’ll thank yourself later. Something like <code class="language-plaintext highlighter-rouge">CurrentCase</code> is better than <code class="language-plaintext highlighter-rouge">LoopVariable1</code>.</li>
+  <li><strong>Always use a collection variable.</strong> Don’t update records directly inside the loop.</li>
+  <li><strong>Test with small data first.</strong> Try it with a handful of records before running against hundreds.</li>
+  <li><strong>Watch your entry criteria.</strong> Make sure your Get Records doesn’t accidentally grab more than you expected.</li>
 </ul>
 
 <hr />
 
-<h2 id="key-takeaway">Key Takeaway</h2>
+<h2 id="wrapping-it-up">Wrapping It Up</h2>
 
-<p>Flows and Apex may run the logic, but <strong>page design runs the experience</strong>.</p>
+<p>Loops in Salesforce Flow are like the secret sauce of automation. They let you handle dynamic lists of records without manually building one update per record. When used properly, they make your automations more flexible, scalable, and reliable.</p>
 
-<p>If your team has to scroll, guess, or tab-hop, your page layout is slowing them down. Invest a little time in Lightning Record Pages, and you’ll give users the gift of focus and speed every time they log in.</p>
+<p>The key is to know when to use them—and when to avoid them. If you need per-record logic or want to generate new records for each item, loops are your best friend. If you just need to mass update, stick with a single Update Records.</p>
+
+<p>So next time you’re building a flow and find yourself thinking, “How am I going to handle this list of records?”—chances are, the answer is: use a loop.</p>
 
   </div>
 </article>
@@ -157,20 +200,15 @@ Instead of dumping everything on one screen:
 
 
 
-<nav class="post-navigation ">
+<nav class="post-navigation single-nav">
   <div class="nav-col">
-    
-    <a href="/blog/flows-with-custom-metadata/" class="nav-link newer">
-      <span class="nav-label">← Newer Post</span>
-      <span class="nav-title">Why We Use Custom Metadata to Simplify Flows</span>
-    </a>
     
   </div>
   <div class="nav-col">
     
-    <a href="/blog/flows-that-dont-fail/" class="nav-link older">
+    <a href="/blog/salesforce-requirements-analysis/" class="nav-link older">
       <span class="nav-label">Older Post →</span>
-      <span class="nav-title">Your Salesforce Org Is Only as Good as Its Worst Flow</span>
+      <span class="nav-title">Ask Better Questions: How to Get the Right Requirements</span>
     </a>
     
   </div>

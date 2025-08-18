@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-08-18T00:04:17+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Ask Better Questions: How to Get the Right Requirements</title><link href="https://redwoodlane.net/blog/salesforce-requirements-analysis/" rel="alternate" type="text/html" title="Ask Better Questions: How to Get the Right Requirements" /><published>2025-06-20T00:00:00+00:00</published><updated>2025-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-requirements-analysis</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-requirements-analysis/"><![CDATA[<p>Early in my Salesforce career, I used to build exactly what was asked.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-08-18T00:53:59+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Mastering Loops in Salesforce Flows</title><link href="https://redwoodlane.net/blog/mastering-loops-salesforce/" rel="alternate" type="text/html" title="Mastering Loops in Salesforce Flows" /><published>2025-08-17T00:00:00+00:00</published><updated>2025-08-17T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/mastering-loops-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/mastering-loops-salesforce/"><![CDATA[<h1 id="mastering-loops-in-salesforce-flows">Mastering Loops in Salesforce Flows</h1>
+
+<p>When I first started building flows, loops honestly scared me. They felt like this mysterious piece of the puzzle that I’d mess up and create infinite flow runs or crash the org. But the truth is, loops are one of the most powerful features of Salesforce Flows. If you’re comfortable using them, they can save you time, reduce clicks, and automate tasks that would otherwise be tedious or error-prone.</p>
+
+<p>In this post, I’m going to break down <strong>when you use loops</strong>, <strong>why you use loops</strong>, and <strong>how to use them properly</strong> so you can build cleaner, smarter automations.</p>
+
+<hr />
+
+<h2 id="what-is-a-loop-in-a-flow">What Is a Loop in a Flow?</h2>
+
+<p>In Salesforce Flow, a loop lets you cycle through a collection of records (or values) one at a time. Think of it like saying:<br />
+<em>“Hey Flow, I’ve got a list of stuff. Please take one item, do something with it, then move to the next one until you’ve gone through the entire list.”</em></p>
+
+<p>For example:</p>
+<ul>
+  <li>You’ve got 10 open Cases related to an Account.</li>
+  <li>You want to close all of them at once when the Account status changes.</li>
+  <li>Instead of manually updating each case (or creating 10 separate updates in your flow), you use a loop to go one by one through all 10 cases and update them automatically.</li>
+</ul>
+
+<hr />
+
+<h2 id="why-use-loops">Why Use Loops?</h2>
+
+<p>Loops help you automate <strong>repetitive record updates</strong> or actions across multiple items without hardcoding each one. Here are some common reasons you’d use a loop in a flow:</p>
+
+<ol>
+  <li>
+    <p><strong>Bulk Record Updates</strong><br />
+Say you need to update all Contact records when an Account field changes. Loops let you cycle through each Contact and apply updates dynamically.</p>
+  </li>
+  <li><strong>Conditional Logic for Each Item</strong><br />
+Sometimes you don’t want to apply the same change to every record. A loop lets you check conditions for each record individually. For example:
+    <ul>
+      <li>If a Case is “High Priority,” reassign it.</li>
+      <li>If a Case is “Low Priority,” close it.</li>
+      <li>If a Case is something else, leave it alone.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Creating Related Records</strong><br />
+You might want to loop through a collection of Contacts and create a new Task for each one. Without a loop, that would be impossible to do dynamically.</p>
+  </li>
+  <li><strong>Cleaning Up Data</strong><br />
+Loops make it easy to find and fix issues like missing fields or inconsistent data across related records.</li>
+</ol>
+
+<hr />
+
+<h2 id="when-should-you-avoid-loops">When Should You Avoid Loops?</h2>
+
+<p>Loops are powerful, but they can also create performance issues if you’re not careful. Avoid using loops if:</p>
+<ul>
+  <li>You’re dealing with very large data sets (thousands of records).</li>
+  <li>You’re performing operations that could be done in a <strong>single Update Records element</strong> instead of looping one by one.</li>
+</ul>
+
+<p>The golden rule: <strong>If you can bulk update, do it.</strong> Only loop when you need individual attention per record.</p>
+
+<hr />
+
+<h2 id="how-to-use-loops-in-a-flow">How to Use Loops in a Flow</h2>
+
+<p>Here’s the step-by-step of how I typically set one up:</p>
+
+<ol>
+  <li>
+    <p><strong>Get Your Collection</strong><br />
+Use a <strong>Get Records</strong> element to pull in the records you want to work with. Example: all open Cases on an Account.</p>
+  </li>
+  <li>
+    <p><strong>Add the Loop Element</strong><br />
+Drag in a Loop element and tell it to iterate over the collection you just grabbed.</p>
+  </li>
+  <li>
+    <p><strong>Do Something Inside the Loop</strong><br />
+This is where the magic happens. You can use <strong>Assignment</strong>, <strong>Update Records</strong>, or even create new records as you go.</p>
+
+    <p>Example: Inside the loop, set each Case’s status to “Closed.”</p>
+  </li>
+  <li>
+    <p><strong>Add the Record to a Collection Variable</strong><br />
+This step is crucial! Instead of updating records one by one inside the loop (which can hit limits), assign the changes to a <strong>record collection variable</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Update All at Once</strong><br />
+After the loop finishes, use a single <strong>Update Records</strong> element to save all the changes at once. This avoids governor limit errors and keeps things efficient.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="example-closing-all-open-cases">Example: Closing All Open Cases</h2>
+
+<p>Here’s a quick real-world example:</p>
+
+<ul>
+  <li><strong>Trigger:</strong> When an Account is deactivated.</li>
+  <li><strong>Get Records:</strong> Find all open Cases related to the Account.</li>
+  <li><strong>Loop:</strong> Go through each Case.</li>
+  <li><strong>Assignment (inside loop):</strong> Set the Case Status to “Closed.” Add it to a “CasesToUpdate” collection variable.</li>
+  <li><strong>Update Records (after loop):</strong> Update all the cases in one go.</li>
+</ul>
+
+<p>This design pattern is efficient, avoids hitting limits, and works reliably.</p>
+
+<hr />
+
+<h2 id="pro-tips-for-loops">Pro Tips for Loops</h2>
+
+<ul>
+  <li><strong>Name your variables clearly.</strong> You’ll thank yourself later. Something like <code class="language-plaintext highlighter-rouge">CurrentCase</code> is better than <code class="language-plaintext highlighter-rouge">LoopVariable1</code>.</li>
+  <li><strong>Always use a collection variable.</strong> Don’t update records directly inside the loop.</li>
+  <li><strong>Test with small data first.</strong> Try it with a handful of records before running against hundreds.</li>
+  <li><strong>Watch your entry criteria.</strong> Make sure your Get Records doesn’t accidentally grab more than you expected.</li>
+</ul>
+
+<hr />
+
+<h2 id="wrapping-it-up">Wrapping It Up</h2>
+
+<p>Loops in Salesforce Flow are like the secret sauce of automation. They let you handle dynamic lists of records without manually building one update per record. When used properly, they make your automations more flexible, scalable, and reliable.</p>
+
+<p>The key is to know when to use them—and when to avoid them. If you need per-record logic or want to generate new records for each item, loops are your best friend. If you just need to mass update, stick with a single Update Records.</p>
+
+<p>So next time you’re building a flow and find yourself thinking, “How am I going to handle this list of records?”—chances are, the answer is: use a loop.</p>]]></content><author><name>srvanelk@gmail.com</name></author><category term="Salesforce" /><category term="Flows" /><category term="Automation" /><summary type="html"><![CDATA[Loops in Salesforce Flows can feel intimidating at first, but they’re one of the most powerful tools you have as an Admin. Let’s talk about when to use them, why they’re useful, and how to get them right.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/posts/2025/loops.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/posts/2025/loops.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ask Better Questions: How to Get the Right Requirements</title><link href="https://redwoodlane.net/blog/salesforce-requirements-analysis/" rel="alternate" type="text/html" title="Ask Better Questions: How to Get the Right Requirements" /><published>2025-06-20T00:00:00+00:00</published><updated>2025-06-20T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-requirements-analysis</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-requirements-analysis/"><![CDATA[<p>Early in my Salesforce career, I used to build exactly what was asked.</p>
 
 <p>“Can you add a checkbox?”<br />
 “Can you make a flow that assigns this to marketing?”<br />
@@ -296,98 +421,467 @@ All the logic lives in one metadata table, not scattered across flows.</li>
 <p>Metadata-driven automation doesn’t just simplify updates — it helps you <strong>build smarter, more resilient flows</strong> from the start.<br />
 The next time you’re tempted to hardcode a value in a Decision element, pause and ask: Should this live in Custom Metadata instead?</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Hardcoding values into flows leads to frustration down the road. Here’s how Custom Metadata Types let us scale automation cleanly.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/flows-metadata-clean.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/flows-metadata-clean.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why We Still Love Lightning Record Pages</title><link href="https://redwoodlane.net/blog/lightning-record-pages-design/" rel="alternate" type="text/html" title="Why We Still Love Lightning Record Pages" /><published>2025-05-01T00:00:00+00:00</published><updated>2025-05-01T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/lightning-record-pages-design</id><content type="html" xml:base="https://redwoodlane.net/blog/lightning-record-pages-design/"><![CDATA[<p>We get it—Flows and Apex get all the attention. But <strong>great Lightning Record Pages</strong> can change how your team works every single day.</p>
 
-<p>Here’s what we focus on:</p>
+<hr />
+
+<h2 id="why-lightning-record-pages-matter">Why Lightning Record Pages Matter</h2>
+
+<p>When users complain about Salesforce being “clunky” or “slow,” it’s not always automation or data model issues. Often, the problem is the <strong>record page design</strong>.</p>
 
 <ul>
-  <li><strong>Page layouts that match business flow</strong>, not object structure</li>
-  <li><strong>Tabs and visibility rules</strong> that reduce cognitive overload</li>
-  <li><strong>Highlights, quick actions, and contextual components</strong> that help people do the right thing faster</li>
+  <li>Too many sections = endless scrolling</li>
+  <li>Important fields buried in side panels = wasted clicks</li>
+  <li>Generic layouts reused everywhere = confusion about what’s relevant</li>
 </ul>
 
-<p>If your team has to scroll, guess, or tab-hop, your page layout is slowing them down. Let’s fix that.</p>
+<p>A well-designed Lightning page makes Salesforce feel more intuitive and keeps people focused on the task at hand.</p>
 
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Sometimes the best improvements come from layout, not logic. Here’s how we design Lightning pages that keep users focused and productive.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/lightning-pages-love.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/lightning-pages-love.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Your Salesforce Org Is Only as Good as Its Worst Flow</title><link href="https://redwoodlane.net/blog/flows-that-dont-fail/" rel="alternate" type="text/html" title="Your Salesforce Org Is Only as Good as Its Worst Flow" /><published>2025-02-06T00:00:00+00:00</published><updated>2025-02-06T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/flows-that-dont-fail</id><content type="html" xml:base="https://redwoodlane.net/blog/flows-that-dont-fail/"><![CDATA[<p>One bad flow can tank user trust, block record saves, or misroute leads. We’ve seen it all.</p>
+<hr />
+
+<h2 id="what-we-focus-on">What We Focus On</h2>
+
+<ol>
+  <li><strong>Page layouts that match business flow, not object structure</strong><br />
+Users don’t think in terms of “field groups” or “schema.” They think in steps: <em>qualify a lead, log activity, close a deal.</em>
+    <ul>
+      <li>Group fields by workflow stage</li>
+      <li>Put the most important info <strong>above the fold</strong></li>
+      <li>Push reference-only data into collapsible sections</li>
+    </ul>
+  </li>
+  <li><strong>Tabs and visibility rules that reduce cognitive overload</strong><br />
+Instead of dumping everything on one screen:
+    <ul>
+      <li>Use <strong>Tabs</strong> for “Details,” “Related,” “Collaboration,” etc.</li>
+      <li>Apply <strong>Component Visibility</strong> so users only see what matters to them (e.g., show Service fields only to Support, not Sales).</li>
+    </ul>
+  </li>
+  <li><strong>Highlights, quick actions, and contextual components</strong>
+    <ul>
+      <li>Add key fields to the <strong>Highlights Panel</strong> so users can scan quickly.</li>
+      <li>Place <strong>Quick Actions</strong> where they make sense—like “Log a Call” or “Send Email” at the top, not buried.</li>
+      <li>Drop in <strong>Dynamic Related Lists</strong> or custom components to give instant context (open cases, past interactions, key contacts).</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="example-in-practice">Example in Practice</h2>
+
+<p>We once redesigned an Account page where reps had to scroll through <strong>five full screens</strong> to see everything. By reorganizing:</p>
+
+<ul>
+  <li>Key fields moved into the Highlights Panel</li>
+  <li>Activity Timeline given its own tab</li>
+  <li>Service-related components hidden unless the Account Type = “Support”</li>
+</ul>
+
+<p>Scrolling dropped by 70%. Reps reported they could prep for calls “at a glance” instead of hunting through fields.</p>
+
+<hr />
+
+<h2 id="pro-tips">Pro Tips</h2>
+
+<ul>
+  <li><strong>Prototype first</strong> → Spin up a draft page in a sandbox and test with one power user.</li>
+  <li><strong>Use the App Builder preview</strong> → Test for different form factors (desktop, tablet, phone).</li>
+  <li><strong>Don’t duplicate layouts</strong> → Use <strong>Dynamic Forms</strong> to reduce the need for dozens of page variations.</li>
+</ul>
+
+<hr />
+
+<h2 id="key-takeaway">Key Takeaway</h2>
+
+<p>Flows and Apex may run the logic, but <strong>page design runs the experience</strong>.</p>
+
+<p>If your team has to scroll, guess, or tab-hop, your page layout is slowing them down. Invest a little time in Lightning Record Pages, and you’ll give users the gift of focus and speed every time they log in.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Sometimes the best improvements come from layout, not logic. Here’s how we design Lightning pages that keep users focused and productive.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/lightning-pages-love.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/lightning-pages-love.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Your Salesforce Org Is Only as Good as Its Worst Flow</title><link href="https://redwoodlane.net/blog/flows-that-dont-fail/" rel="alternate" type="text/html" title="Your Salesforce Org Is Only as Good as Its Worst Flow" /><published>2025-02-06T00:00:00+00:00</published><updated>2025-02-06T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/flows-that-dont-fail</id><content type="html" xml:base="https://redwoodlane.net/blog/flows-that-dont-fail/"><![CDATA[<p>One bad flow can tank user trust, block record saves, or misroute leads. We’ve seen it all.</p>
 
 <p>At Redwood Lane, we approach Flow like infrastructure: <strong>built to last, safe to fail, easy to maintain.</strong></p>
 
-<p>Our approach:</p>
+<hr />
 
+<h2 id="why-a-bad-flow-hurts-more-than-you-think">Why a Bad Flow Hurts More Than You Think</h2>
+
+<p>A broken flow doesn’t just throw an error — it undermines confidence.</p>
 <ul>
-  <li><strong>We test with real-world data</strong>, not perfect-case scenarios.</li>
-  <li><strong>We document branches and logic</strong>, so anyone can understand how it works.</li>
-  <li><strong>We create reusable subflows</strong>, so changes don’t require a rebuild every time.</li>
+  <li>Users stop trusting Salesforce if records fail to save.</li>
+  <li>Managers lose faith in reports when automation misroutes data.</li>
+  <li>Admins spend hours firefighting instead of building new solutions.</li>
 </ul>
 
-<p>Flow is powerful. But with power comes responsibility—and we take that seriously.</p>
+<p>That’s why the “weakest link” really does define your org. One unstable flow can ripple out into every process that touches it.</p>
 
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[A single unstable automation can create ripple effects across your business. Here’s how we design flows that don’t fail under pressure.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/flow-stability.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/flow-stability.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Best Time to Future-Proof Your Org Is Right Now</title><link href="https://redwoodlane.net/blog/future-proof-salesforce/" rel="alternate" type="text/html" title="The Best Time to Future-Proof Your Org Is Right Now" /><published>2024-10-25T00:00:00+00:00</published><updated>2024-10-25T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/future-proof-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/future-proof-salesforce/"><![CDATA[<p>If your Salesforce org only works for today, it’s already behind.</p>
+<hr />
 
-<p>We help clients think a step ahead—not by building bloated systems, but by designing <strong>flexibility</strong> into the foundation.</p>
+<h2 id="our-approach-to-reliable-flows">Our Approach to Reliable Flows</h2>
 
-<p>Here’s how we future-proof an org:</p>
+<ol>
+  <li><strong>Test with real-world data</strong>
+    <ul>
+      <li>Don’t just test with “happy path” records.</li>
+      <li>Use real scenarios: missing fields, bad picklist values, inactive users.</li>
+      <li>Validate bulk behavior (does it work with 200 records in one transaction?).</li>
+    </ul>
+
+    <p>👉 If a flow only works in perfect conditions, it won’t last in production.</p>
+  </li>
+</ol>
+
+<hr />
+
+<ol>
+  <li><strong>Document branches and logic</strong>
+    <ul>
+      <li>Flows aren’t self-explanatory once they get big.</li>
+      <li>We add <strong>descriptions</strong> to every element.</li>
+      <li>We keep an <strong>architecture doc</strong> or diagram showing the logic at a higher level.</li>
+    </ul>
+
+    <p>This helps the next admin (or your future self) understand why a decision path exists.</p>
+  </li>
+</ol>
+
+<hr />
+
+<ol>
+  <li><strong>Create reusable subflows</strong>
+    <ul>
+      <li>Pull out common logic (like sending notifications or assigning owners) into subflows.</li>
+      <li>Reference those subflows wherever needed instead of duplicating steps.</li>
+      <li>When a rule changes, update one subflow instead of six flows.</li>
+    </ul>
+
+    <p>Reusability = less maintenance debt.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="example-in-practice">Example in Practice</h2>
+
+<p>We once audited an org where <strong>seven different flows</strong> updated Opportunity Stage fields. Each had slightly different logic, so users never knew what would happen.</p>
+
+<p>We consolidated the logic into <strong>one master flow with subflows</strong> for exceptions. Errors dropped dramatically, and user complaints about “Salesforce being unpredictable” vanished overnight.</p>
+
+<hr />
+
+<h2 id="pro-tips-for-flow-stability">Pro Tips for Flow Stability</h2>
 
 <ul>
-  <li><strong>We modularize automation</strong>, so changes don’t ripple in unpredictable ways.</li>
-  <li><strong>We document key decisions</strong>, so future teams understand the why—not just the what.</li>
-  <li><strong>We train admins</strong>, so your team can evolve the system without outside help.</li>
+  <li>Use <strong>Fault Paths</strong> to capture and log errors. Silent failures are worse than loud ones.</li>
+  <li>Turn on <strong>Flow Error Emails</strong>, but route them to an admin queue instead of one person’s inbox.</li>
+  <li>Version-control your flows (naming conventions like <code class="language-plaintext highlighter-rouge">Opportunity_Update_v3</code>) so you know what’s deployed.</li>
+  <li>Favor <strong>Before-Save Flows</strong> for simple updates — they’re faster and less likely to hit governor limits.</li>
 </ul>
 
-<p>The future is unpredictable. But with the right structure, your CRM can be ready for anything.</p>
+<hr />
 
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Tech changes. Teams grow. Priorities shift. Here’s how we help clients build Salesforce orgs that are ready for what’s next.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/future-proof-org.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/future-proof-org.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">When a CRM Becomes a Strategic Advantage</title><link href="https://redwoodlane.net/blog/crm-strategic-advantage/" rel="alternate" type="text/html" title="When a CRM Becomes a Strategic Advantage" /><published>2024-07-10T00:00:00+00:00</published><updated>2024-07-10T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/crm-strategic-advantage</id><content type="html" xml:base="https://redwoodlane.net/blog/crm-strategic-advantage/"><![CDATA[<p>There’s a difference between <em>having</em> Salesforce and <strong>leveraging</strong> Salesforce.</p>
+<h2 id="key-takeaway">Key Takeaway</h2>
 
-<p>At Redwood Lane, we help organizations evolve from just “using the tool” to making their CRM a <strong>strategic advantage</strong>.</p>
+<p>Flow is powerful. But with power comes responsibility.</p>
 
-<p>What does that look like?</p>
-
+<p>Build flows that are:</p>
 <ul>
-  <li><strong>Leadership gets real-time insights</strong>, not just monthly reports.</li>
-  <li><strong>Sales and service teams work in sync</strong>, without manual handoffs.</li>
-  <li><strong>Processes evolve faster</strong>, because the system is built for change.</li>
+  <li><strong>Tested with messy data</strong></li>
+  <li><strong>Documented clearly</strong></li>
+  <li><strong>Modular and reusable</strong></li>
 </ul>
 
-<p>Salesforce isn’t just a place to store data. It’s a platform for transformation. We’re here to help you use it that way.</p>
+<p>Do that, and your org won’t be defined by its worst flow — it’ll be defined by its most reliable one.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[A single unstable automation can create ripple effects across your business. Here’s how we design flows that don’t fail under pressure.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/flow-stability.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/flow-stability.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Best Time to Future-Proof Your Org Is Right Now</title><link href="https://redwoodlane.net/blog/future-proof-salesforce/" rel="alternate" type="text/html" title="The Best Time to Future-Proof Your Org Is Right Now" /><published>2024-10-25T00:00:00+00:00</published><updated>2024-10-25T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/future-proof-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/future-proof-salesforce/"><![CDATA[<p>If your Salesforce org only works for today, it’s already behind.</p>
 
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Most companies treat Salesforce as a tool. The smart ones treat it as a strategy. Here’s what that shift looks like.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/crm-strategic-advantage.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/crm-strategic-advantage.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Chasing Simplicity in Complex Systems</title><link href="https://redwoodlane.net/blog/simple-salesforce-design/" rel="alternate" type="text/html" title="Chasing Simplicity in Complex Systems" /><published>2024-04-17T00:00:00+00:00</published><updated>2024-04-17T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/simple-salesforce-design</id><content type="html" xml:base="https://redwoodlane.net/blog/simple-salesforce-design/"><![CDATA[<p>Powerful systems don’t have to feel complicated.</p>
+<p>Future-proofing isn’t about predicting every change — it’s about building <strong>flexibility</strong> into the foundation so the org can evolve without breaking every time the business shifts.</p>
+
+<hr />
+
+<h2 id="why-future-proofing-matters">Why Future-Proofing Matters</h2>
+
+<p>Salesforce orgs grow fast:</p>
+<ul>
+  <li>New business units come online.</li>
+  <li>Leadership wants new reports yesterday.</li>
+  <li>Integrations pile up with other systems.</li>
+</ul>
+
+<p>If your org isn’t designed to adapt, small changes become expensive projects. Future-proofing turns Salesforce into a system that <em>absorbs</em> change instead of collapsing under it.</p>
+
+<hr />
+
+<h2 id="how-we-future-proof-an-org">How We Future-Proof an Org</h2>
+
+<h3 id="1-modularize-automation">1. Modularize Automation</h3>
+<p>Flows and Apex shouldn’t be sprawling webs. We design automation so that:</p>
+<ul>
+  <li>Each flow handles <strong>one clear responsibility</strong></li>
+  <li>Common logic is pulled into <strong>subflows</strong></li>
+  <li>Changes in one area don’t ripple unpredictably into another</li>
+</ul>
+
+<p>Think of automation like Lego bricks: independent pieces that can be rearranged, not glued-together parts that break when you move them.</p>
+
+<hr />
+
+<h3 id="2-document-key-decisions">2. Document Key Decisions</h3>
+<p>Future admins shouldn’t have to guess why a custom object or field exists. We:</p>
+<ul>
+  <li>Write <strong>descriptions</strong> for fields, flows, and Apex classes</li>
+  <li>Maintain a simple <strong>decision log</strong> (even a spreadsheet works) that explains <em>why</em> choices were made</li>
+  <li>Keep naming conventions consistent so patterns are obvious</li>
+</ul>
+
+<p>Documentation isn’t for today — it’s for the person trying to untangle things a year from now.</p>
+
+<hr />
+
+<h3 id="3-train-admins-for-adaptability">3. Train Admins for Adaptability</h3>
+<p>Tools are only as good as the people running them. We:</p>
+<ul>
+  <li>Teach admins how to use <strong>Custom Metadata</strong> instead of hardcoding</li>
+  <li>Walk through <strong>deployment best practices</strong> so changes don’t break production</li>
+  <li>Share <strong>design principles</strong>, not just solutions, so the team can evolve the system without outside help</li>
+</ul>
+
+<p>Empowered admins = resilient orgs.</p>
+
+<hr />
+
+<h2 id="example-in-practice">Example in Practice</h2>
+
+<p>We once worked with a client who had <strong>15 record-triggered flows</strong> on Opportunity, each solving a different request. Updates were brittle and errors common.</p>
+
+<p>We consolidated them into <strong>three modular flows with subflows</strong> and documented each decision. Six months later, their own admins were confidently adding enhancements without needing rebuilds or outside support.</p>
+
+<hr />
+
+<h2 id="key-takeaway">Key Takeaway</h2>
+
+<p>The future is unpredictable.</p>
+
+<p>But with the right structure, your CRM can be:</p>
+<ul>
+  <li>Modular in its automation</li>
+  <li>Clear in its documentation</li>
+  <li>Supported by trained admins</li>
+</ul>
+
+<p>The best time to future-proof your org isn’t tomorrow. It’s right now.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Tech changes. Teams grow. Priorities shift. Here’s how we help clients build Salesforce orgs that are ready for what’s next.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/future-proof-org.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/future-proof-org.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">When a CRM Becomes a Strategic Advantage</title><link href="https://redwoodlane.net/blog/crm-strategic-advantage/" rel="alternate" type="text/html" title="When a CRM Becomes a Strategic Advantage" /><published>2024-07-10T00:00:00+00:00</published><updated>2024-07-10T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/crm-strategic-advantage</id><content type="html" xml:base="https://redwoodlane.net/blog/crm-strategic-advantage/"><![CDATA[<p>There’s a difference between <em>having</em> Salesforce and <strong>leveraging</strong> Salesforce.</p>
+
+<p>Plenty of organizations use Salesforce as a digital filing cabinet: log calls, track opportunities, run reports. But the real value comes when it shifts from being “just a tool” to becoming part of your <strong>business strategy.</strong></p>
+
+<hr />
+
+<h2 id="what-that-shift-looks-like">What That Shift Looks Like</h2>
+
+<ol>
+  <li><strong>Leadership gets real-time insights</strong>
+    <ul>
+      <li>Instead of waiting for end-of-month spreadsheets, dashboards provide up-to-the-minute visibility.</li>
+      <li>Executives make decisions based on today’s pipeline, not last quarter’s recap.</li>
+      <li>Forecasting becomes proactive, not reactive.</li>
+    </ul>
+  </li>
+  <li><strong>Sales and service teams work in sync</strong>
+    <ul>
+      <li>Customer data isn’t siloed. Sales knows what service promised; service sees what sales closed.</li>
+      <li>No more email chains or “who owns this?” confusion.</li>
+      <li>Customers feel the difference because every interaction is informed.</li>
+    </ul>
+  </li>
+  <li><strong>Processes evolve faster</strong>
+    <ul>
+      <li>When priorities shift, automation adapts.</li>
+      <li>Flows and configurations support new go-to-market strategies without months of rework.</li>
+      <li>The system becomes a partner in change, not a blocker.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="why-most-orgs-stay-stuck">Why Most Orgs Stay Stuck</h2>
+
+<p>The gap often comes from mindset:</p>
+<ul>
+  <li><strong>Tool mindset</strong> → “We log data here.”</li>
+  <li><strong>Strategy mindset</strong> → “We run our business here.”</li>
+</ul>
+
+<p>Without that shift, Salesforce is underutilized, and teams miss opportunities to streamline, align, and innovate.</p>
+
+<hr />
+
+<h2 id="example-in-practice">Example in Practice</h2>
+
+<p>A client once treated Salesforce purely as a sales tool. Service teams worked in a separate system, and leadership pulled reports from spreadsheets stitched together monthly.</p>
+
+<p>We helped unify those systems in Salesforce. Now:</p>
+<ul>
+  <li>Sales and service share the same 360° customer view</li>
+  <li>Leadership dashboards update daily with pipeline and case resolution metrics</li>
+  <li>Marketing can trigger campaigns based on live service data</li>
+</ul>
+
+<p>The result? Faster decisions, happier customers, and a measurable competitive edge.</p>
+
+<hr />
+
+<h2 id="key-takeaway">Key Takeaway</h2>
+
+<p>Salesforce isn’t just a place to store data. It’s a platform for <strong>transformation</strong>.</p>
+
+<p>When CRM becomes a <strong>strategic advantage</strong>, you:</p>
+<ul>
+  <li>Give leaders clarity in the moment</li>
+  <li>Align sales and service seamlessly</li>
+  <li>Build processes that can keep up with change</li>
+</ul>
+
+<p>The difference between a tool and a strategy is the difference between <em>keeping up</em> and <em>leading the way</em>.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Most companies treat Salesforce as a tool. The smart ones treat it as a strategy. Here’s what that shift looks like.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/crm-strategic-advantage.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/crm-strategic-advantage.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Chasing Simplicity in Complex Systems</title><link href="https://redwoodlane.net/blog/simple-salesforce-design/" rel="alternate" type="text/html" title="Chasing Simplicity in Complex Systems" /><published>2024-04-17T00:00:00+00:00</published><updated>2024-04-17T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/simple-salesforce-design</id><content type="html" xml:base="https://redwoodlane.net/blog/simple-salesforce-design/"><![CDATA[<p>Powerful systems don’t have to feel complicated.</p>
 
 <p>In fact, the best Salesforce builds we’ve seen are the ones that feel <em>effortless</em>—even when the logic under the hood is sophisticated.</p>
 
-<p>At Redwood Lane, we help teams simplify without sacrificing capability:</p>
+<hr />
 
+<h2 id="why-simplicity-matters">Why Simplicity Matters</h2>
+
+<p>When a system feels confusing:</p>
 <ul>
-  <li><strong>We hide complexity behind automation and smart defaults.</strong></li>
-  <li><strong>We design interfaces that focus attention, not overwhelm.</strong></li>
-  <li><strong>We make sure every action feels purposeful, not puzzling.</strong></li>
+  <li>Users stop adopting it.</li>
+  <li>Data quality suffers because fields get skipped.</li>
+  <li>Workarounds creep in, creating shadow processes outside Salesforce.</li>
 </ul>
 
-<p>Complexity is inevitable. Confusion is optional. We’re here to help you build powerful systems that feel simple.</p>
+<p>But when the experience is simple:</p>
+<ul>
+  <li>Teams trust the system and actually use it.</li>
+  <li>Leaders get cleaner data and more accurate reporting.</li>
+  <li>Enhancements become easier to layer in without rework.</li>
+</ul>
 
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Even advanced Salesforce orgs can feel intuitive—if you build with clarity in mind. Here’s how we help make the complex feel simple.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/simplicity-in-complexity.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/simplicity-in-complexity.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Problem With One-Size-Fits-All CRM Advice</title><link href="https://redwoodlane.net/blog/one-size-crm-problems/" rel="alternate" type="text/html" title="The Problem With One-Size-Fits-All CRM Advice" /><published>2024-01-24T00:00:00+00:00</published><updated>2024-01-24T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/one-size-crm-problems</id><content type="html" xml:base="https://redwoodlane.net/blog/one-size-crm-problems/"><![CDATA[<p>You can find endless Salesforce “best practices” online—but that doesn’t mean they’ll work for your org.</p>
+<p>Complexity in the backend is fine. Confusion in the frontend is costly.</p>
+
+<hr />
+
+<h2 id="how-we-keep-complex-systems-simple">How We Keep Complex Systems Simple</h2>
+
+<ol>
+  <li><strong>Hide complexity behind automation and smart defaults</strong>
+    <ul>
+      <li>Use Flows to set field values automatically when possible.</li>
+      <li>Default picklist values so users don’t have to guess.</li>
+      <li>Reduce clicks by handling routine steps behind the scenes.</li>
+    </ul>
+
+    <p>👉 The less a user has to think about setup, the more they can focus on the work.</p>
+  </li>
+</ol>
+
+<hr />
+
+<ol>
+  <li><strong>Design interfaces that focus attention, not overwhelm</strong>
+    <ul>
+      <li>Group fields by <em>how people work</em>, not by schema.</li>
+      <li>Use Dynamic Forms to reveal fields only when relevant.</li>
+      <li>Keep the Highlights Panel clean — only critical fields belong above the fold.</li>
+    </ul>
+
+    <p>Think of the page as a guided path, not a data dump.</p>
+  </li>
+</ol>
+
+<hr />
+
+<ol>
+  <li><strong>Make every action feel purposeful, not puzzling</strong>
+    <ul>
+      <li>Quick Actions should match the most common tasks.</li>
+      <li>Labels should use business language, not technical jargon.</li>
+      <li>Error messages should explain <em>what to do next</em>, not just what went wrong.</li>
+    </ul>
+
+    <p>When people know exactly what button to click, adoption soars.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="example-in-practice">Example in Practice</h2>
+
+<p>We worked with a client whose Service Request page had over <strong>200 fields</strong> visible. Agents spent more time scrolling than serving customers.</p>
+
+<p>By hiding 70% of fields behind conditional visibility and automating common updates, we:</p>
+<ul>
+  <li>Cut average case handling time by 25%</li>
+  <li>Reduced data entry errors</li>
+  <li>Made training for new agents twice as fast</li>
+</ul>
+
+<p>The backend logic was still complex — but the user experience felt straightforward.</p>
+
+<hr />
+
+<h2 id="key-takeaway">Key Takeaway</h2>
+
+<p>Complexity in Salesforce is inevitable. But confusion is optional.</p>
+
+<p>By:</p>
+<ul>
+  <li>Automating smartly</li>
+  <li>Designing pages that guide, not overwhelm</li>
+  <li>Ensuring every action has purpose</li>
+</ul>
+
+<p>…you can make even the most advanced orgs feel effortless to the people who use them every day.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Even advanced Salesforce orgs can feel intuitive—if you build with clarity in mind. Here’s how we help make the complex feel simple.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/simplicity-in-complexity.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/simplicity-in-complexity.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Problem With One-Size-Fits-All CRM Advice</title><link href="https://redwoodlane.net/blog/one-size-crm-problems/" rel="alternate" type="text/html" title="The Problem With One-Size-Fits-All CRM Advice" /><published>2024-01-24T00:00:00+00:00</published><updated>2024-01-24T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/one-size-crm-problems</id><content type="html" xml:base="https://redwoodlane.net/blog/one-size-crm-problems/"><![CDATA[<p>You can find endless Salesforce “best practices” online—but that doesn’t mean they’ll work for your org.</p>
+
+<p>What works for a 10-person startup won’t necessarily work for a 1,000-person enterprise. A flow pattern that’s elegant in one org may buckle under scale in another. That’s the problem with one-size-fits-all advice: it assumes context doesn’t matter.</p>
 
 <p>At Redwood Lane, we’ve learned that the <em>right</em> solution depends entirely on your team, your process, and your goals.</p>
 
-<p>Here’s what we do instead of relying on one-size-fits-all advice:</p>
+<hr />
+
+<h2 id="why-best-practices-can-backfire">Why Best Practices Can Backfire</h2>
 
 <ul>
-  <li><strong>We ask more questions than we answer—at first.</strong></li>
-  <li><strong>We study your data, usage patterns, and team behavior.</strong></li>
-  <li><strong>We prototype solutions and test them with real users.</strong></li>
+  <li><strong>Over-automation</strong>: Copying a “recommended” flow structure can lead to dozens of record-triggered flows that are impossible to manage.</li>
+  <li><strong>Under-utilization</strong>: Following advice to “keep things simple” sometimes leaves teams stuck with manual steps they could have automated.</li>
+  <li><strong>Misaligned features</strong>: A shiny new Salesforce release may look exciting, but if it doesn’t fit your team’s actual workflow, it creates more noise than value.</li>
 </ul>
 
-<p>Smart consulting isn’t just about knowing the tools—it’s about knowing when <em>not</em> to use them. That’s where we come in.</p>
+<p>Best practices are starting points, not blueprints.</p>
 
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Every Salesforce org is different. Here’s why we approach each client with fresh eyes—and zero assumptions.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/one-size-fits-all.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/one-size-fits-all.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Don’t Automate Noise</title><link href="https://redwoodlane.net/blog/dont-automate-noise/" rel="alternate" type="text/html" title="Don’t Automate Noise" /><published>2023-10-30T00:00:00+00:00</published><updated>2023-10-30T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/dont-automate-noise</id><content type="html" xml:base="https://redwoodlane.net/blog/dont-automate-noise/"><![CDATA[<p>We love automation. But we’ve also seen how <strong>bad automation can cause more problems than it solves</strong>.</p>
+<hr />
 
-<p>At Redwood Lane, we focus on automating systems that are stable, repeatable, and worth the effort. Because automating noise? That just gets you noisy, faster.</p>
+<h2 id="how-we-approach-each-org">How We Approach Each Org</h2>
 
-<p>Here’s how we evaluate what to automate:</p>
+<ol>
+  <li>
+    <p><strong>We ask more questions than we answer—at first.</strong><br />
+Before recommending anything, we dig into <em>why</em> a process exists. What pain point are we solving? What outcome is most valuable to the team?</p>
+  </li>
+  <li><strong>We study your data, usage patterns, and team behavior.</strong>
+    <ul>
+      <li>Which fields are actually populated?</li>
+      <li>Which reports are leaders relying on?</li>
+      <li>Where do users drop off in workflows?<br />
+Data tells us where the system supports the business—and where it gets in the way.</li>
+    </ul>
+  </li>
+  <li><strong>We prototype solutions and test them with real users.</strong><br />
+We’d rather build a small proof-of-concept that fails fast than roll out a giant automation that fails silently in production. User feedback shapes the final design.</li>
+</ol>
 
-<ul>
-  <li><strong>Is the process well-defined?</strong> If not, we map it before we build.</li>
-  <li><strong>Is it frequent and time-consuming?</strong> That’s a great candidate.</li>
-  <li><strong>Does it reduce risk or error?</strong> Then it’s not just convenient—it’s valuable.</li>
-</ul>
+<hr />
 
-<p>Automation should make things smoother—not louder. We’ll help you get there.</p>
+<h2 id="example-in-practice">Example in Practice</h2>
 
-<hr />]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Automation can make you faster—or just amplify chaos. Here’s how we help teams automate the *right* things.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/automate-right-things.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/automate-right-things.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>A client once came to us with advice they’d read online: “Use Record Types for every department.” They had <strong>nine Record Types</strong> on a single object, with layouts and picklists so fragmented that nobody could find what they needed.</p>
+
+<p>Instead of sticking to the “best practice,” we consolidated to three Record Types and used Dynamic Forms for the rest. User adoption jumped, and admin maintenance dropped overnight.</p>
+
+<hr />
+
+<h2 id="key-takeaway">Key Takeaway</h2>
+
+<p>Smart consulting isn’t just about knowing the tools—it’s about knowing when <em>not</em> to use them.</p>
+
+<p>Every Salesforce org is unique. The best solution isn’t the one you find in a blog post—it’s the one that fits <strong>your data, your team, and your strategy</strong>.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Every Salesforce org is different. Here’s why we approach each client with fresh eyes—and zero assumptions.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/one-size-fits-all.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/one-size-fits-all.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

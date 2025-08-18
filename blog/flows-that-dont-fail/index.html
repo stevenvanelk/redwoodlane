@@ -74,17 +74,96 @@
 
 <p>At Redwood Lane, we approach Flow like infrastructure: <strong>built to last, safe to fail, easy to maintain.</strong></p>
 
-<p>Our approach:</p>
+<hr />
 
+<h2 id="why-a-bad-flow-hurts-more-than-you-think">Why a Bad Flow Hurts More Than You Think</h2>
+
+<p>A broken flow doesn’t just throw an error — it undermines confidence.</p>
 <ul>
-  <li><strong>We test with real-world data</strong>, not perfect-case scenarios.</li>
-  <li><strong>We document branches and logic</strong>, so anyone can understand how it works.</li>
-  <li><strong>We create reusable subflows</strong>, so changes don’t require a rebuild every time.</li>
+  <li>Users stop trusting Salesforce if records fail to save.</li>
+  <li>Managers lose faith in reports when automation misroutes data.</li>
+  <li>Admins spend hours firefighting instead of building new solutions.</li>
 </ul>
 
-<p>Flow is powerful. But with power comes responsibility—and we take that seriously.</p>
+<p>That’s why the “weakest link” really does define your org. One unstable flow can ripple out into every process that touches it.</p>
 
 <hr />
+
+<h2 id="our-approach-to-reliable-flows">Our Approach to Reliable Flows</h2>
+
+<ol>
+  <li><strong>Test with real-world data</strong>
+    <ul>
+      <li>Don’t just test with “happy path” records.</li>
+      <li>Use real scenarios: missing fields, bad picklist values, inactive users.</li>
+      <li>Validate bulk behavior (does it work with 200 records in one transaction?).</li>
+    </ul>
+
+    <p>👉 If a flow only works in perfect conditions, it won’t last in production.</p>
+  </li>
+</ol>
+
+<hr />
+
+<ol>
+  <li><strong>Document branches and logic</strong>
+    <ul>
+      <li>Flows aren’t self-explanatory once they get big.</li>
+      <li>We add <strong>descriptions</strong> to every element.</li>
+      <li>We keep an <strong>architecture doc</strong> or diagram showing the logic at a higher level.</li>
+    </ul>
+
+    <p>This helps the next admin (or your future self) understand why a decision path exists.</p>
+  </li>
+</ol>
+
+<hr />
+
+<ol>
+  <li><strong>Create reusable subflows</strong>
+    <ul>
+      <li>Pull out common logic (like sending notifications or assigning owners) into subflows.</li>
+      <li>Reference those subflows wherever needed instead of duplicating steps.</li>
+      <li>When a rule changes, update one subflow instead of six flows.</li>
+    </ul>
+
+    <p>Reusability = less maintenance debt.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="example-in-practice">Example in Practice</h2>
+
+<p>We once audited an org where <strong>seven different flows</strong> updated Opportunity Stage fields. Each had slightly different logic, so users never knew what would happen.</p>
+
+<p>We consolidated the logic into <strong>one master flow with subflows</strong> for exceptions. Errors dropped dramatically, and user complaints about “Salesforce being unpredictable” vanished overnight.</p>
+
+<hr />
+
+<h2 id="pro-tips-for-flow-stability">Pro Tips for Flow Stability</h2>
+
+<ul>
+  <li>Use <strong>Fault Paths</strong> to capture and log errors. Silent failures are worse than loud ones.</li>
+  <li>Turn on <strong>Flow Error Emails</strong>, but route them to an admin queue instead of one person’s inbox.</li>
+  <li>Version-control your flows (naming conventions like <code class="language-plaintext highlighter-rouge">Opportunity_Update_v3</code>) so you know what’s deployed.</li>
+  <li>Favor <strong>Before-Save Flows</strong> for simple updates — they’re faster and less likely to hit governor limits.</li>
+</ul>
+
+<hr />
+
+<h2 id="key-takeaway">Key Takeaway</h2>
+
+<p>Flow is powerful. But with power comes responsibility.</p>
+
+<p>Build flows that are:</p>
+<ul>
+  <li><strong>Tested with messy data</strong></li>
+  <li><strong>Documented clearly</strong></li>
+  <li><strong>Modular and reusable</strong></li>
+</ul>
+
+<p>Do that, and your org won’t be defined by its worst flow — it’ll be defined by its most reliable one.</p>
 
   </div>
 </article>
