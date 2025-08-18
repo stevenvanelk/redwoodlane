@@ -270,3 +270,138 @@ h1, h2, h3, .hero-title {
         text-align: right;
     }
 }
+
+/* Blog list layout */
+.blog-wrapper .blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-wrapper .post-card {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+    height: 200px;
+    /* same fixed height as WH */
+    border-bottom: none;
+    /* remove your old divider */
+    padding: 0;
+    /* remove old padding if present */
+}
+
+.blog-wrapper .post-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Thumbnail — fixed width, full height */
+.blog-wrapper .post-thumbnail {
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0;
+    /* card handles rounding */
+    flex-shrink: 0;
+}
+
+.blog-wrapper .post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content area */
+.blog-wrapper .post-content {
+    padding: 1rem 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Title — single-line clamp like WH */
+.blog-wrapper .post-content h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Excerpt — 3-line clamp like WH */
+.blog-wrapper .post-content p:not(.post-date) {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Date style */
+.blog-wrapper .post-content .post-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0 0 0.5rem 0;
+}
+
+/* Read more (keep your brand color if you want) */
+.blog-wrapper .read-more {
+    margin-top: 0.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+    /* or keep #c4412f */
+}
+
+/* Mobile behavior — stack and auto-height like WH */
+@media (max-width: 480px) {
+    .blog-wrapper .post-card {
+        flex-direction: column;
+        height: auto;
+        max-height: 300px;
+        overflow: hidden;
+    }
+
+    .blog-wrapper .post-thumbnail {
+        width: 100%;
+        height: 180px;
+    }
+
+    .blog-wrapper .post-content {
+        padding: 0.1rem 1rem 0.75rem;
+        justify-content: flex-start;
+    }
+
+    .blog-wrapper .post-content h2 {
+        font-size: 1.05rem;
+        margin: 0 0 0.15rem;
+        -webkit-line-clamp: 1;
+        line-height: 1.2;
+    }
+
+    .blog-wrapper .post-content p:not(.post-date) {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        -webkit-line-clamp: 2;
+        margin: 0 0 0.15rem;
+    }
+
+    .blog-wrapper .post-content .post-date {
+        font-size: 0.8rem;
+        margin-top: auto;
+    }
+}
