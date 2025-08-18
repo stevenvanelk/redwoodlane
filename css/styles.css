@@ -550,11 +550,6 @@ button:hover {
     text-align: center;
 }
 
-.certifications ul {
-    text-align: center;
-    justify-content: center;
-}
-
 .certifications li {
     font-size: 18px;
     margin: 0.5rem 0;
@@ -575,6 +570,33 @@ button:hover {
 
 .certifications svg[aria-hidden="true"] {
     pointer-events: none;
+}
+
+ul.certifications {
+    list-style: none;
+    margin: 0 auto 0.75rem;
+    padding: 0;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 0.5rem;
+}
+
+ul.certifications li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+ul.certifications svg {
+    width: 16px;
+    height: 16px;
+    fill: #b30000;
+    flex-shrink: 0;
+    transform: translateY(1px);
 }
 
 /* Footer Styling */
