@@ -1,13 +1,14 @@
 ---
+layout: post
 title: "Mastering Loops in Salesforce Flows"
-pubDate: 2025-08-17
+date: 2025-08-17
 author: "srvanelk@gmail.com"
-tags: ["Salesforce", "Flows", "Automation"]
-image: "/images/blog/posts/2025/loops.webp"
+keywords: Salesforce, Flows, Automation
+hero_image: /images/blog/posts/2025/loops.webp
+image: /images/blog/posts/2025/loops.webp
 description: "Loops in Salesforce Flows can feel intimidating at first, but they’re one of the most powerful tools you have as an Admin. Let’s talk about when to use them, why they’re useful, and how to get them right."
+permalink: /blog/mastering-loops-salesforce/
 ---
-
-# Mastering Loops in Salesforce Flows
 
 When I first started building flows, loops honestly scared me. They felt like this mysterious piece of the puzzle that I’d mess up and create infinite flow runs or crash the org. But the truth is, loops are one of the most powerful features of Salesforce Flows. If you’re comfortable using them, they can save you time, reduce clicks, and automate tasks that would otherwise be tedious or error-prone.
 
