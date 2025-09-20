@@ -1,4 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-08-26T14:32:13+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Mastering Loops in Salesforce Flows</title><link href="https://redwoodlane.net/blog/mastering-loops-salesforce/" rel="alternate" type="text/html" title="Mastering Loops in Salesforce Flows" /><published>2025-08-17T00:00:00+00:00</published><updated>2025-08-17T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/mastering-loops-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/mastering-loops-salesforce/"><![CDATA[<p>When I first started building flows, loops honestly scared me. They felt like this mysterious piece of the puzzle that I’d mess up and create infinite flow runs or crash the org. But the truth is, loops are one of the most powerful features of Salesforce Flows. If you’re comfortable using them, they can save you time, reduce clicks, and automate tasks that would otherwise be tedious or error-prone.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-09-20T10:16:27+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Using Record Types Without Creating Chaos</title><link href="https://redwoodlane.net/blog/record-types-strategy/" rel="alternate" type="text/html" title="Using Record Types Without Creating Chaos" /><published>2025-09-18T00:00:00+00:00</published><updated>2025-09-18T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/record-types-strategy</id><content type="html" xml:base="https://redwoodlane.net/blog/record-types-strategy/"><![CDATA[<p>Used well, Record Types can clarify business processes, separate workflows, and simplify reporting.</p>
+
+<p>Used poorly? They lead to layout sprawl, automation headaches, and endless picklist management.</p>
+
+<hr />
+
+<h2 id="what-record-types-actually-do">What Record Types Actually Do</h2>
+
+<p>At their core, Record Types let you:</p>
+<ul>
+  <li>Show different <strong>page layouts</strong> to different teams</li>
+  <li>Control <strong>picklist values</strong> based on context</li>
+  <li>Segment <strong>business processes</strong> (like Sales Stages or Case Lifecycles)</li>
+</ul>
+
+<p>That flexibility is powerful, but it comes with tradeoffs. Every new Record Type multiplies the number of layouts, flows, and picklists you may need to maintain. If you’ve ever had to update the same field in six different layouts, you know the pain.</p>
+
+<hr />
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<p>Here are a few ways I’ve seen Record Types cause chaos:</p>
+
+<ul>
+  <li><strong>“One per department” thinking</strong> → suddenly you have 12 record types on the same object, half of which aren’t used consistently.</li>
+  <li><strong>Picklist overload</strong> → admins forget that each Record Type controls picklist values, so adding a new value means touching every type.</li>
+  <li><strong>Automation breakdowns</strong> → Flows or validation rules that don’t account for Record Type differences, leading to confusing errors for users.</li>
+  <li><strong>Layout sprawl</strong> → maintaining dozens of near-identical layouts instead of reusing compact, universal designs.</li>
+</ul>
+
+<hr />
+
+<h2 id="a-better-approach">A Better Approach</h2>
+
+<p>When I design with Record Types, I focus on three principles:</p>
+
+<ol>
+  <li>
+    <p><strong>Tie them to real business logic</strong><br />
+Use Record Types when the process <em>actually diverges</em>. For example, Service Requests for “Travel” vs. “Dining” may need different lifecycles, not just different labels.</p>
+  </li>
+  <li>
+    <p><strong>Map page layouts carefully</strong><br />
+Don’t create a new layout unless the fields really differ. Instead, lean on Dynamic Forms and conditional visibility to keep things tidy.</p>
+  </li>
+  <li>
+    <p><strong>Track the impact on automation</strong><br />
+Every Flow, rule, and assignment process should be checked against Record Types. One missed condition can throw off the whole system.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="how-to-decide-do-you-really-need-a-record-type">How to Decide: Do You Really Need a Record Type?</h2>
+
+<p>Here are some quick checks I use:</p>
+
+<ul>
+  <li>
+    <p><strong>Do different groups of users follow completely different processes?</strong><br />
+→ Record Types may help.</p>
+  </li>
+  <li>
+    <p><strong>Do users just want different field labels or sections?</strong><br />
+→ Dynamic Forms or permission sets are often better.</p>
+  </li>
+  <li>
+    <p><strong>Will this change double (or triple) my maintenance work?</strong><br />
+→ Be cautious; future you will thank present you.</p>
+  </li>
+</ul>
+
+<p>Not every difference deserves a Record Type. Sometimes a single flexible layout with good field-level security is the simpler, cleaner solution.</p>
+
+<hr />
+
+<h2 id="example-in-practice">Example in Practice</h2>
+
+<p>I once worked with a client who had created <strong>seven Case Record Types</strong>—one per team. The result? Reporting was inconsistent, and nobody could agree on what “Open” meant because each Record Type had its own lifecycle.</p>
+
+<p>We simplified it to <strong>two Record Types</strong>: “Service” and “Internal.” Then we used picklists, Dynamic Forms, and assignment rules to handle the smaller differences. Reporting got cleaner, user training got easier, and admins cut maintenance time in half.</p>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+
+<ul>
+  <li>Use Record Types sparingly—only when processes <em>truly</em> differ.</li>
+  <li>Keep layouts as lean as possible with Dynamic Forms and conditional visibility.</li>
+  <li>Always consider the downstream impact on automation, picklists, and reporting.</li>
+</ul>
+
+<p><strong>Record Types should add clarity, not complexity.</strong> When they do, your users spend less time fighting Salesforce and more time getting work done.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Record Types can empower your team—or slow everything down. Here’s how we help clients use them wisely.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/record-types-strategy.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/record-types-strategy.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Mastering Loops in Salesforce Flows</title><link href="https://redwoodlane.net/blog/mastering-loops-salesforce/" rel="alternate" type="text/html" title="Mastering Loops in Salesforce Flows" /><published>2025-08-17T00:00:00+00:00</published><updated>2025-08-17T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/mastering-loops-salesforce</id><content type="html" xml:base="https://redwoodlane.net/blog/mastering-loops-salesforce/"><![CDATA[<p>When I first started building flows, loops honestly scared me. They felt like this mysterious piece of the puzzle that I’d mess up and create infinite flow runs or crash the org. But the truth is, loops are one of the most powerful features of Salesforce Flows. If you’re comfortable using them, they can save you time, reduce clicks, and automate tasks that would otherwise be tedious or error-prone.</p>
 
 <p>In this post, I’m going to break down <strong>when you use loops</strong>, <strong>why you use loops</strong>, and <strong>how to use them properly</strong> so you can build cleaner, smarter automations.</p>
 
@@ -829,57 +921,4 @@ Instead of dumping everything on one screen:
   <li>Ensuring every action has purpose</li>
 </ul>
 
-<p>…you can make even the most advanced orgs feel effortless to the people who use them every day.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Even advanced Salesforce orgs can feel intuitive—if you build with clarity in mind. Here’s how we help make the complex feel simple.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/simplicity-in-complexity.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/simplicity-in-complexity.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Problem With One-Size-Fits-All CRM Advice</title><link href="https://redwoodlane.net/blog/one-size-crm-problems/" rel="alternate" type="text/html" title="The Problem With One-Size-Fits-All CRM Advice" /><published>2024-01-24T00:00:00+00:00</published><updated>2024-01-24T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/one-size-crm-problems</id><content type="html" xml:base="https://redwoodlane.net/blog/one-size-crm-problems/"><![CDATA[<p>You can find endless Salesforce “best practices” online—but that doesn’t mean they’ll work for your org.</p>
-
-<p>What works for a 10-person startup won’t necessarily work for a 1,000-person enterprise. A flow pattern that’s elegant in one org may buckle under scale in another. That’s the problem with one-size-fits-all advice: it assumes context doesn’t matter.</p>
-
-<p>At Redwood Lane, we’ve learned that the <em>right</em> solution depends entirely on your team, your process, and your goals.</p>
-
-<hr />
-
-<h2 id="why-best-practices-can-backfire">Why Best Practices Can Backfire</h2>
-
-<ul>
-  <li><strong>Over-automation</strong>: Copying a “recommended” flow structure can lead to dozens of record-triggered flows that are impossible to manage.</li>
-  <li><strong>Under-utilization</strong>: Following advice to “keep things simple” sometimes leaves teams stuck with manual steps they could have automated.</li>
-  <li><strong>Misaligned features</strong>: A shiny new Salesforce release may look exciting, but if it doesn’t fit your team’s actual workflow, it creates more noise than value.</li>
-</ul>
-
-<p>Best practices are starting points, not blueprints.</p>
-
-<hr />
-
-<h2 id="how-we-approach-each-org">How We Approach Each Org</h2>
-
-<ol>
-  <li>
-    <p><strong>We ask more questions than we answer—at first.</strong><br />
-Before recommending anything, we dig into <em>why</em> a process exists. What pain point are we solving? What outcome is most valuable to the team?</p>
-  </li>
-  <li><strong>We study your data, usage patterns, and team behavior.</strong>
-    <ul>
-      <li>Which fields are actually populated?</li>
-      <li>Which reports are leaders relying on?</li>
-      <li>Where do users drop off in workflows?<br />
-Data tells us where the system supports the business—and where it gets in the way.</li>
-    </ul>
-  </li>
-  <li><strong>We prototype solutions and test them with real users.</strong><br />
-We’d rather build a small proof-of-concept that fails fast than roll out a giant automation that fails silently in production. User feedback shapes the final design.</li>
-</ol>
-
-<hr />
-
-<h2 id="example-in-practice">Example in Practice</h2>
-
-<p>A client once came to us with advice they’d read online: “Use Record Types for every department.” They had <strong>nine Record Types</strong> on a single object, with layouts and picklists so fragmented that nobody could find what they needed.</p>
-
-<p>Instead of sticking to the “best practice,” we consolidated to three Record Types and used Dynamic Forms for the rest. User adoption jumped, and admin maintenance dropped overnight.</p>
-
-<hr />
-
-<h2 id="key-takeaway">Key Takeaway</h2>
-
-<p>Smart consulting isn’t just about knowing the tools—it’s about knowing when <em>not</em> to use them.</p>
-
-<p>Every Salesforce org is unique. The best solution isn’t the one you find in a blog post—it’s the one that fits <strong>your data, your team, and your strategy</strong>.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Every Salesforce org is different. Here’s why we approach each client with fresh eyes—and zero assumptions.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/one-size-fits-all.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/one-size-fits-all.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>…you can make even the most advanced orgs feel effortless to the people who use them every day.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Even advanced Salesforce orgs can feel intuitive—if you build with clarity in mind. Here’s how we help make the complex feel simple.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/simplicity-in-complexity.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/simplicity-in-complexity.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

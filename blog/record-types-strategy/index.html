@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - page 6 | Redwood Lane</title>
-    <meta name="description" content="Articles and insights from Redwood Lane on Salesforce automation, development, consulting, and more.">
-    <meta name="keywords" content="Salesforce, Blog, Admin Tips, Developer Insights, Automation, CRM, Redwood Lane">
+    <title>Using Record Types Without Creating Chaos | Redwood Lane</title>
+    <meta name="description" content="Record Types can empower your team—or slow everything down. Here’s how we help clients use them wisely.">
+    <meta name="keywords" content="Salesforce Record Types, Admin Strategy, Data Design, CRM Best Practices">
     <meta name="author" content="Redwood Lane">
-    <meta property="og:title" content="Blog - page 6 | Redwood Lane Salesforce Consulting">
-    <meta property="og:description" content="Articles and insights from Redwood Lane on Salesforce automation, development, consulting, and more.">
+    <meta property="og:title" content="Using Record Types Without Creating Chaos | Redwood Lane Salesforce Consulting">
+    <meta property="og:description" content="Record Types can empower your team—or slow everything down. Here’s how we help clients use them wisely.">
     
-    <meta property="og:image" content="/images/global/RL-Sharing.webp">
+    <meta property="og:image" content="/images/blog/record-types-strategy.webp">
     
-    <meta property="og:url" content="https://redwoodlane.net/blog/page/6/index.html">
+    <meta property="og:url" content="https://redwoodlane.net/blog/record-types-strategy/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog - page 6 | Redwood Lane">
-    <meta name="twitter:description" content="Articles and insights from Redwood Lane on Salesforce automation, development, consulting, and more.">
+    <meta name="twitter:title" content="Using Record Types Without Creating Chaos | Redwood Lane">
+    <meta name="twitter:description" content="Record Types can empower your team—or slow everything down. Here’s how we help clients use them wisely.">
     
-    <meta name="twitter:image" content="/images/global/RL-Sharing.webp">
+    <meta name="twitter:image" content="/images/blog/record-types-strategy.webp">
     
     <meta name="fediverse:creator" content="@redwoodlane@mastodon.social">
     <link rel="stylesheet" href="/css/styles.css">
@@ -57,94 +57,135 @@
     </nav>
 </header>
       <main class="blog">
-        <div class="hero">
-    <img src="/images/blog/rl-hero-blog.webp" srcset="
-        /images/blog/rl-hero-blog-small.webp 480w,
-        /images/blog/rl-hero-blog-medium.webp 768w,
-        /images/blog/rl-hero-blog.webp 1920w
-      " sizes="100vw" alt="Redwood Lane Blog" class="hero-img">
-    <div class="hero-text">
-        <div class="hero-content">
-            <h1>Welcome to the Blog</h1>
-            <p>Advice to help businesses automate, integrate, and scale</p>
-            
-            <a href="/contact/" class="cta-button">Get in Touch</a>
-            
-        </div>
+        <article class="blog-post">
+  
+  <div class="hero-container">
+    <img src="/images/blog/record-types-strategy.webp" alt="Using Record Types Without Creating Chaos hero image" class="post-hero-img">
+    <div class="hero-title">
+      <h1>Using Record Types Without Creating Chaos</h1>
     </div>
-</div>
+  </div>
   
 
-<h1>Redwood Lane Blog</h1>
-<div class="blog-wrapper">
-    <div class="blog-list">
-        
-        <article class="post-card">
-            <div class="post-thumbnail">
-                
-                <a href="/blog/quick-wins-clean-salesforce/">
-                    <img src="/images/blog/cleanup.webp" alt="3 Quick Wins to Clean Up Your Salesforce Org thumbnail">
-                </a>
-                
-            </div>
-            <div class="post-content">
-                <h2 class="post-link-title"><a href="/blog/quick-wins-clean-salesforce/">3 Quick Wins to Clean Up Your Salesforce Org</a></h2>
-                <p class="post-date">June 20, 2020</p>
-                <p>A messy Salesforce org is like a cluttered workspace—eventually, it slows everyone down. Over time, new fields, layouts, and automations ...</p>
-            </div>
-        </article>
-        
-        <article class="post-card">
-            <div class="post-thumbnail">
-                
-                <a href="/blog/redwood-lane-is-open/">
-                    <img src="/images/index/rl-hero.webp" alt="Redwood Lane is Open for Business thumbnail">
-                </a>
-                
-            </div>
-            <div class="post-content">
-                <h2 class="post-link-title"><a href="/blog/redwood-lane-is-open/">Redwood Lane is Open for Business</a></h2>
-                <p class="post-date">March 20, 2020</p>
-                <p>We’re excited to announce the launch of Redwood Lane, a new Salesforce consulting company focused on helping businesses unlock the full p...</p>
-            </div>
-        </article>
-        
-    </div>
+  <div class="blog-wrapper">
+    <p class="blog-date"><em>September 18, 2025</em></p>
+    <p>Used well, Record Types can clarify business processes, separate workflows, and simplify reporting.</p>
 
-    <div class="pagination">
-        
-        <a href="/blog/page/5/">← Previous</a>
-        
+<p>Used poorly? They lead to layout sprawl, automation headaches, and endless picklist management.</p>
+
+<hr />
+
+<h2 id="what-record-types-actually-do">What Record Types Actually Do</h2>
+
+<p>At their core, Record Types let you:</p>
+<ul>
+  <li>Show different <strong>page layouts</strong> to different teams</li>
+  <li>Control <strong>picklist values</strong> based on context</li>
+  <li>Segment <strong>business processes</strong> (like Sales Stages or Case Lifecycles)</li>
+</ul>
+
+<p>That flexibility is powerful, but it comes with tradeoffs. Every new Record Type multiplies the number of layouts, flows, and picklists you may need to maintain. If you’ve ever had to update the same field in six different layouts, you know the pain.</p>
+
+<hr />
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<p>Here are a few ways I’ve seen Record Types cause chaos:</p>
+
+<ul>
+  <li><strong>“One per department” thinking</strong> → suddenly you have 12 record types on the same object, half of which aren’t used consistently.</li>
+  <li><strong>Picklist overload</strong> → admins forget that each Record Type controls picklist values, so adding a new value means touching every type.</li>
+  <li><strong>Automation breakdowns</strong> → Flows or validation rules that don’t account for Record Type differences, leading to confusing errors for users.</li>
+  <li><strong>Layout sprawl</strong> → maintaining dozens of near-identical layouts instead of reusing compact, universal designs.</li>
+</ul>
+
+<hr />
+
+<h2 id="a-better-approach">A Better Approach</h2>
+
+<p>When I design with Record Types, I focus on three principles:</p>
+
+<ol>
+  <li>
+    <p><strong>Tie them to real business logic</strong><br />
+Use Record Types when the process <em>actually diverges</em>. For example, Service Requests for “Travel” vs. “Dining” may need different lifecycles, not just different labels.</p>
+  </li>
+  <li>
+    <p><strong>Map page layouts carefully</strong><br />
+Don’t create a new layout unless the fields really differ. Instead, lean on Dynamic Forms and conditional visibility to keep things tidy.</p>
+  </li>
+  <li>
+    <p><strong>Track the impact on automation</strong><br />
+Every Flow, rule, and assignment process should be checked against Record Types. One missed condition can throw off the whole system.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="how-to-decide-do-you-really-need-a-record-type">How to Decide: Do You Really Need a Record Type?</h2>
+
+<p>Here are some quick checks I use:</p>
+
+<ul>
+  <li>
+    <p><strong>Do different groups of users follow completely different processes?</strong><br />
+→ Record Types may help.</p>
+  </li>
+  <li>
+    <p><strong>Do users just want different field labels or sections?</strong><br />
+→ Dynamic Forms or permission sets are often better.</p>
+  </li>
+  <li>
+    <p><strong>Will this change double (or triple) my maintenance work?</strong><br />
+→ Be cautious; future you will thank present you.</p>
+  </li>
+</ul>
+
+<p>Not every difference deserves a Record Type. Sometimes a single flexible layout with good field-level security is the simpler, cleaner solution.</p>
+
+<hr />
+
+<h2 id="example-in-practice">Example in Practice</h2>
+
+<p>I once worked with a client who had created <strong>seven Case Record Types</strong>—one per team. The result? Reporting was inconsistent, and nobody could agree on what “Open” meant because each Record Type had its own lifecycle.</p>
+
+<p>We simplified it to <strong>two Record Types</strong>: “Service” and “Internal.” Then we used picklists, Dynamic Forms, and assignment rules to handle the smaller differences. Reporting got cleaner, user training got easier, and admins cut maintenance time in half.</p>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+
+<ul>
+  <li>Use Record Types sparingly—only when processes <em>truly</em> differ.</li>
+  <li>Keep layouts as lean as possible with Dynamic Forms and conditional visibility.</li>
+  <li>Always consider the downstream impact on automation, picklists, and reporting.</li>
+</ul>
+
+<p><strong>Record Types should add clarity, not complexity.</strong> When they do, your users spend less time fighting Salesforce and more time getting work done.</p>
+
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<nav class="post-navigation single-nav">
+  <div class="nav-col">
     
-        
-        
-        <a href="/blog/">1</a>
-        
-        
-        
-        <a href="/blog/page/2/">2</a>
-        
-        
-        
-        <a href="/blog/page/3/">3</a>
-        
-        
-        
-        <a href="/blog/page/4/">4</a>
-        
-        
-        
-        <a href="/blog/page/5/">5</a>
-        
-        
-        
-        <strong>6</strong>
-        
-        
+  </div>
+  <div class="nav-col">
     
-        
-    </div>
-</div>
+    <a href="/blog/mastering-loops-salesforce/" class="nav-link older">
+      <span class="nav-label">Older Post →</span>
+      <span class="nav-title">Mastering Loops in Salesforce Flows</span>
+    </a>
+    
+  </div>
+</nav>
 
       </main>
       <footer>
