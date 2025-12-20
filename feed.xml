@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-09-20T10:16:27+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">Using Record Types Without Creating Chaos</title><link href="https://redwoodlane.net/blog/record-types-strategy/" rel="alternate" type="text/html" title="Using Record Types Without Creating Chaos" /><published>2025-09-18T00:00:00+00:00</published><updated>2025-09-18T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/record-types-strategy</id><content type="html" xml:base="https://redwoodlane.net/blog/record-types-strategy/"><![CDATA[<p>Used well, Record Types can clarify business processes, separate workflows, and simplify reporting.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://redwoodlane.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redwoodlane.net/" rel="alternate" type="text/html" /><updated>2025-12-20T10:18:56+00:00</updated><id>https://redwoodlane.net/feed.xml</id><title type="html">Redwood Lane</title><subtitle>Expert Salesforce consulting, specializing in automation, integration, and custom development.</subtitle><author><name>Steven Van Elk</name></author><entry><title type="html">What We Look For in a Salesforce Health Check</title><link href="https://redwoodlane.net/blog/salesforce-health-check/" rel="alternate" type="text/html" title="What We Look For in a Salesforce Health Check" /><published>2025-12-18T00:00:00+00:00</published><updated>2025-12-18T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/salesforce-health-check</id><content type="html" xml:base="https://redwoodlane.net/blog/salesforce-health-check/"><![CDATA[<p>Before we build anything, we dig in.</p>
+
+<p>Our Salesforce Health Check is more than a checklist—it’s how we understand what’s working, what’s risky, and what’s holding your team back.</p>
+
+<hr />
+
+<h2 id="why-a-health-check-matters">Why a Health Check Matters</h2>
+
+<p>It’s tempting to jump straight into building Flows, installing packages, or customizing layouts. But if the foundation of the org isn’t healthy, every new change sits on shaky ground.</p>
+
+<p>A Health Check helps you:</p>
+<ul>
+  <li>Spot <strong>technical debt</strong> before it becomes unmanageable</li>
+  <li>Identify <strong>quick wins</strong> that improve adoption immediately</li>
+  <li>Prioritize projects based on actual risk and impact</li>
+</ul>
+
+<p>Whether we’re onboarding a new client or reviewing an existing environment, this audit gives us a clear picture of how the system is being used (and misused).</p>
+
+<hr />
+
+<h2 id="what-we-look-for">What We Look For</h2>
+
+<h3 id="1-automation-overlap">1. Automation Overlap</h3>
+<p>Multiple Flows, Workflow Rules, or Apex triggers running on the same object can cause unpredictable behavior. We check for:</p>
+<ul>
+  <li>Flows firing in the wrong order</li>
+  <li>Workflow Rules that duplicate Flow logic</li>
+  <li>Triggers with no context on execution order</li>
+</ul>
+
+<p>👉 A single update to a record shouldn’t kick off three separate automations that all do the same thing.</p>
+
+<hr />
+
+<h3 id="2-page-layout-overload">2. Page Layout Overload</h3>
+<p>If users have to scroll through endless sections, adoption drops. We look for:</p>
+<ul>
+  <li>Fields that are rarely used but still visible</li>
+  <li>Redundant sections that confuse users</li>
+  <li>Opportunities to apply <strong>Dynamic Forms</strong> for conditional visibility</li>
+</ul>
+
+<p>Clean layouts reduce cognitive load and make Salesforce feel more intuitive.</p>
+
+<hr />
+
+<h3 id="3-data-quality-warning-signs">3. Data Quality Warning Signs</h3>
+<p>Bad data equals bad reporting. We scan for:</p>
+<ul>
+  <li>Incomplete or inconsistent records</li>
+  <li>Picklists with outdated or duplicate values</li>
+  <li>“Owner drift,” where inactive users still own accounts, opportunities, or cases</li>
+</ul>
+
+<p>Data quality fixes often provide some of the fastest ROI because they directly improve reporting and decision-making.</p>
+
+<hr />
+
+<h3 id="4-scalability-blockers">4. Scalability Blockers</h3>
+<p>We look for technical patterns that work today but will break tomorrow, such as:</p>
+<ul>
+  <li>Hardcoded IDs in Flows or Apex</li>
+  <li>Filters that aren’t indexed, slowing down queries and reports</li>
+  <li>Processes that only work at small scale but fail under higher volume</li>
+</ul>
+
+<p>Future-proofing now saves painful rework later.</p>
+
+<hr />
+
+<h2 id="example-in-practice">Example in Practice</h2>
+
+<p>A recent audit uncovered <strong>five active Flows on Opportunity Close</strong>, all trying to update related records differently. Users complained of “random” errors. Once consolidated into a single Flow with clear entry conditions, error rates dropped by 80% and the sales team finally trusted the process.</p>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+
+<p>A Health Check isn’t about pointing fingers—it’s about finding opportunities.</p>
+
+<ul>
+  <li>Eliminate automation overlap to reduce risk.</li>
+  <li>Simplify page layouts for better adoption.</li>
+  <li>Improve data quality to strengthen reporting.</li>
+  <li>Remove scalability blockers before they cause outages.</li>
+</ul>
+
+<p>Sometimes the biggest wins don’t come from new features. They come from fixing the foundation and giving your org a clean bill of health for the year ahead.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Whether we’re onboarding a new client or auditing an org before a project, these are the signs we watch for.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/salesforce-health-check.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/salesforce-health-check.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Using Record Types Without Creating Chaos</title><link href="https://redwoodlane.net/blog/record-types-strategy/" rel="alternate" type="text/html" title="Using Record Types Without Creating Chaos" /><published>2025-09-18T00:00:00+00:00</published><updated>2025-09-18T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/record-types-strategy</id><content type="html" xml:base="https://redwoodlane.net/blog/record-types-strategy/"><![CDATA[<p>Used well, Record Types can clarify business processes, separate workflows, and simplify reporting.</p>
 
 <p>Used poorly? They lead to layout sprawl, automation headaches, and endless picklist management.</p>
 
@@ -825,100 +913,4 @@ Instead of dumping everything on one screen:
   <li>Build processes that can keep up with change</li>
 </ul>
 
-<p>The difference between a tool and a strategy is the difference between <em>keeping up</em> and <em>leading the way</em>.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Most companies treat Salesforce as a tool. The smart ones treat it as a strategy. Here’s what that shift looks like.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/crm-strategic-advantage.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/crm-strategic-advantage.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Chasing Simplicity in Complex Systems</title><link href="https://redwoodlane.net/blog/simple-salesforce-design/" rel="alternate" type="text/html" title="Chasing Simplicity in Complex Systems" /><published>2024-04-17T00:00:00+00:00</published><updated>2024-04-17T00:00:00+00:00</updated><id>https://redwoodlane.net/blog/simple-salesforce-design</id><content type="html" xml:base="https://redwoodlane.net/blog/simple-salesforce-design/"><![CDATA[<p>Powerful systems don’t have to feel complicated.</p>
-
-<p>In fact, the best Salesforce builds we’ve seen are the ones that feel <em>effortless</em>—even when the logic under the hood is sophisticated.</p>
-
-<hr />
-
-<h2 id="why-simplicity-matters">Why Simplicity Matters</h2>
-
-<p>When a system feels confusing:</p>
-<ul>
-  <li>Users stop adopting it.</li>
-  <li>Data quality suffers because fields get skipped.</li>
-  <li>Workarounds creep in, creating shadow processes outside Salesforce.</li>
-</ul>
-
-<p>But when the experience is simple:</p>
-<ul>
-  <li>Teams trust the system and actually use it.</li>
-  <li>Leaders get cleaner data and more accurate reporting.</li>
-  <li>Enhancements become easier to layer in without rework.</li>
-</ul>
-
-<p>Complexity in the backend is fine. Confusion in the frontend is costly.</p>
-
-<hr />
-
-<h2 id="how-we-keep-complex-systems-simple">How We Keep Complex Systems Simple</h2>
-
-<ol>
-  <li><strong>Hide complexity behind automation and smart defaults</strong>
-    <ul>
-      <li>Use Flows to set field values automatically when possible.</li>
-      <li>Default picklist values so users don’t have to guess.</li>
-      <li>Reduce clicks by handling routine steps behind the scenes.</li>
-    </ul>
-
-    <p>👉 The less a user has to think about setup, the more they can focus on the work.</p>
-  </li>
-</ol>
-
-<hr />
-
-<ol>
-  <li><strong>Design interfaces that focus attention, not overwhelm</strong>
-    <ul>
-      <li>Group fields by <em>how people work</em>, not by schema.</li>
-      <li>Use Dynamic Forms to reveal fields only when relevant.</li>
-      <li>Keep the Highlights Panel clean — only critical fields belong above the fold.</li>
-    </ul>
-
-    <p>Think of the page as a guided path, not a data dump.</p>
-  </li>
-</ol>
-
-<hr />
-
-<ol>
-  <li><strong>Make every action feel purposeful, not puzzling</strong>
-    <ul>
-      <li>Quick Actions should match the most common tasks.</li>
-      <li>Labels should use business language, not technical jargon.</li>
-      <li>Error messages should explain <em>what to do next</em>, not just what went wrong.</li>
-    </ul>
-
-    <p>When people know exactly what button to click, adoption soars.</p>
-  </li>
-</ol>
-
-<hr />
-
-<h2 id="example-in-practice">Example in Practice</h2>
-
-<p>We worked with a client whose Service Request page had over <strong>200 fields</strong> visible. Agents spent more time scrolling than serving customers.</p>
-
-<p>By hiding 70% of fields behind conditional visibility and automating common updates, we:</p>
-<ul>
-  <li>Cut average case handling time by 25%</li>
-  <li>Reduced data entry errors</li>
-  <li>Made training for new agents twice as fast</li>
-</ul>
-
-<p>The backend logic was still complex — but the user experience felt straightforward.</p>
-
-<hr />
-
-<h2 id="key-takeaway">Key Takeaway</h2>
-
-<p>Complexity in Salesforce is inevitable. But confusion is optional.</p>
-
-<p>By:</p>
-<ul>
-  <li>Automating smartly</li>
-  <li>Designing pages that guide, not overwhelm</li>
-  <li>Ensuring every action has purpose</li>
-</ul>
-
-<p>…you can make even the most advanced orgs feel effortless to the people who use them every day.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Even advanced Salesforce orgs can feel intuitive—if you build with clarity in mind. Here’s how we help make the complex feel simple.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/simplicity-in-complexity.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/simplicity-in-complexity.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>The difference between a tool and a strategy is the difference between <em>keeping up</em> and <em>leading the way</em>.</p>]]></content><author><name>Steven Van Elk</name></author><category term="Salesforce" /><category term="Salesforce Administrator" /><category term="Salesforce Developer" /><category term="Salesforce Consulting" /><category term="Consulting" /><category term="CRM" /><summary type="html"><![CDATA[Most companies treat Salesforce as a tool. The smart ones treat it as a strategy. Here’s what that shift looks like.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://redwoodlane.net/images/blog/crm-strategic-advantage.webp" /><media:content medium="image" url="https://redwoodlane.net/images/blog/crm-strategic-advantage.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
